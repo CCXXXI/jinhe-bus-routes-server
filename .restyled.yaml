@@ -13,3 +13,6 @@ restylers:
     - prettier-markdown:
           arguments: ["--prose-wrap", "preserve"]
     - "*"
+
+exclude:
+    - "archive/data/*"
