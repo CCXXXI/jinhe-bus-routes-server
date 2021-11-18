@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: mamba-org/provision-with-micromamba@v11
         with:
-          environment-file: "data/environment.yml"
+          environment-file: "jinhe_data/environment.yml"
       - run: pytest --cov=./ --cov-report xml
-        working-directory: data
+        working-directory: jinhe_data
       - uses: codecov/codecov-action@v2
