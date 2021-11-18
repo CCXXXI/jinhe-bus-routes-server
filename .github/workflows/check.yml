@@ -1,0 +1,23 @@
+name: check
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "44 13 * * SUN"
+
+defaults:
+  run:
+    shell: bash -l {0}
+
+jobs:
+  data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: mamba-org/provision-with-micromamba@v11
+        with:
+          environment-file: "data/environment.yml"
+      - run: pytest --cov=./ --cov-report xml
+        working-directory: data
+      - uses: codecov/codecov-action@v2
