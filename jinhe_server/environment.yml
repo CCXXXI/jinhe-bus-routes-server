@@ -1,8 +1,8 @@
-name: nosql
-channels:
-  - conda-forge
-  - defaults
+name: jinhe-server
+channels: [ conda-forge ]
 dependencies:
+  - pytest-cov
+
   - flask
   - sentry-sdk
   - blinker
