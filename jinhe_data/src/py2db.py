@@ -1,0 +1,3 @@
+def placeholder():
+    """Yet another fake function."""
+    return ...

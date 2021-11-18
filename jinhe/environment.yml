@@ -1,8 +1,0 @@
-name: nosql
-channels:
-  - conda-forge
-  - defaults
-dependencies:
-  - flask
-  - sentry-sdk
-  - blinker
