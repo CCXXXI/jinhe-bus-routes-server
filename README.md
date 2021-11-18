@@ -9,6 +9,7 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/CCXXXI/jinhe-bus-routes-server.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/CCXXXI/jinhe-bus-routes-server/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/CCXXXI/jinhe-bus-routes-server.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/CCXXXI/jinhe-bus-routes-server/context:python)
 [![CodeFactor](https://www.codefactor.io/repository/github/ccxxxi/jinhe-bus-routes-server/badge)](https://www.codefactor.io/repository/github/ccxxxi/jinhe-bus-routes-server)
+[![codecov](https://codecov.io/gh/CCXXXI/jinhe-bus-routes-server/branch/main/graph/badge.svg?token=RHp5mqkUKo)](https://codecov.io/gh/CCXXXI/jinhe-bus-routes-server)
 
 华东师范大学 非关系型数据存储技术及其应用 2021 秋季学期 实践项目。
 
