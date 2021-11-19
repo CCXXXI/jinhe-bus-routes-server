@@ -49,7 +49,7 @@ class Route:
         # basic
         mapping = asdict(self)
         for key in ("name", "stations", "up_stations", "down_stations"):
-            mapping.pop(key)
+            del mapping[key]
         r.hset(f"Route:{self.name}", mapping=mapping)
 
         # graph
