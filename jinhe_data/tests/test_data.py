@@ -1,4 +1,5 @@
 from data.routes import routes
+from data.stations import stations
 
 
 def test_routes():
@@ -26,3 +27,9 @@ def test_routes():
 
     # 93 routes
     assert len(routes) == 93
+
+
+def test_stations():
+    """Check stations data."""
+    # id > 0
+    assert all(station.id > 0 for station in stations)
