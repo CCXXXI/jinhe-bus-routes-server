@@ -31,8 +31,14 @@ class Route:
     type: str
     """线路类型"""
 
-    # stations: list[str]
-    # """沿线站点的 `id_`"""
+    stations: list[str] = None
+    """不分上下行的沿线站点的 `id_`"""
+
+    up_stations: list[str] = None
+    """上行沿线站点的 `id_`"""
+
+    down_stations: list[str] = None
+    """下行沿线站点的 `id_`"""
 
     def __post_init__(self):
         """Convert bool to int as Redis doesn't support bool."""
@@ -40,7 +46,11 @@ class Route:
 
     def save(self, r: Redis):
         """Save self to the database."""
-        # 基础信息
+        # basic
         mapping = asdict(self)
         mapping.pop("stations")
+        mapping.pop("up_stations")
+        mapping.pop("down_stations")
         r.hset(self.name, mapping=mapping)
+
+        # graph
