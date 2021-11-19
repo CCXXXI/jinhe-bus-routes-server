@@ -8,3 +8,18 @@ def test_routes():
 
     # `name` is unique
     assert len({route.name for route in routes}) == len(routes)
+
+    # stations
+    assert all(
+        (
+            route.stations is None
+            and route.up_stations is not None
+            and route.down_stations is not None
+        )
+        or (
+            route.stations is not None
+            and route.up_stations is None
+            and route.down_stations is None
+        )
+        for route in routes
+    )
