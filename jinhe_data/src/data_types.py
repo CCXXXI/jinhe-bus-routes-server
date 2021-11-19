@@ -34,13 +34,13 @@ class Route:
     """线路类型"""
 
     stations: list[int] = None
-    """不分上下行的沿线站点的 `id_`"""
+    """不分上下行的沿线站点的 `id`"""
 
     up_stations: list[int] = None
-    """上行沿线站点的 `id_`"""
+    """上行沿线站点的 `id`"""
 
     down_stations: list[int] = None
-    """下行沿线站点的 `id_`"""
+    """下行沿线站点的 `id`"""
 
     def __post_init__(self):
         """Convert bool to int as Redis doesn't support bool."""
