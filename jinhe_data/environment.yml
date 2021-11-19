@@ -1,5 +1,5 @@
 name: jinhe-data
-channels: [ conda-forge ]
+channels: [conda-forge]
 dependencies:
   - pytest-cov
   - pip
