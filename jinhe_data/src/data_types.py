@@ -5,7 +5,7 @@ from redis import Redis
 
 @dataclass
 class Line:
-    """路线基本信息"""
+    """路线"""
 
     directional: int
     """无向为false，不仅仅是环线，还有G62路等单向线路"""
@@ -31,10 +31,16 @@ class Line:
     type: str
     """线路类型"""
 
+    # stations: list[str]
+    # """沿线站点的 `id_`"""
+
     def __post_init__(self):
         """Convert bool to int as Redis doesn't support bool."""
         self.directional = int(self.directional)
 
     def save(self, r: Redis):
         """Save self to the database."""
-        r.hset(self.name, mapping=asdict(self))
+        # 基础信息
+        mapping = asdict(self)
+        mapping.pop("stations")
+        r.hset(self.name, mapping=mapping)
