@@ -51,6 +51,6 @@ class Route:
         mapping.pop("stations")
         mapping.pop("up_stations")
         mapping.pop("down_stations")
-        r.hset(self.name, mapping=mapping)
+        r.hset(f"Route:{self.name}", mapping=mapping)
 
         # graph
