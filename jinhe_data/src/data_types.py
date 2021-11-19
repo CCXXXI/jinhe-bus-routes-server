@@ -1,6 +1,8 @@
 from dataclasses import asdict, dataclass
+from itertools import pairwise
 
 from redis import Redis
+from redisgraph import Edge, Graph, Node
 
 
 @dataclass
@@ -44,7 +46,7 @@ class Route:
         """Convert bool to int as Redis doesn't support bool."""
         self.directional = int(self.directional)
 
-    def save(self, r: Redis):
+    def save(self, r: Redis, g: Graph):
         """Save self to the database."""
         # basic
         mapping = asdict(self)
@@ -53,3 +55,19 @@ class Route:
         r.hset(f"Route:{self.name}", mapping=mapping)
 
         # graph
+        for s, d in (
+            (self.stations, ""),
+            (self.up_stations, "up"),
+            (self.down_stations, "down"),
+        ):
+            if s:
+                for u_id, v_id in pairwise(s):
+                    u: Node = g.query(
+                        "MATCH (p:$id) RETURN p",
+                        {"id": u_id},
+                    ).result_set[0]
+                    v: Node = g.query(
+                        "MATCH (p:$id) RETURN p",
+                        {"id": v_id},
+                    ).result_set[0]
+                    g.add_edge(Edge(u, self.name + d, v))
