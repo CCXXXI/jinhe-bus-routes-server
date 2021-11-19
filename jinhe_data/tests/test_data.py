@@ -23,3 +23,6 @@ def test_routes():
         )
         for route in routes
     )
+
+    # 93 routes
+    assert len(routes) == 93
