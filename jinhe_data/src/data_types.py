@@ -48,9 +48,8 @@ class Route:
         """Save self to the database."""
         # basic
         mapping = asdict(self)
-        mapping.pop("stations")
-        mapping.pop("up_stations")
-        mapping.pop("down_stations")
+        for key in ("name", "stations", "up_stations", "down_stations"):
+            mapping.pop(key)
         r.hset(f"Route:{self.name}", mapping=mapping)
 
         # graph
