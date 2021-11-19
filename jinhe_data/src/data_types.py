@@ -33,13 +33,13 @@ class Route:
     type: str
     """线路类型"""
 
-    stations: list[str] = None
+    stations: list[int] = None
     """不分上下行的沿线站点的 `id_`"""
 
-    up_stations: list[str] = None
+    up_stations: list[int] = None
     """上行沿线站点的 `id_`"""
 
-    down_stations: list[str] = None
+    down_stations: list[int] = None
     """下行沿线站点的 `id_`"""
 
     def __post_init__(self):
