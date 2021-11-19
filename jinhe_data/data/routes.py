@@ -1,6 +1,6 @@
 from src.data_types import Route
 
-routes: list[Route] = [
+routes: tuple[Route, ...] = (
     Route(
         directional=True,
         interval=5,
@@ -10,7 +10,7 @@ routes: list[Route] = [
         route="金河客运站-花明公交站",
         runtime="6:00-23:59",
         type="干线",
-        up_stations=[
+        up_stations=(
             16560,
             803,
             98730,
@@ -40,8 +40,8 @@ routes: list[Route] = [
             27698,
             23351,
             27676,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             27675,
             27699,
             27733,
@@ -71,7 +71,7 @@ routes: list[Route] = [
             811,
             818,
             821,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -82,15 +82,15 @@ routes: list[Route] = [
         route="合江客运站→环球中心",
         runtime="6:30-7:00",
         type="高峰线",
-        up_stations=[
+        up_stations=(
             114518,
             98310,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             114519,
             107000,
             107036,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -101,7 +101,7 @@ routes: list[Route] = [
         route="火车西站公交站-动物园公交站",
         runtime="6:30-22:30",
         type="快速公交",
-        up_stations=[
+        up_stations=(
             5027,
             7217,
             7232,
@@ -118,8 +118,8 @@ routes: list[Route] = [
             7369,
             6999,
             6997,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             6996,
             7370,
             7368,
@@ -135,7 +135,7 @@ routes: list[Route] = [
             7233,
             7223,
             98777,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -146,7 +146,7 @@ routes: list[Route] = [
         route="火车西站公交站-金河南站公交站",
         runtime="6:30-22:10",
         type="快速公交",
-        up_stations=[
+        up_stations=(
             7386,
             64838,
             64826,
@@ -160,8 +160,8 @@ routes: list[Route] = [
             59159,
             59162,
             57487,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             57729,
             59160,
             59149,
@@ -175,7 +175,7 @@ routes: list[Route] = [
             64839,
             6999,
             7384,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -186,7 +186,7 @@ routes: list[Route] = [
         route="钟楼-环球中心",
         runtime="6:15-21:50",
         type="快速公交",
-        up_stations=[
+        up_stations=(
             99947,
             100125,
             100163,
@@ -199,8 +199,8 @@ routes: list[Route] = [
             100201,
             3654,
             98308,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             3539,
             1129,
             98784,
@@ -213,7 +213,7 @@ routes: list[Route] = [
             100164,
             100126,
             99916,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -224,7 +224,7 @@ routes: list[Route] = [
         route="兴义镇-火车西站公交站",
         runtime="5:50-23:00",
         type="城乡线",
-        up_stations=[
+        up_stations=(
             7542,
             7527,
             7504,
@@ -253,8 +253,8 @@ routes: list[Route] = [
             6854,
             6818,
             14495,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             14497,
             6819,
             6884,
@@ -283,7 +283,7 @@ routes: list[Route] = [
             7501,
             7528,
             7550,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -294,7 +294,7 @@ routes: list[Route] = [
         route="北路湾公交站-金河南站公交站",
         runtime="6:00-23:59",
         type="干线",
-        up_stations=[
+        up_stations=(
             34656,
             26552,
             60640,
@@ -316,8 +316,8 @@ routes: list[Route] = [
             59159,
             59162,
             57489,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             57727,
             59160,
             59149,
@@ -339,7 +339,7 @@ routes: list[Route] = [
             26585,
             26564,
             34591,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -350,7 +350,7 @@ routes: list[Route] = [
         route="庆安公交站-鱼凫西路南",
         runtime="6:30-21:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             17160,
             23712,
             23734,
@@ -372,8 +372,8 @@ routes: list[Route] = [
             23521,
             23469,
             23840,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             23850,
             23851,
             23470,
@@ -396,7 +396,7 @@ routes: list[Route] = [
             23735,
             23713,
             23836,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -407,7 +407,7 @@ routes: list[Route] = [
         route="金河客运站-庆安小区",
         runtime="6:40-22:00",
         type="干线",
-        up_stations=[
+        up_stations=(
             16560,
             56503,
             56485,
@@ -423,8 +423,8 @@ routes: list[Route] = [
             99672,
             99736,
             99794,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             99796,
             99737,
             17160,
@@ -442,7 +442,7 @@ routes: list[Route] = [
             56512,
             818,
             822,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -453,7 +453,7 @@ routes: list[Route] = [
         route="科北路-永丰公交站",
         runtime="6:20-21:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             56809,
             62368,
             46556,
@@ -479,8 +479,8 @@ routes: list[Route] = [
             2134,
             2074,
             2070,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             2827,
             2073,
             2094,
@@ -507,7 +507,7 @@ routes: list[Route] = [
             62369,
             56747,
             56821,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -518,7 +518,7 @@ routes: list[Route] = [
         route="北客站-桦林园",
         runtime="6:20-22:00",
         type="干线",
-        up_stations=[
+        up_stations=(
             20259,
             20156,
             20189,
@@ -543,8 +543,8 @@ routes: list[Route] = [
             20841,
             20878,
             20765,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             20758,
             20879,
             20842,
@@ -567,7 +567,7 @@ routes: list[Route] = [
             20206,
             20190,
             20260,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -578,7 +578,7 @@ routes: list[Route] = [
         route="北客站-地铁金河大道东",
         runtime="6:20-22:00",
         type="驳接线",
-        up_stations=[
+        up_stations=(
             20493,
             20156,
             20189,
@@ -603,8 +603,8 @@ routes: list[Route] = [
             102016,
             14621,
             702,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             693,
             102017,
             20596,
@@ -627,7 +627,7 @@ routes: list[Route] = [
             20206,
             20190,
             20492,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -638,7 +638,7 @@ routes: list[Route] = [
         route="高新新区公交站-金河南站公交站",
         runtime="6:00-22:20",
         type="干线",
-        up_stations=[
+        up_stations=(
             57727,
             59160,
             59149,
@@ -673,8 +673,8 @@ routes: list[Route] = [
             58251,
             58225,
             58210,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             58204,
             58252,
             64355,
@@ -709,7 +709,7 @@ routes: list[Route] = [
             59159,
             59162,
             57480,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -720,7 +720,7 @@ routes: list[Route] = [
         route="高朋路首末站-植物园",
         runtime="6:40-21:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             2708,
             2766,
             61828,
@@ -741,8 +741,8 @@ routes: list[Route] = [
             61902,
             61915,
             60914,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             60933,
             61914,
             61901,
@@ -763,7 +763,7 @@ routes: list[Route] = [
             61829,
             2769,
             2714,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -774,7 +774,7 @@ routes: list[Route] = [
         route="燎原-北路湾公交站",
         runtime="6:30-22:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             16500,
             16483,
             17808,
@@ -800,8 +800,8 @@ routes: list[Route] = [
             26585,
             26564,
             34592,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             34658,
             26552,
             26576,
@@ -828,7 +828,7 @@ routes: list[Route] = [
             16482,
             16852,
             17779,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -839,7 +839,7 @@ routes: list[Route] = [
         route="金河旅游区-新兴工业园",
         runtime="6:50-21:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             17984,
             41392,
             41507,
@@ -860,8 +860,8 @@ routes: list[Route] = [
             41631,
             41619,
             41749,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             41748,
             41618,
             41630,
@@ -882,7 +882,7 @@ routes: list[Route] = [
             41394,
             4989,
             17995,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -893,7 +893,7 @@ routes: list[Route] = [
         route="北路湾公交站-永盛",
         runtime="6:10-22:30",
         type="城乡线",
-        up_stations=[
+        up_stations=(
             34659,
             26552,
             26576,
@@ -927,8 +927,8 @@ routes: list[Route] = [
             56113,
             7528,
             56110,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             7527,
             56112,
             56484,
@@ -961,7 +961,7 @@ routes: list[Route] = [
             26585,
             26564,
             34593,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -972,7 +972,7 @@ routes: list[Route] = [
         route="庆安公交站-科北路",
         runtime="6:40-23:00",
         type="干线",
-        up_stations=[
+        up_stations=(
             17160,
             17288,
             17337,
@@ -993,8 +993,8 @@ routes: list[Route] = [
             16418,
             16432,
             2814,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             2058,
             16433,
             16419,
@@ -1016,7 +1016,7 @@ routes: list[Route] = [
             17339,
             17295,
             17737,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -1027,7 +1027,7 @@ routes: list[Route] = [
         route="永丰公交站-机投公交站",
         runtime="6:40-22:00",
         type="干线",
-        up_stations=[
+        up_stations=(
             45226,
             45056,
             45026,
@@ -1052,8 +1052,8 @@ routes: list[Route] = [
             56900,
             56747,
             56822,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             56810,
             56901,
             56910,
@@ -1078,7 +1078,7 @@ routes: list[Route] = [
             45057,
             45217,
             45222,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -1089,7 +1089,7 @@ routes: list[Route] = [
         route="桦林园-植物园",
         runtime="6:40-22:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             20763,
             27015,
             27280,
@@ -1115,8 +1115,8 @@ routes: list[Route] = [
             60853,
             60883,
             60900,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             60932,
             60884,
             60854,
@@ -1142,7 +1142,7 @@ routes: list[Route] = [
             27277,
             27016,
             20768,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -1153,7 +1153,7 @@ routes: list[Route] = [
         route="曾家坡公交站-动物园公交站",
         runtime="6:40-21:00",
         type="干线",
-        up_stations=[
+        up_stations=(
             24271,
             24737,
             24750,
@@ -1175,8 +1175,8 @@ routes: list[Route] = [
             5197,
             5168,
             5456,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             5027,
             5214,
             5167,
@@ -1199,7 +1199,7 @@ routes: list[Route] = [
             24751,
             24738,
             24296,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -1210,7 +1210,7 @@ routes: list[Route] = [
         route="金河客运站-三里坪公交站",
         runtime="6:30-22:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             97424,
             97507,
             60669,
@@ -1239,8 +1239,8 @@ routes: list[Route] = [
             811,
             818,
             21379,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             21426,
             803,
             98730,
@@ -1268,7 +1268,7 @@ routes: list[Route] = [
             60668,
             97506,
             97439,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -1279,7 +1279,7 @@ routes: list[Route] = [
         route="曾家坡公交站-海椒市",
         runtime="6:30-22:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             24270,
             24737,
             24750,
@@ -1305,8 +1305,8 @@ routes: list[Route] = [
             25920,
             25928,
             25908,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             25909,
             25919,
             25944,
@@ -1331,7 +1331,7 @@ routes: list[Route] = [
             24751,
             24738,
             24295,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -1342,7 +1342,7 @@ routes: list[Route] = [
         route="花明公交站-金融城",
         runtime="6:00-22:00",
         type="干线",
-        up_stations=[
+        up_stations=(
             62105,
             27699,
             27733,
@@ -1366,8 +1366,8 @@ routes: list[Route] = [
             64646,
             64636,
             64625,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             60200,
             64635,
             64645,
@@ -1393,7 +1393,7 @@ routes: list[Route] = [
             23351,
             27680,
             62116,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -1404,7 +1404,7 @@ routes: list[Route] = [
         route="花明公交站-庆安公交站",
         runtime="6:00-23:00",
         type="干线",
-        up_stations=[
+        up_stations=(
             17160,
             23712,
             62803,
@@ -1440,8 +1440,8 @@ routes: list[Route] = [
             23351,
             27680,
             62117,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             62106,
             27699,
             27733,
@@ -1475,7 +1475,7 @@ routes: list[Route] = [
             62802,
             23713,
             62794,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -1486,7 +1486,7 @@ routes: list[Route] = [
         route="金河市政府-钟楼",
         runtime="6:30-21:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             99928,
             99487,
             99561,
@@ -1504,8 +1504,8 @@ routes: list[Route] = [
             17808,
             17823,
             17826,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             17848,
             17824,
             17809,
@@ -1523,7 +1523,7 @@ routes: list[Route] = [
             99559,
             99488,
             99913,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -1534,7 +1534,7 @@ routes: list[Route] = [
         route="火车西站公交站-八里小区",
         runtime="6:00-22:00",
         type="干线",
-        up_stations=[
+        up_stations=(
             26070,
             26145,
             26140,
@@ -1556,8 +1556,8 @@ routes: list[Route] = [
             6787,
             6999,
             27295,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             27297,
             6788,
             6819,
@@ -1578,7 +1578,7 @@ routes: list[Route] = [
             26141,
             26144,
             26192,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -1589,7 +1589,7 @@ routes: list[Route] = [
         route="环球中心-天华一路",
         runtime="6:30-22:15",
         type="干线",
-        up_stations=[
+        up_stations=(
             15343,
             22007,
             22011,
@@ -1606,8 +1606,8 @@ routes: list[Route] = [
             60053,
             60066,
             60081,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             60087,
             60105,
             60060,
@@ -1625,7 +1625,7 @@ routes: list[Route] = [
             22013,
             22008,
             98305,
-        ],
+        ),
     ),
     Route(
         directional=False,
@@ -1636,7 +1636,7 @@ routes: list[Route] = [
         route="金河市政府-金河市政府",
         runtime="6:00-22:30",
         type="干线",
-        stations=[
+        stations=(
             17848,
             17824,
             17809,
@@ -1667,7 +1667,7 @@ routes: list[Route] = [
             17808,
             17823,
             17841,
-        ],
+        ),
     ),
     Route(
         directional=False,
@@ -1678,7 +1678,7 @@ routes: list[Route] = [
         route="金河市政府-金河市政府",
         runtime="6:00-22:30",
         type="干线",
-        stations=[
+        stations=(
             17848,
             17824,
             17809,
@@ -1709,7 +1709,7 @@ routes: list[Route] = [
             17808,
             17823,
             17840,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -1720,7 +1720,7 @@ routes: list[Route] = [
         route="永丰公交站-金河南站公交站",
         runtime="6:10-22:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             56811,
             62368,
             62428,
@@ -1752,8 +1752,8 @@ routes: list[Route] = [
             64548,
             59162,
             57488,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             57728,
             64549,
             64535,
@@ -1785,7 +1785,7 @@ routes: list[Route] = [
             62369,
             56747,
             56820,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -1796,7 +1796,7 @@ routes: list[Route] = [
         route="三里坪公交站-花明公交站",
         runtime="6:30-22:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             97424,
             97507,
             60669,
@@ -1819,8 +1819,8 @@ routes: list[Route] = [
             23351,
             27680,
             62118,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             62107,
             27699,
             27733,
@@ -1842,7 +1842,7 @@ routes: list[Route] = [
             97506,
             97417,
             97440,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -1853,7 +1853,7 @@ routes: list[Route] = [
         route="新南天地-东林小区",
         runtime="6:30-21:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             98049,
             98071,
             56545,
@@ -1873,8 +1873,8 @@ routes: list[Route] = [
             14571,
             6362,
             6420,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             62709,
             22008,
             15343,
@@ -1894,7 +1894,7 @@ routes: list[Route] = [
             56546,
             98072,
             98050,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -1905,7 +1905,7 @@ routes: list[Route] = [
         route="金河旅游区-动物园公交站",
         runtime="6:30-22:00",
         type="干线",
-        up_stations=[
+        up_stations=(
             5027,
             5214,
             5167,
@@ -1927,8 +1927,8 @@ routes: list[Route] = [
             5058,
             4998,
             4991,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             4985,
             4997,
             5007,
@@ -1950,7 +1950,7 @@ routes: list[Route] = [
             5197,
             5168,
             5023,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -1961,7 +1961,7 @@ routes: list[Route] = [
         route="环球中心-地铁四河站",
         runtime="6:30-22:00",
         type="驳接线",
-        up_stations=[
+        up_stations=(
             15343,
             14571,
             6377,
@@ -1983,8 +1983,8 @@ routes: list[Route] = [
             15075,
             15034,
             14881,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             14880,
             15035,
             15074,
@@ -2006,7 +2006,7 @@ routes: list[Route] = [
             6378,
             14572,
             98306,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2017,7 +2017,7 @@ routes: list[Route] = [
         route="鱼凫西路南-机投公交站",
         runtime="6:30-20:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             23850,
             44929,
             4057,
@@ -2038,8 +2038,8 @@ routes: list[Route] = [
             45024,
             45057,
             45223,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             45226,
             45056,
             45026,
@@ -2060,7 +2060,7 @@ routes: list[Route] = [
             44928,
             23851,
             44917,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2071,7 +2071,7 @@ routes: list[Route] = [
         route="施家沟-清河镇",
         runtime="6:30-19:00",
         type="城乡线",
-        up_stations=[
+        up_stations=(
             55920,
             55928,
             55905,
@@ -2085,8 +2085,8 @@ routes: list[Route] = [
             55881,
             55870,
             55846,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             55845,
             55871,
             55880,
@@ -2099,7 +2099,7 @@ routes: list[Route] = [
             55899,
             55904,
             55919,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2110,7 +2110,7 @@ routes: list[Route] = [
         route="银杏园公交站-万寿乡",
         runtime="7:00-20:00",
         type="城乡线",
-        up_stations=[
+        up_stations=(
             45945,
             45917,
             45909,
@@ -2125,8 +2125,8 @@ routes: list[Route] = [
             45650,
             45960,
             37959,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             21924,
             37966,
             45961,
@@ -2143,7 +2143,7 @@ routes: list[Route] = [
             45916,
             45953,
             45931,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2154,7 +2154,7 @@ routes: list[Route] = [
         route="银杏园公交站→地铁七河路口",
         runtime="6:10-22:40",
         type="驳接线",
-        up_stations=[
+        up_stations=(
             45826,
             45847,
             45860,
@@ -2173,8 +2173,8 @@ routes: list[Route] = [
             45916,
             45953,
             45935,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             45944,
             45917,
             45909,
@@ -2190,7 +2190,7 @@ routes: list[Route] = [
             45720,
             45868,
             45825,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2201,7 +2201,7 @@ routes: list[Route] = [
         route="金河旅游区-东源路",
         runtime="7:00-21:00",
         type="支线",
-        up_stations=[
+        up_stations=(
             6956,
             18000,
             18027,
@@ -2213,8 +2213,8 @@ routes: list[Route] = [
             18220,
             18093,
             17936,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             17939,
             18072,
             18079,
@@ -2228,7 +2228,7 @@ routes: list[Route] = [
             18009,
             4989,
             6962,
-        ],
+        ),
     ),
     Route(
         directional=False,
@@ -2239,7 +2239,7 @@ routes: list[Route] = [
         route="SM社区-SM社区",
         runtime="6:30-21:20",
         type="社区线",
-        stations=[
+        stations=(
             3639,
             3662,
             6562,
@@ -2254,7 +2254,7 @@ routes: list[Route] = [
             6684,
             21982,
             2218,
-        ],
+        ),
     ),
     Route(
         directional=False,
@@ -2265,7 +2265,7 @@ routes: list[Route] = [
         route="SM社区-SM社区",
         runtime="6:00-22:00",
         type="社区线",
-        stations=[
+        stations=(
             2220,
             6685,
             21974,
@@ -2281,7 +2281,7 @@ routes: list[Route] = [
             6565,
             3660,
             2219,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2292,7 +2292,7 @@ routes: list[Route] = [
         route="机投公交站-癀后门",
         runtime="6:30-20:30",
         type="支线",
-        up_stations=[
+        up_stations=(
             45226,
             45056,
             55602,
@@ -2305,8 +2305,8 @@ routes: list[Route] = [
             17627,
             56627,
             56618,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             56617,
             56628,
             17626,
@@ -2320,7 +2320,7 @@ routes: list[Route] = [
             45057,
             45217,
             45224,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2331,7 +2331,7 @@ routes: list[Route] = [
         route="金河客运站-动物园公交站",
         runtime="7:00-20:00",
         type="支线",
-        up_stations=[
+        up_stations=(
             5027,
             5214,
             5167,
@@ -2343,8 +2343,8 @@ routes: list[Route] = [
             98726,
             818,
             21535,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             21426,
             803,
             98730,
@@ -2354,7 +2354,7 @@ routes: list[Route] = [
             98755,
             5168,
             7229,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2365,7 +2365,7 @@ routes: list[Route] = [
         route="鸿石社区-四医院",
         runtime="6:30-20:00",
         type="支线",
-        up_stations=[
+        up_stations=(
             55097,
             55152,
             55161,
@@ -2379,8 +2379,8 @@ routes: list[Route] = [
             54544,
             55768,
             55761,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             54746,
             54723,
             54545,
@@ -2395,7 +2395,7 @@ routes: list[Route] = [
             55151,
             55141,
             55092,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2406,7 +2406,7 @@ routes: list[Route] = [
         route="曾家坡公交站→文家场",
         runtime="7:00-19:30",
         type="城乡线",
-        up_stations=[
+        up_stations=(
             24273,
             55438,
             55448,
@@ -2415,8 +2415,8 @@ routes: list[Route] = [
             55492,
             55487,
             55471,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             55472,
             55486,
             55491,
@@ -2425,7 +2425,7 @@ routes: list[Route] = [
             55450,
             55437,
             24298,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2436,7 +2436,7 @@ routes: list[Route] = [
         route="燎原-地铁东井巷",
         runtime="7:00-21:00",
         type="驳接线",
-        up_stations=[
+        up_stations=(
             16500,
             16483,
             16418,
@@ -2449,8 +2449,8 @@ routes: list[Route] = [
             2725,
             15547,
             16757,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             16758,
             16772,
             2734,
@@ -2464,7 +2464,7 @@ routes: list[Route] = [
             16482,
             16852,
             16851,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2475,7 +2475,7 @@ routes: list[Route] = [
         route="环球中心-驿都路",
         runtime="7:00-21:00",
         type="支线",
-        up_stations=[
+        up_stations=(
             15343,
             27223,
             20841,
@@ -2487,8 +2487,8 @@ routes: list[Route] = [
             46786,
             46588,
             46569,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             46556,
             46589,
             46785,
@@ -2500,7 +2500,7 @@ routes: list[Route] = [
             20842,
             27224,
             98307,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2511,7 +2511,7 @@ routes: list[Route] = [
         route="环球中心-驿都路",
         runtime="7:00-21:00",
         type="支线",
-        up_stations=[
+        up_stations=(
             3539,
             1129,
             1154,
@@ -2523,8 +2523,8 @@ routes: list[Route] = [
             46610,
             46588,
             46569,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             46556,
             46589,
             46609,
@@ -2536,7 +2536,7 @@ routes: list[Route] = [
             1148,
             3654,
             98307,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2547,7 +2547,7 @@ routes: list[Route] = [
         route="曾家坡公交站→高朋路首末站",
         runtime="6:30-20:30",
         type="支线",
-        up_stations=[
+        up_stations=(
             25281,
             25256,
             25240,
@@ -2566,8 +2566,8 @@ routes: list[Route] = [
             24751,
             24738,
             24297,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             24272,
             24737,
             24750,
@@ -2586,7 +2586,7 @@ routes: list[Route] = [
             25239,
             25258,
             25276,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2597,7 +2597,7 @@ routes: list[Route] = [
         route="两河路-大同镇",
         runtime="6:00-22:20",
         type="城乡线",
-        up_stations=[
+        up_stations=(
             5413,
             16116,
             16078,
@@ -2632,8 +2632,8 @@ routes: list[Route] = [
             45534,
             45477,
             45332,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             45331,
             45478,
             45541,
@@ -2669,7 +2669,7 @@ routes: list[Route] = [
             16115,
             5425,
             5414,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2680,7 +2680,7 @@ routes: list[Route] = [
         route="金河旅游区-锦城西路",
         runtime="6:00-22:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             63049,
             4997,
             5007,
@@ -2714,8 +2714,8 @@ routes: list[Route] = [
             60037,
             60053,
             62905,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             62898,
             60052,
             60040,
@@ -2750,7 +2750,7 @@ routes: list[Route] = [
             4998,
             4989,
             63045,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2761,7 +2761,7 @@ routes: list[Route] = [
         route="金河客运站-天河区公交站",
         runtime="6:00-21:00",
         type="干线",
-        up_stations=[
+        up_stations=(
             21427,
             5358,
             5437,
@@ -2794,8 +2794,8 @@ routes: list[Route] = [
             53401,
             53255,
             53259,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             53055,
             53400,
             55552,
@@ -2827,7 +2827,7 @@ routes: list[Route] = [
             811,
             818,
             21537,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2838,7 +2838,7 @@ routes: list[Route] = [
         route="万寿乡→永盛",
         runtime="6:00-18:00",
         type="城乡线",
-        up_stations=[
+        up_stations=(
             98619,
             7540,
             37926,
@@ -2849,8 +2849,8 @@ routes: list[Route] = [
             98658,
             98675,
             37959,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             21924,
             98676,
             98657,
@@ -2861,7 +2861,7 @@ routes: list[Route] = [
             37925,
             37934,
             98677,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2872,7 +2872,7 @@ routes: list[Route] = [
         route="科北路-高朋路首末站",
         runtime="6:30-21:00",
         type="支线",
-        up_stations=[
+        up_stations=(
             2708,
             2766,
             2777,
@@ -2882,8 +2882,8 @@ routes: list[Route] = [
             2074,
             2059,
             3836,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             3839,
             2073,
             2725,
@@ -2892,7 +2892,7 @@ routes: list[Route] = [
             2788,
             2769,
             2714,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2903,7 +2903,7 @@ routes: list[Route] = [
         route="金河客运站-鸿石社区",
         runtime="6:30-21:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             21427,
             55601,
             45057,
@@ -2937,8 +2937,8 @@ routes: list[Route] = [
             55151,
             55141,
             55091,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             55097,
             55152,
             55161,
@@ -2972,7 +2972,7 @@ routes: list[Route] = [
             55602,
             818,
             21538,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -2983,7 +2983,7 @@ routes: list[Route] = [
         route="北客站-天河区公交站",
         runtime="6:30-22:20",
         type="干线",
-        up_stations=[
+        up_stations=(
             53725,
             53733,
             53772,
@@ -3003,8 +3003,8 @@ routes: list[Route] = [
             53704,
             53675,
             53258,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             53071,
             53674,
             53703,
@@ -3024,7 +3024,7 @@ routes: list[Route] = [
             53776,
             53734,
             53726,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3035,7 +3035,7 @@ routes: list[Route] = [
         route="科北路-帀家店",
         runtime="6:40-22:00",
         type="干线",
-        up_stations=[
+        up_stations=(
             54113,
             16433,
             16419,
@@ -3073,8 +3073,8 @@ routes: list[Route] = [
             54587,
             54586,
             54570,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             54572,
             54585,
             54588,
@@ -3114,7 +3114,7 @@ routes: list[Route] = [
             18017,
             2059,
             54110,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3125,7 +3125,7 @@ routes: list[Route] = [
         route="科北路→天河区公交站",
         runtime="7:00-19:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             54113,
             16433,
             24646,
@@ -3137,8 +3137,8 @@ routes: list[Route] = [
             53401,
             53255,
             54074,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             53055,
             53400,
             52824,
@@ -3150,7 +3150,7 @@ routes: list[Route] = [
             16432,
             2059,
             54110,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3161,7 +3161,7 @@ routes: list[Route] = [
         route="火车西站公交站-天河区公交站",
         runtime="6:20-21:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             61933,
             52661,
             52681,
@@ -3206,8 +3206,8 @@ routes: list[Route] = [
             53401,
             53255,
             53254,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             53072,
             53400,
             53418,
@@ -3252,7 +3252,7 @@ routes: list[Route] = [
             52660,
             6999,
             61929,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3263,7 +3263,7 @@ routes: list[Route] = [
         route="三里坪公交站-天河区公交站",
         runtime="6:30-21:30",
         type="干线",
-        up_stations=[
+        up_stations=(
             97424,
             97507,
             60641,
@@ -3311,8 +3311,8 @@ routes: list[Route] = [
             53401,
             53255,
             53260,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             53073,
             53400,
             53418,
@@ -3359,7 +3359,7 @@ routes: list[Route] = [
             97506,
             97417,
             97441,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3370,7 +3370,7 @@ routes: list[Route] = [
         route="合江客运站→地铁钟楼站",
         runtime="5:50-21:00",
         type="驳接线",
-        up_stations=[
+        up_stations=(
             106932,
             107112,
             114349,
@@ -3379,8 +3379,8 @@ routes: list[Route] = [
             107108,
             99594,
             114470,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             114472,
             99561,
             99496,
@@ -3391,7 +3391,7 @@ routes: list[Route] = [
             107113,
             107000,
             107034,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3402,7 +3402,7 @@ routes: list[Route] = [
         route="合江客运站-金河客运站",
         runtime="5:30-21:40",
         type="城乡线",
-        up_stations=[
+        up_stations=(
             106932,
             107112,
             114349,
@@ -3411,8 +3411,8 @@ routes: list[Route] = [
             98726,
             818,
             21539,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             21444,
             803,
             104283,
@@ -3421,7 +3421,7 @@ routes: list[Route] = [
             107113,
             107000,
             107035,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3432,15 +3432,15 @@ routes: list[Route] = [
         route="金河客运站→锦城西路",
         runtime="7:00-8:00",
         type="高峰线",
-        up_stations=[
+        up_stations=(
             21447,
             23114,
             63023,
             60188,
             62928,
             62906,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             63154,
             62927,
             63115,
@@ -3449,7 +3449,7 @@ routes: list[Route] = [
             98106,
             818,
             21540,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3460,21 +3460,21 @@ routes: list[Route] = [
         route="燎原→环球中心",
         runtime="7:30-7:50",
         type="高峰线",
-        up_stations=[
+        up_stations=(
             3539,
             98106,
             59549,
             16116,
             16852,
             99324,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             98707,
             16115,
             59548,
             98783,
             98309,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3485,16 +3485,16 @@ routes: list[Route] = [
         route="金河客运站→新兴工业园",
         runtime="7:00-7:40",
         type="高峰线",
-        up_stations=[
+        up_stations=(
             21447,
             41749,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             62319,
             56484,
             818,
             21540,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3505,7 +3505,7 @@ routes: list[Route] = [
         route="花明公交站-高新新区公交站",
         runtime="7:30-9:00\\17:00-18:30",
         type="高峰线",
-        up_stations=[
+        up_stations=(
             58202,
             64355,
             60211,
@@ -3520,8 +3520,8 @@ routes: list[Route] = [
             27732,
             27680,
             62120,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             62109,
             27733,
             60188,
@@ -3536,7 +3536,7 @@ routes: list[Route] = [
             64356,
             58225,
             58208,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3547,7 +3547,7 @@ routes: list[Route] = [
         route="永丰公交站→锦城西路",
         runtime="7:20-8:00",
         type="高峰线",
-        up_stations=[
+        up_stations=(
             56812,
             62462,
             62779,
@@ -3556,8 +3556,8 @@ routes: list[Route] = [
             60001,
             60037,
             62906,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             63154,
             60040,
             60002,
@@ -3567,7 +3567,7 @@ routes: list[Route] = [
             62463,
             56747,
             56819,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3578,21 +3578,21 @@ routes: list[Route] = [
         route="金河客运站-金河市政府",
         runtime="7:30-8:30\\17:30-18:30",
         type="高峰线",
-        up_stations=[
+        up_stations=(
             21459,
             27120,
             16501,
             17823,
             17826,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             17848,
             17824,
             98707,
             5425,
             818,
             21542,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3603,7 +3603,7 @@ routes: list[Route] = [
         route="金河客运站-普光公交站",
         runtime="6:45-21:30",
         type="高峰线",
-        up_stations=[
+        up_stations=(
             103131,
             104207,
             99648,
@@ -3612,8 +3612,8 @@ routes: list[Route] = [
             98726,
             818,
             21541,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             21459,
             803,
             104283,
@@ -3621,7 +3621,7 @@ routes: list[Route] = [
             99630,
             104184,
             103125,
-        ],
+        ),
     ),
     Route(
         directional=False,
@@ -3632,7 +3632,7 @@ routes: list[Route] = [
         route="曾家坡公交站-市政府-曾家坡公交站",
         runtime="7:30-8:30",
         type="高峰线",
-        stations=[
+        stations=(
             24273,
             24737,
             24750,
@@ -3659,7 +3659,7 @@ routes: list[Route] = [
             24751,
             24738,
             24298,
-        ],
+        ),
     ),
     Route(
         directional=False,
@@ -3670,7 +3670,7 @@ routes: list[Route] = [
         route="和盛苑-和盛苑",
         runtime="7:00-8:00\\17:30-18:40",
         type="高峰线",
-        stations=[
+        stations=(
             56670,
             21964,
             28845,
@@ -3687,7 +3687,7 @@ routes: list[Route] = [
             20596,
             56371,
             56671,
-        ],
+        ),
     ),
     Route(
         directional=False,
@@ -3698,7 +3698,7 @@ routes: list[Route] = [
         route="和盛苑→锦城西路",
         runtime="7:20-7:40",
         type="高峰线",
-        stations=[
+        stations=(
             56670,
             20595,
             5135,
@@ -3708,7 +3708,7 @@ routes: list[Route] = [
             63739,
             63825,
             62906,
-        ],
+        ),
     ),
     Route(
         directional=False,
@@ -3719,12 +3719,12 @@ routes: list[Route] = [
         route="地铁东井巷-市政府-地铁东井巷",
         runtime="8:00-9:00\\17:30-18:30",
         type="高峰线",
-        stations=[
+        stations=(
             16758,
             17823,
             17848,
             16757,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3735,7 +3735,7 @@ routes: list[Route] = [
         route="北路湾公交站→锦城西路",
         runtime="7:30-8:00",
         type="高峰线",
-        up_stations=[
+        up_stations=(
             62259,
             26552,
             26576,
@@ -3743,8 +3743,8 @@ routes: list[Route] = [
             60188,
             62928,
             62906,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             63154,
             62927,
             60186,
@@ -3752,7 +3752,7 @@ routes: list[Route] = [
             26524,
             26602,
             34597,
-        ],
+        ),
     ),
     Route(
         directional=False,
@@ -3763,7 +3763,7 @@ routes: list[Route] = [
         route="东林小区→高新软件园公交站",
         runtime="7:30-7:40",
         type="高峰线",
-        stations=[
+        stations=(
             64737,
             14572,
             23058,
@@ -3774,7 +3774,7 @@ routes: list[Route] = [
             64009,
             64103,
             59507,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3785,7 +3785,7 @@ routes: list[Route] = [
         route="天河区公交站→高新新区公交站",
         runtime="7:00-8:20",
         type="高峰线",
-        up_stations=[
+        up_stations=(
             53074,
             46218,
             52795,
@@ -3799,8 +3799,8 @@ routes: list[Route] = [
             58251,
             58225,
             58207,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             58201,
             58252,
             60211,
@@ -3814,7 +3814,7 @@ routes: list[Route] = [
             46217,
             53255,
             54073,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3825,21 +3825,21 @@ routes: list[Route] = [
         route="永盛-金河南站公交站",
         runtime="7:00-21:35",
         type="高峰线",
-        up_stations=[
+        up_stations=(
             7527,
             56484,
             56545,
             750,
             59162,
             57482,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             57729,
             749,
             56546,
             56485,
             98677,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3850,7 +3850,7 @@ routes: list[Route] = [
         route="金河南站公交站-高新新区公交站",
         runtime="6:30-23:00",
         type="快速公交",
-        up_stations=[
+        up_stations=(
             57725,
             59160,
             59149,
@@ -3877,8 +3877,8 @@ routes: list[Route] = [
             58251,
             58225,
             58211,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             58205,
             58252,
             58289,
@@ -3905,7 +3905,7 @@ routes: list[Route] = [
             59159,
             59162,
             57478,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3916,7 +3916,7 @@ routes: list[Route] = [
         route="金河南站公交站-高新软件园公交站",
         runtime="6:20-22:30",
         type="快速公交",
-        up_stations=[
+        up_stations=(
             57725,
             59160,
             59149,
@@ -3939,8 +3939,8 @@ routes: list[Route] = [
             58400,
             63213,
             59508,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             59509,
             63214,
             58401,
@@ -3964,7 +3964,7 @@ routes: list[Route] = [
             59159,
             59162,
             57479,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -3975,7 +3975,7 @@ routes: list[Route] = [
         route="钟楼→中海国际",
         runtime="6:00-22:50",
         type="快速公交",
-        up_stations=[
+        up_stations=(
             99947,
             99630,
             99688,
@@ -3992,8 +3992,8 @@ routes: list[Route] = [
             102968,
             100676,
             100653,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             100655,
             100677,
             102969,
@@ -4010,7 +4010,7 @@ routes: list[Route] = [
             99687,
             99648,
             99917,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -4021,7 +4021,7 @@ routes: list[Route] = [
         route="植物园-花明公交站",
         runtime="6:00-22:30",
         type="快速公交",
-        up_stations=[
+        up_stations=(
             60932,
             60884,
             60854,
@@ -4037,8 +4037,8 @@ routes: list[Route] = [
             23351,
             27680,
             62119,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             62108,
             63146,
             63135,
@@ -4052,7 +4052,7 @@ routes: list[Route] = [
             60853,
             60883,
             60903,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -4063,7 +4063,7 @@ routes: list[Route] = [
         route="金河南站公交站-火车西站公交站",
         runtime="23:30-5:30",
         type="夜班线",
-        up_stations=[
+        up_stations=(
             14497,
             56077,
             26756,
@@ -4087,8 +4087,8 @@ routes: list[Route] = [
             59159,
             59162,
             57488,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             57728,
             59160,
             59149,
@@ -4112,7 +4112,7 @@ routes: list[Route] = [
             56078,
             6999,
             14495,
-        ],
+        ),
     ),
     Route(
         directional=False,
@@ -4123,7 +4123,7 @@ routes: list[Route] = [
         route="八里小区-八里小区",
         runtime="22:30-1:00",
         type="夜班线",
-        stations=[
+        stations=(
             26070,
             26145,
             26140,
@@ -4145,7 +4145,7 @@ routes: list[Route] = [
             26141,
             26144,
             26192,
-        ],
+        ),
     ),
     Route(
         directional=False,
@@ -4156,7 +4156,7 @@ routes: list[Route] = [
         route="东林小区-东林小区",
         runtime="22:30-1:00",
         type="夜班线",
-        stations=[
+        stations=(
             6354,
             6363,
             6377,
@@ -4175,7 +4175,7 @@ routes: list[Route] = [
             6378,
             6362,
             6420,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -4186,7 +4186,7 @@ routes: list[Route] = [
         route="金河客运站-火车西站公交站",
         runtime="23:30-5:30",
         type="夜班线",
-        up_stations=[
+        up_stations=(
             21444,
             803,
             98730,
@@ -4210,8 +4210,8 @@ routes: list[Route] = [
             6787,
             6999,
             6997,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             6996,
             6788,
             6819,
@@ -4234,7 +4234,7 @@ routes: list[Route] = [
             811,
             818,
             21541,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -4245,7 +4245,7 @@ routes: list[Route] = [
         route="金河客运站-火车西站公交站",
         runtime="23:10-5:50",
         type="夜班线",
-        up_stations=[
+        up_stations=(
             21447,
             803,
             98730,
@@ -4271,8 +4271,8 @@ routes: list[Route] = [
             27134,
             6999,
             7384,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             7386,
             27145,
             25578,
@@ -4298,7 +4298,7 @@ routes: list[Route] = [
             811,
             818,
             21542,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -4309,7 +4309,7 @@ routes: list[Route] = [
         route="动物园公交站-鱼凫西路南",
         runtime="23:00-5:45",
         type="夜班线",
-        up_stations=[
+        up_stations=(
             5027,
             5214,
             5167,
@@ -4328,8 +4328,8 @@ routes: list[Route] = [
             23521,
             23469,
             23840,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             23850,
             23851,
             23470,
@@ -4348,7 +4348,7 @@ routes: list[Route] = [
             5197,
             5168,
             5023,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -4359,7 +4359,7 @@ routes: list[Route] = [
         route="北路湾公交站-北客站",
         runtime="23:00-5:30",
         type="夜班线",
-        up_stations=[
+        up_stations=(
             34661,
             26552,
             26576,
@@ -4381,8 +4381,8 @@ routes: list[Route] = [
             20206,
             20190,
             20260,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             20259,
             20156,
             20189,
@@ -4406,7 +4406,7 @@ routes: list[Route] = [
             26585,
             26564,
             34595,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -4417,7 +4417,7 @@ routes: list[Route] = [
         route="科北路-北路湾公交站",
         runtime="23:00-5:30",
         type="夜班线",
-        up_stations=[
+        up_stations=(
             2827,
             2073,
             3809,
@@ -4435,8 +4435,8 @@ routes: list[Route] = [
             26585,
             26564,
             34596,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             34662,
             26552,
             26576,
@@ -4452,7 +4452,7 @@ routes: list[Route] = [
             3810,
             2074,
             2070,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -4463,7 +4463,7 @@ routes: list[Route] = [
         route="高朋路首末站-地铁四河站",
         runtime="23:00-5:30",
         type="夜班线",
-        up_stations=[
+        up_stations=(
             2708,
             2766,
             2777,
@@ -4489,8 +4489,8 @@ routes: list[Route] = [
             15075,
             15034,
             14881,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             14880,
             15035,
             15074,
@@ -4516,7 +4516,7 @@ routes: list[Route] = [
             2788,
             2769,
             2714,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -4527,7 +4527,7 @@ routes: list[Route] = [
         route="金河南站公交站-高新软件园公交站",
         runtime="23:30-5:20",
         type="夜班线",
-        up_stations=[
+        up_stations=(
             57728,
             59160,
             59149,
@@ -4558,8 +4558,8 @@ routes: list[Route] = [
             58251,
             58225,
             58209,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             58203,
             58252,
             64355,
@@ -4590,7 +4590,7 @@ routes: list[Route] = [
             59159,
             59162,
             57481,
-        ],
+        ),
     ),
     Route(
         directional=True,
@@ -4601,7 +4601,7 @@ routes: list[Route] = [
         route="天河区公交站-科北路",
         runtime="22:40-5:30",
         type="夜班线",
-        up_stations=[
+        up_stations=(
             53460,
             53400,
             53418,
@@ -4632,8 +4632,8 @@ routes: list[Route] = [
             16418,
             16432,
             2814,
-        ],
-        down_stations=[
+        ),
+        down_stations=(
             2058,
             16433,
             16419,
@@ -4664,6 +4664,6 @@ routes: list[Route] = [
             53417,
             53401,
             55729,
-        ],
+        ),
     ),
-]
+)
