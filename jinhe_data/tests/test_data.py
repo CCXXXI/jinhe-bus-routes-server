@@ -3,5 +3,9 @@ from data.lines import lines
 
 def test_lines():
     """Check lines data."""
-    for line in lines:
-        assert line.directional in (0, 1)
+
+    # `directional` is True of False
+    assert all(line.directional in (0, 1) for line in lines)
+
+    # `name` is unique
+    assert len(set(line.name for line in lines)) == len(lines)
