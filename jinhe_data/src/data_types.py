@@ -71,3 +71,15 @@ class Route:
                         {"id": v_id},
                     ).result_set[0]
                     g.add_edge(Edge(u, self.name + d, v))
+
+
+@dataclass
+class Station:
+    """站点"""
+
+    id: int
+    zh: str
+    en: str
+
+    def save(self, g: Graph):
+        g.add_node(Node(label=self.id, properties={"zh": self.zh, "en": self.en}))
