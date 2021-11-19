@@ -7,4 +7,4 @@ def test_lines():
     assert all(line.directional in (0, 1) for line in lines)
 
     # `name` is unique
-    assert len(set(line.name for line in lines)) == len(lines)
+    assert len({line.name for line in lines}) == len(lines)
