@@ -1,5 +1,4 @@
-from data.routes import routes
-from data.stations import stations
+from data import routes, stations
 
 
 def test_routes():
