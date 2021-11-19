@@ -82,4 +82,5 @@ class Station:
     en: str
 
     def save(self, g: Graph):
+        """Save self to the database."""
         g.add_node(Node(label=self.id, properties={"zh": self.zh, "en": self.en}))
