@@ -4,7 +4,7 @@ from redis import Redis
 
 
 @dataclass
-class Line:
+class Route:
     """路线"""
 
     directional: int

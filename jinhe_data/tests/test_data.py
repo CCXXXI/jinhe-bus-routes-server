@@ -1,10 +1,10 @@
-from data.lines import lines
+from data.routes import routes
 
 
-def test_lines():
-    """Check lines data."""
+def test_routes():
+    """Check routes data."""
     # `directional` is True of False
-    assert all(line.directional in (0, 1) for line in lines)
+    assert all(route.directional in (0, 1) for route in routes)
 
     # `name` is unique
-    assert len({line.name for line in lines}) == len(lines)
+    assert len({route.name for route in routes}) == len(routes)

@@ -1,7 +1,7 @@
-from src.data_types import Line
+from src.data_types import Route
 
-lines: list[Line] = [
-    Line(
+routes: list[Route] = [
+    Route(
         directional=True,
         interval=5,
         kilometer=15.0,
@@ -11,7 +11,7 @@ lines: list[Line] = [
         runtime="6:00-23:59",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=30,
         kilometer=51.0,
@@ -21,7 +21,7 @@ lines: list[Line] = [
         runtime="6:30-7:00",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=3,
         kilometer=10.0,
@@ -31,7 +31,7 @@ lines: list[Line] = [
         runtime="6:30-22:30",
         type="快速公交",
     ),
-    Line(
+    Route(
         directional=True,
         interval=3,
         kilometer=8.0,
@@ -41,7 +41,7 @@ lines: list[Line] = [
         runtime="6:30-22:10",
         type="快速公交",
     ),
-    Line(
+    Route(
         directional=True,
         interval=3,
         kilometer=8.0,
@@ -51,7 +51,7 @@ lines: list[Line] = [
         runtime="6:15-21:50",
         type="快速公交",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=11.5,
@@ -61,7 +61,7 @@ lines: list[Line] = [
         runtime="5:50-23:00",
         type="城乡线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=5,
         kilometer=11.0,
@@ -71,7 +71,7 @@ lines: list[Line] = [
         runtime="6:00-23:59",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=10.0,
@@ -81,7 +81,7 @@ lines: list[Line] = [
         runtime="6:30-21:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=10,
         kilometer=7.0,
@@ -91,7 +91,7 @@ lines: list[Line] = [
         runtime="6:40-22:00",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=14.0,
@@ -101,7 +101,7 @@ lines: list[Line] = [
         runtime="6:20-21:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=12.0,
@@ -111,7 +111,7 @@ lines: list[Line] = [
         runtime="6:20-22:00",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=10.0,
@@ -121,7 +121,7 @@ lines: list[Line] = [
         runtime="6:20-22:00",
         type="驳接线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=17.0,
@@ -131,7 +131,7 @@ lines: list[Line] = [
         runtime="6:00-22:20",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=10,
         kilometer=9.0,
@@ -141,7 +141,7 @@ lines: list[Line] = [
         runtime="6:40-21:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=12.0,
@@ -151,7 +151,7 @@ lines: list[Line] = [
         runtime="6:30-22:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=8.5,
@@ -161,7 +161,7 @@ lines: list[Line] = [
         runtime="6:50-21:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=16.0,
@@ -171,7 +171,7 @@ lines: list[Line] = [
         runtime="6:10-22:30",
         type="城乡线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=10.0,
@@ -181,7 +181,7 @@ lines: list[Line] = [
         runtime="6:40-23:00",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=11.0,
@@ -191,7 +191,7 @@ lines: list[Line] = [
         runtime="6:40-22:00",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=11.0,
@@ -201,7 +201,7 @@ lines: list[Line] = [
         runtime="6:40-22:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=10.0,
@@ -211,7 +211,7 @@ lines: list[Line] = [
         runtime="6:40-21:00",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=15.0,
@@ -221,7 +221,7 @@ lines: list[Line] = [
         runtime="6:30-22:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=13.0,
@@ -231,7 +231,7 @@ lines: list[Line] = [
         runtime="6:30-22:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=13.0,
@@ -241,7 +241,7 @@ lines: list[Line] = [
         runtime="6:00-22:00",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=17.0,
@@ -251,7 +251,7 @@ lines: list[Line] = [
         runtime="6:00-23:00",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=9.0,
@@ -261,7 +261,7 @@ lines: list[Line] = [
         runtime="6:30-21:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=5,
         kilometer=8.0,
@@ -271,7 +271,7 @@ lines: list[Line] = [
         runtime="6:00-22:00",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=9.0,
@@ -281,7 +281,7 @@ lines: list[Line] = [
         runtime="6:30-22:15",
         type="干线",
     ),
-    Line(
+    Route(
         directional=False,
         interval=5,
         kilometer=14.0,
@@ -291,7 +291,7 @@ lines: list[Line] = [
         runtime="6:00-22:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=False,
         interval=5,
         kilometer=14.0,
@@ -301,7 +301,7 @@ lines: list[Line] = [
         runtime="6:00-22:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=18.0,
@@ -311,7 +311,7 @@ lines: list[Line] = [
         runtime="6:10-22:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=10.0,
@@ -321,7 +321,7 @@ lines: list[Line] = [
         runtime="6:30-22:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=8.0,
@@ -331,7 +331,7 @@ lines: list[Line] = [
         runtime="6:30-21:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=10,
         kilometer=9.5,
@@ -341,7 +341,7 @@ lines: list[Line] = [
         runtime="6:30-22:00",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=10,
         kilometer=9.5,
@@ -351,7 +351,7 @@ lines: list[Line] = [
         runtime="6:30-22:00",
         type="驳接线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=8.0,
@@ -361,7 +361,7 @@ lines: list[Line] = [
         runtime="6:30-20:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=10,
         kilometer=5.0,
@@ -371,7 +371,7 @@ lines: list[Line] = [
         runtime="6:30-19:00",
         type="城乡线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=6.0,
@@ -381,7 +381,7 @@ lines: list[Line] = [
         runtime="7:00-20:00",
         type="城乡线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=7.0,
@@ -391,7 +391,7 @@ lines: list[Line] = [
         runtime="6:10-22:40",
         type="驳接线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=5.0,
@@ -401,7 +401,7 @@ lines: list[Line] = [
         runtime="7:00-21:00",
         type="支线",
     ),
-    Line(
+    Route(
         directional=False,
         interval=8,
         kilometer=6.5,
@@ -411,7 +411,7 @@ lines: list[Line] = [
         runtime="6:30-21:20",
         type="社区线",
     ),
-    Line(
+    Route(
         directional=False,
         interval=8,
         kilometer=7.0,
@@ -421,7 +421,7 @@ lines: list[Line] = [
         runtime="6:00-22:00",
         type="社区线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=6.0,
@@ -431,7 +431,7 @@ lines: list[Line] = [
         runtime="6:30-20:30",
         type="支线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=5.0,
@@ -441,7 +441,7 @@ lines: list[Line] = [
         runtime="7:00-20:00",
         type="支线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=5.0,
@@ -451,7 +451,7 @@ lines: list[Line] = [
         runtime="6:30-20:00",
         type="支线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=3.0,
@@ -461,7 +461,7 @@ lines: list[Line] = [
         runtime="7:00-19:30",
         type="城乡线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=6.0,
@@ -471,7 +471,7 @@ lines: list[Line] = [
         runtime="7:00-21:00",
         type="驳接线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=5.7,
@@ -481,7 +481,7 @@ lines: list[Line] = [
         runtime="7:00-21:00",
         type="支线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=4.7,
@@ -491,7 +491,7 @@ lines: list[Line] = [
         runtime="7:00-21:00",
         type="支线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=8.0,
@@ -501,7 +501,7 @@ lines: list[Line] = [
         runtime="6:30-20:30",
         type="支线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=15.0,
@@ -511,7 +511,7 @@ lines: list[Line] = [
         runtime="6:00-22:20",
         type="城乡线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=17.0,
@@ -521,7 +521,7 @@ lines: list[Line] = [
         runtime="6:00-22:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=15.0,
@@ -531,7 +531,7 @@ lines: list[Line] = [
         runtime="6:00-21:00",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=12,
         kilometer=10.0,
@@ -541,7 +541,7 @@ lines: list[Line] = [
         runtime="6:00-18:00",
         type="城乡线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=5.0,
@@ -551,7 +551,7 @@ lines: list[Line] = [
         runtime="6:30-21:00",
         type="支线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=15.0,
@@ -561,7 +561,7 @@ lines: list[Line] = [
         runtime="6:30-21:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=8.5,
@@ -571,7 +571,7 @@ lines: list[Line] = [
         runtime="6:30-22:20",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=8,
         kilometer=17.0,
@@ -581,7 +581,7 @@ lines: list[Line] = [
         runtime="6:40-22:00",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=14.5,
@@ -591,7 +591,7 @@ lines: list[Line] = [
         runtime="7:00-19:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=22.5,
@@ -601,7 +601,7 @@ lines: list[Line] = [
         runtime="6:20-21:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=6,
         kilometer=22.5,
@@ -611,7 +611,7 @@ lines: list[Line] = [
         runtime="6:30-21:30",
         type="干线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=20,
         kilometer=46.5,
@@ -621,7 +621,7 @@ lines: list[Line] = [
         runtime="5:50-21:00",
         type="驳接线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=20,
         kilometer=47.0,
@@ -631,7 +631,7 @@ lines: list[Line] = [
         runtime="5:30-21:40",
         type="城乡线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=5,
         kilometer=18.5,
@@ -641,7 +641,7 @@ lines: list[Line] = [
         runtime="7:00-8:00",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=20,
         kilometer=7.0,
@@ -651,7 +651,7 @@ lines: list[Line] = [
         runtime="7:30-7:50",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=20,
         kilometer=5.0,
@@ -661,7 +661,7 @@ lines: list[Line] = [
         runtime="7:00-7:40",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=5,
         kilometer=15.0,
@@ -671,7 +671,7 @@ lines: list[Line] = [
         runtime="7:30-9:00\\17:00-18:30",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=5,
         kilometer=11.0,
@@ -681,7 +681,7 @@ lines: list[Line] = [
         runtime="7:20-8:00",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=5,
         kilometer=6.0,
@@ -691,7 +691,7 @@ lines: list[Line] = [
         runtime="7:30-8:30\\17:30-18:30",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=5,
         kilometer=9.0,
@@ -701,7 +701,7 @@ lines: list[Line] = [
         runtime="6:45-21:30",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=False,
         interval=5,
         kilometer=14.0,
@@ -711,7 +711,7 @@ lines: list[Line] = [
         runtime="7:30-8:30",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=False,
         interval=5,
         kilometer=7.0,
@@ -721,7 +721,7 @@ lines: list[Line] = [
         runtime="7:00-8:00\\17:30-18:40",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=False,
         interval=10,
         kilometer=17.0,
@@ -731,7 +731,7 @@ lines: list[Line] = [
         runtime="7:20-7:40",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=False,
         interval=5,
         kilometer=10.5,
@@ -741,7 +741,7 @@ lines: list[Line] = [
         runtime="8:00-9:00\\17:30-18:30",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=15,
         kilometer=14.5,
@@ -751,7 +751,7 @@ lines: list[Line] = [
         runtime="7:30-8:00",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=False,
         interval=5,
         kilometer=17.0,
@@ -761,7 +761,7 @@ lines: list[Line] = [
         runtime="7:30-7:40",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=40,
         kilometer=40.0,
@@ -771,7 +771,7 @@ lines: list[Line] = [
         runtime="7:00-8:20",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=10,
         kilometer=22.0,
@@ -781,7 +781,7 @@ lines: list[Line] = [
         runtime="7:00-21:35",
         type="高峰线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=3,
         kilometer=16.0,
@@ -791,7 +791,7 @@ lines: list[Line] = [
         runtime="6:30-23:00",
         type="快速公交",
     ),
-    Line(
+    Route(
         directional=True,
         interval=3,
         kilometer=15.0,
@@ -801,7 +801,7 @@ lines: list[Line] = [
         runtime="6:20-22:30",
         type="快速公交",
     ),
-    Line(
+    Route(
         directional=True,
         interval=3,
         kilometer=7.0,
@@ -811,7 +811,7 @@ lines: list[Line] = [
         runtime="6:00-22:50",
         type="快速公交",
     ),
-    Line(
+    Route(
         directional=True,
         interval=3,
         kilometer=9.0,
@@ -821,7 +821,7 @@ lines: list[Line] = [
         runtime="6:00-22:30",
         type="快速公交",
     ),
-    Line(
+    Route(
         directional=True,
         interval=10,
         kilometer=11.0,
@@ -831,7 +831,7 @@ lines: list[Line] = [
         runtime="23:30-5:30",
         type="夜班线",
     ),
-    Line(
+    Route(
         directional=False,
         interval=10,
         kilometer=8.0,
@@ -841,7 +841,7 @@ lines: list[Line] = [
         runtime="22:30-1:00",
         type="夜班线",
     ),
-    Line(
+    Route(
         directional=False,
         interval=10,
         kilometer=8.0,
@@ -851,7 +851,7 @@ lines: list[Line] = [
         runtime="22:30-1:00",
         type="夜班线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=10,
         kilometer=12.5,
@@ -861,7 +861,7 @@ lines: list[Line] = [
         runtime="23:30-5:30",
         type="夜班线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=10,
         kilometer=12.5,
@@ -871,7 +871,7 @@ lines: list[Line] = [
         runtime="23:10-5:50",
         type="夜班线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=10,
         kilometer=9.0,
@@ -881,7 +881,7 @@ lines: list[Line] = [
         runtime="23:00-5:45",
         type="夜班线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=10,
         kilometer=11.5,
@@ -891,7 +891,7 @@ lines: list[Line] = [
         runtime="23:00-5:30",
         type="夜班线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=10,
         kilometer=9.0,
@@ -901,7 +901,7 @@ lines: list[Line] = [
         runtime="23:00-5:30",
         type="夜班线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=10,
         kilometer=12.0,
@@ -911,7 +911,7 @@ lines: list[Line] = [
         runtime="23:00-5:30",
         type="夜班线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=10,
         kilometer=17.0,
@@ -921,7 +921,7 @@ lines: list[Line] = [
         runtime="23:30-5:20",
         type="夜班线",
     ),
-    Line(
+    Route(
         directional=True,
         interval=10,
         kilometer=14.0,
