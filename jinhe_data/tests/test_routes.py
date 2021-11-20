@@ -73,20 +73,6 @@ class TestRoute:
                     assert 0 <= m < 60
 
     @staticmethod
-    def test_services_ascending(route: Route):
-        """The service time is ascending."""
-        for services in filter(
-            None,
-            (
-                route.services,
-                route.up_services,
-                route.down_services,
-            ),
-        ):
-            for service in services:
-                assert service == tuple(sorted(service))
-
-    @staticmethod
     @mark.skip(reason="not implemented yet")
     def test_up_down(route: Route):
         """The route is up and down or none."""
