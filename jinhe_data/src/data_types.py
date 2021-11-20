@@ -6,6 +6,19 @@ from redisgraph import Edge, Graph, Node
 
 
 @dataclass
+class Station:
+    """站点"""
+
+    id: int
+    zh: str
+    en: str
+
+    def save(self, g: Graph):
+        """Save self to the database."""
+        g.add_node(Node(label=self.id, properties={"zh": self.zh, "en": self.en}))
+
+
+@dataclass
 class Route:
     """路线"""
 
@@ -84,16 +97,3 @@ class Route:
                         {"id": v_id},
                     ).result_set[0]
                     g.add_edge(Edge(u, self.name + d, v))
-
-
-@dataclass
-class Station:
-    """站点"""
-
-    id: int
-    zh: str
-    en: str
-
-    def save(self, g: Graph):
-        """Save self to the database."""
-        g.add_node(Node(label=self.id, properties={"zh": self.zh, "en": self.en}))
