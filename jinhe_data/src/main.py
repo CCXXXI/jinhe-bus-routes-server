@@ -18,5 +18,5 @@ def save():
     r.save()
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     save()
