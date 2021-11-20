@@ -44,7 +44,7 @@ class TestRoute:
 
     @staticmethod
     def test_stations(route: Route):
-        """The station id is valid."""
+        """The station id is valid and unique."""
         for stations in filter(
             None,
             (
@@ -54,6 +54,7 @@ class TestRoute:
             ),
         ):
             assert set(stations) <= station_ids
+            assert len(set(stations)) == len(stations)
 
     @staticmethod
     def test_service_time(route: Route):
