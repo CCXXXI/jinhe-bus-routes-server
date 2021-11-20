@@ -22,6 +22,7 @@ def test_stations():
     """No isolated station."""
 
     def flatten(stations_arr: Iterable[tuple[int, ...]]) -> set[int]:
+        """Return a set of all stations."""
         return set(chain.from_iterable(filter(None, stations_arr)))
 
     assert (
