@@ -15,7 +15,7 @@ class Station:
 
     def save(self, g: Graph):
         """Save self to the database."""
-        g.add_node(Node(label=self.id, properties={"zh": self.zh, "en": self.en}))
+        g.add_node(Node(properties={"id": self.id, "zh": self.zh, "en": self.en}))
 
 
 @dataclass
@@ -89,11 +89,11 @@ class Route:
             if s:
                 for u_id, v_id in pairwise(s):
                     u: Node = g.query(
-                        "MATCH (p:$id) RETURN p",
+                        "MATCH (p {id: $id}) RETURN p",
                         {"id": u_id},
                     ).result_set[0]
                     v: Node = g.query(
-                        "MATCH (p:$id) RETURN p",
+                        "MATCH (p {id: $id}) RETURN p",
                         {"id": v_id},
                     ).result_set[0]
                     g.add_edge(Edge(u, self.name + d, v))
