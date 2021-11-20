@@ -41,7 +41,7 @@ routes: tuple[Route, ...] = (
             23351,
             27676,
         ),
-        first_up_service=(
+        up_first=(
             360,
             362,
             364,
@@ -321,7 +321,7 @@ routes: tuple[Route, ...] = (
             818,
             821,
         ),
-        first_down_service=(
+        down_first=(
             360,
             361,
             362,
@@ -581,10 +581,10 @@ routes: tuple[Route, ...] = (
         runtime="6:30-7:00",
         type="高峰线",
         up_stations=(114518, 98310),
-        first_up_service=(390, 440),
+        up_first=(390, 440),
         up_steps=(0, 30),
         down_stations=(114519, 107000, 107036),
-        first_down_service=(390, 438, 440),
+        down_first=(390, 438, 440),
         down_steps=(0, 30),
     ),
     Route(
@@ -614,7 +614,7 @@ routes: tuple[Route, ...] = (
             6999,
             6997,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             393,
@@ -972,7 +972,7 @@ routes: tuple[Route, ...] = (
             7223,
             98777,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -1337,7 +1337,7 @@ routes: tuple[Route, ...] = (
             59162,
             57487,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             394,
@@ -1683,7 +1683,7 @@ routes: tuple[Route, ...] = (
             6999,
             7384,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -2038,7 +2038,7 @@ routes: tuple[Route, ...] = (
             3654,
             98308,
         ),
-        first_up_service=(375, 377, 379, 380, 382, 383, 384, 385, 386, 388, 390, 392),
+        up_first=(375, 377, 379, 380, 382, 383, 384, 385, 386, 388, 390, 392),
         up_steps=(
             0,
             3,
@@ -2367,7 +2367,7 @@ routes: tuple[Route, ...] = (
             100126,
             99916,
         ),
-        first_down_service=(375, 377, 379, 381, 382, 383, 384, 385, 387, 389, 391, 393),
+        down_first=(375, 377, 379, 381, 382, 383, 384, 385, 387, 389, 391, 393),
         down_steps=(
             0,
             3,
@@ -2722,7 +2722,7 @@ routes: tuple[Route, ...] = (
             6818,
             14495,
         ),
-        first_up_service=(
+        up_first=(
             350,
             356,
             358,
@@ -2956,7 +2956,7 @@ routes: tuple[Route, ...] = (
             7528,
             7550,
         ),
-        first_down_service=(
+        down_first=(
             360,
             362,
             364,
@@ -3192,7 +3192,7 @@ routes: tuple[Route, ...] = (
             59162,
             57489,
         ),
-        first_up_service=(
+        up_first=(
             360,
             362,
             364,
@@ -3456,7 +3456,7 @@ routes: tuple[Route, ...] = (
             26564,
             34591,
         ),
-        first_down_service=(
+        down_first=(
             360,
             363,
             365,
@@ -3730,7 +3730,7 @@ routes: tuple[Route, ...] = (
             23469,
             23840,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             394,
@@ -3892,7 +3892,7 @@ routes: tuple[Route, ...] = (
             23713,
             23836,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -4058,7 +4058,7 @@ routes: tuple[Route, ...] = (
             99736,
             99794,
         ),
-        first_up_service=(
+        up_first=(
             400,
             402,
             404,
@@ -4189,7 +4189,7 @@ routes: tuple[Route, ...] = (
             818,
             822,
         ),
-        first_down_service=(
+        down_first=(
             400,
             401,
             402,
@@ -4340,7 +4340,7 @@ routes: tuple[Route, ...] = (
             2074,
             2070,
         ),
-        first_up_service=(
+        up_first=(
             380,
             381,
             383,
@@ -4549,7 +4549,7 @@ routes: tuple[Route, ...] = (
             56747,
             56821,
         ),
-        first_down_service=(
+        down_first=(
             380,
             382,
             384,
@@ -4767,7 +4767,7 @@ routes: tuple[Route, ...] = (
             20878,
             20765,
         ),
-        first_up_service=(
+        up_first=(
             380,
             381,
             383,
@@ -4937,7 +4937,7 @@ routes: tuple[Route, ...] = (
             20190,
             20260,
         ),
-        first_down_service=(
+        down_first=(
             380,
             382,
             384,
@@ -5117,7 +5117,7 @@ routes: tuple[Route, ...] = (
             14621,
             702,
         ),
-        first_up_service=(
+        up_first=(
             380,
             381,
             383,
@@ -5287,7 +5287,7 @@ routes: tuple[Route, ...] = (
             20190,
             20492,
         ),
-        first_down_service=(
+        down_first=(
             380,
             382,
             384,
@@ -5477,7 +5477,7 @@ routes: tuple[Route, ...] = (
             58225,
             58210,
         ),
-        first_up_service=(
+        up_first=(
             370,
             372,
             374,
@@ -5713,7 +5713,7 @@ routes: tuple[Route, ...] = (
             59162,
             57480,
         ),
-        first_down_service=(
+        down_first=(
             360,
             362,
             364,
@@ -5947,7 +5947,7 @@ routes: tuple[Route, ...] = (
             61915,
             60914,
         ),
-        first_up_service=(
+        up_first=(
             400,
             402,
             404,
@@ -6083,7 +6083,7 @@ routes: tuple[Route, ...] = (
             2769,
             2714,
         ),
-        first_down_service=(
+        down_first=(
             400,
             402,
             404,
@@ -6234,7 +6234,7 @@ routes: tuple[Route, ...] = (
             26564,
             34592,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             394,
@@ -6412,7 +6412,7 @@ routes: tuple[Route, ...] = (
             16852,
             17779,
         ),
-        first_down_service=(
+        down_first=(
             390,
             391,
             393,
@@ -6595,7 +6595,7 @@ routes: tuple[Route, ...] = (
             41619,
             41749,
         ),
-        first_up_service=(
+        up_first=(
             410,
             412,
             414,
@@ -6752,7 +6752,7 @@ routes: tuple[Route, ...] = (
             4989,
             17995,
         ),
-        first_down_service=(
+        down_first=(
             410,
             412,
             414,
@@ -6932,7 +6932,7 @@ routes: tuple[Route, ...] = (
             7528,
             56110,
         ),
-        first_up_service=(
+        up_first=(
             380,
             381,
             383,
@@ -7125,7 +7125,7 @@ routes: tuple[Route, ...] = (
             26564,
             34593,
         ),
-        first_down_service=(
+        down_first=(
             370,
             372,
             374,
@@ -7316,7 +7316,7 @@ routes: tuple[Route, ...] = (
             16432,
             2814,
         ),
-        first_up_service=(
+        up_first=(
             400,
             402,
             404,
@@ -7527,7 +7527,7 @@ routes: tuple[Route, ...] = (
             17295,
             17737,
         ),
-        first_down_service=(
+        down_first=(
             400,
             401,
             404,
@@ -7752,7 +7752,7 @@ routes: tuple[Route, ...] = (
             56747,
             56822,
         ),
-        first_up_service=(
+        up_first=(
             400,
             402,
             404,
@@ -7960,7 +7960,7 @@ routes: tuple[Route, ...] = (
             45217,
             45222,
         ),
-        first_down_service=(
+        down_first=(
             400,
             402,
             404,
@@ -8179,7 +8179,7 @@ routes: tuple[Route, ...] = (
             60883,
             60900,
         ),
-        first_up_service=(
+        up_first=(
             400,
             402,
             404,
@@ -8354,7 +8354,7 @@ routes: tuple[Route, ...] = (
             27016,
             20768,
         ),
-        first_down_service=(
+        down_first=(
             400,
             402,
             404,
@@ -8535,7 +8535,7 @@ routes: tuple[Route, ...] = (
             5168,
             5456,
         ),
-        first_up_service=(
+        up_first=(
             400,
             402,
             404,
@@ -8692,7 +8692,7 @@ routes: tuple[Route, ...] = (
             24738,
             24296,
         ),
-        first_down_service=(
+        down_first=(
             400,
             401,
             403,
@@ -8866,7 +8866,7 @@ routes: tuple[Route, ...] = (
             818,
             21379,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             394,
@@ -9088,7 +9088,7 @@ routes: tuple[Route, ...] = (
             97506,
             97439,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -9317,7 +9317,7 @@ routes: tuple[Route, ...] = (
             25928,
             25908,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             394,
@@ -9493,7 +9493,7 @@ routes: tuple[Route, ...] = (
             24738,
             24295,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -9677,7 +9677,7 @@ routes: tuple[Route, ...] = (
             64636,
             64625,
         ),
-        first_up_service=(
+        up_first=(
             360,
             361,
             363,
@@ -9852,7 +9852,7 @@ routes: tuple[Route, ...] = (
             27680,
             62116,
         ),
-        first_down_service=(
+        down_first=(
             360,
             362,
             364,
@@ -10049,7 +10049,7 @@ routes: tuple[Route, ...] = (
             27680,
             62117,
         ),
-        first_up_service=(
+        up_first=(
             360,
             362,
             364,
@@ -10294,7 +10294,7 @@ routes: tuple[Route, ...] = (
             23713,
             62794,
         ),
-        first_down_service=(
+        down_first=(
             360,
             361,
             363,
@@ -10531,7 +10531,7 @@ routes: tuple[Route, ...] = (
             17823,
             17826,
         ),
-        first_up_service=(
+        up_first=(
             390,
             391,
             393,
@@ -10684,7 +10684,7 @@ routes: tuple[Route, ...] = (
             99488,
             99913,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             395,
@@ -10851,7 +10851,7 @@ routes: tuple[Route, ...] = (
             6999,
             27295,
         ),
-        first_up_service=(
+        up_first=(
             360,
             361,
             363,
@@ -11091,7 +11091,7 @@ routes: tuple[Route, ...] = (
             26144,
             26192,
         ),
-        first_down_service=(
+        down_first=(
             360,
             362,
             364,
@@ -11336,7 +11336,7 @@ routes: tuple[Route, ...] = (
             60066,
             60081,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             394,
@@ -11533,7 +11533,7 @@ routes: tuple[Route, ...] = (
             22008,
             98305,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -11754,7 +11754,7 @@ routes: tuple[Route, ...] = (
             17823,
             17841,
         ),
-        first_service=(
+        first=(
             360,
             362,
             365,
@@ -12029,7 +12029,7 @@ routes: tuple[Route, ...] = (
             17823,
             17840,
         ),
-        first_service=(
+        first=(
             360,
             362,
             365,
@@ -12305,7 +12305,7 @@ routes: tuple[Route, ...] = (
             59162,
             57488,
         ),
-        first_up_service=(
+        up_first=(
             370,
             371,
             373,
@@ -12496,7 +12496,7 @@ routes: tuple[Route, ...] = (
             56747,
             56820,
         ),
-        first_down_service=(
+        down_first=(
             370,
             372,
             374,
@@ -12688,7 +12688,7 @@ routes: tuple[Route, ...] = (
             27680,
             62118,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             394,
@@ -12858,7 +12858,7 @@ routes: tuple[Route, ...] = (
             97417,
             97440,
         ),
-        first_down_service=(
+        down_first=(
             390,
             391,
             393,
@@ -13035,7 +13035,7 @@ routes: tuple[Route, ...] = (
             6362,
             6420,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             394,
@@ -13192,7 +13192,7 @@ routes: tuple[Route, ...] = (
             98072,
             98050,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -13361,7 +13361,7 @@ routes: tuple[Route, ...] = (
             4998,
             4991,
         ),
-        first_up_service=(
+        up_first=(
             390,
             391,
             393,
@@ -13503,7 +13503,7 @@ routes: tuple[Route, ...] = (
             5168,
             5023,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -13655,7 +13655,7 @@ routes: tuple[Route, ...] = (
             15034,
             14881,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             394,
@@ -13797,7 +13797,7 @@ routes: tuple[Route, ...] = (
             14572,
             98306,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -13948,7 +13948,7 @@ routes: tuple[Route, ...] = (
             45057,
             45223,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             394,
@@ -14100,7 +14100,7 @@ routes: tuple[Route, ...] = (
             23851,
             44917,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -14255,7 +14255,7 @@ routes: tuple[Route, ...] = (
             55870,
             55846,
         ),
-        first_up_service=(
+        up_first=(
             390,
             391,
             392,
@@ -14362,7 +14362,7 @@ routes: tuple[Route, ...] = (
             55904,
             55919,
         ),
-        first_down_service=(390, 391, 392, 393, 394, 395, 396, 398, 399, 400, 401, 402),
+        down_first=(390, 391, 392, 393, 394, 395, 396, 398, 399, 400, 401, 402),
         down_steps=(
             0,
             10,
@@ -14467,7 +14467,7 @@ routes: tuple[Route, ...] = (
             45960,
             37959,
         ),
-        first_up_service=(
+        up_first=(
             420,
             421,
             422,
@@ -14601,7 +14601,7 @@ routes: tuple[Route, ...] = (
             45953,
             45931,
         ),
-        first_down_service=(
+        down_first=(
             420,
             421,
             422,
@@ -14749,7 +14749,7 @@ routes: tuple[Route, ...] = (
             45953,
             45935,
         ),
-        first_up_service=(
+        up_first=(
             370,
             371,
             372,
@@ -14912,7 +14912,7 @@ routes: tuple[Route, ...] = (
             45868,
             45825,
         ),
-        first_down_service=(
+        down_first=(
             370,
             371,
             372,
@@ -15078,7 +15078,7 @@ routes: tuple[Route, ...] = (
             18093,
             17936,
         ),
-        first_up_service=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
+        up_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
         up_steps=(
             0,
             8,
@@ -15202,7 +15202,7 @@ routes: tuple[Route, ...] = (
             4989,
             6962,
         ),
-        first_down_service=(
+        down_first=(
             420,
             422,
             424,
@@ -15351,7 +15351,7 @@ routes: tuple[Route, ...] = (
             21982,
             2218,
         ),
-        first_service=(
+        first=(
             360,
             362,
             364,
@@ -15512,7 +15512,7 @@ routes: tuple[Route, ...] = (
             3660,
             2219,
         ),
-        first_service=(
+        first=(
             390,
             392,
             394,
@@ -15672,7 +15672,7 @@ routes: tuple[Route, ...] = (
             56627,
             56618,
         ),
-        first_up_service=(390, 392, 394, 396, 398, 400, 402, 404, 406, 408, 410, 412),
+        up_first=(390, 392, 394, 396, 398, 400, 402, 404, 406, 408, 410, 412),
         up_steps=(
             0,
             8,
@@ -15796,7 +15796,7 @@ routes: tuple[Route, ...] = (
             45217,
             45224,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -15942,7 +15942,7 @@ routes: tuple[Route, ...] = (
             818,
             21535,
         ),
-        first_up_service=(420, 421, 423, 425, 427, 429, 431, 433, 435, 436, 437),
+        up_first=(420, 421, 423, 425, 427, 429, 431, 433, 435, 436, 437),
         up_steps=(
             0,
             8,
@@ -16044,7 +16044,7 @@ routes: tuple[Route, ...] = (
             776,
         ),
         down_stations=(21426, 803, 98730, 17693, 56570, 56445, 98755, 5168, 7229),
-        first_down_service=(420, 422, 424, 426, 428, 430, 432, 434, 436),
+        down_first=(420, 422, 424, 426, 428, 430, 432, 434, 436),
         down_steps=(
             0,
             8,
@@ -16170,7 +16170,7 @@ routes: tuple[Route, ...] = (
             55768,
             55761,
         ),
-        first_up_service=(
+        up_first=(
             390,
             391,
             392,
@@ -16305,7 +16305,7 @@ routes: tuple[Route, ...] = (
             55141,
             55092,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -16436,7 +16436,7 @@ routes: tuple[Route, ...] = (
         runtime="7:00-19:30",
         type="城乡线",
         up_stations=(24273, 55438, 55448, 55353, 55341, 55492, 55487, 55471),
-        first_up_service=(420, 422, 424, 426, 428, 430, 432, 434),
+        up_first=(420, 422, 424, 426, 428, 430, 432, 434),
         up_steps=(
             0,
             6,
@@ -16566,7 +16566,7 @@ routes: tuple[Route, ...] = (
             750,
         ),
         down_stations=(55472, 55486, 55491, 55342, 55352, 55450, 55437, 24298),
-        first_down_service=(420, 422, 424, 426, 428, 430, 432, 434),
+        down_first=(420, 422, 424, 426, 428, 430, 432, 434),
         down_steps=(
             0,
             6,
@@ -16719,7 +16719,7 @@ routes: tuple[Route, ...] = (
             15547,
             16757,
         ),
-        first_up_service=(420, 423, 425, 427, 429, 431, 433, 435, 437, 439, 441, 443),
+        up_first=(420, 423, 425, 427, 429, 431, 433, 435, 437, 439, 441, 443),
         up_steps=(
             0,
             6,
@@ -16878,7 +16878,7 @@ routes: tuple[Route, ...] = (
             16852,
             16851,
         ),
-        first_down_service=(
+        down_first=(
             420,
             422,
             424,
@@ -17059,7 +17059,7 @@ routes: tuple[Route, ...] = (
             46588,
             46569,
         ),
-        first_up_service=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
+        up_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
         up_steps=(
             0,
             6,
@@ -17216,7 +17216,7 @@ routes: tuple[Route, ...] = (
             27224,
             98307,
         ),
-        first_down_service=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
+        down_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
         down_steps=(
             0,
             6,
@@ -17383,7 +17383,7 @@ routes: tuple[Route, ...] = (
             46588,
             46569,
         ),
-        first_up_service=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
+        up_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
         up_steps=(
             0,
             6,
@@ -17540,7 +17540,7 @@ routes: tuple[Route, ...] = (
             3654,
             98307,
         ),
-        first_down_service=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
+        down_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
         down_steps=(
             0,
             6,
@@ -17714,7 +17714,7 @@ routes: tuple[Route, ...] = (
             24738,
             24297,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             394,
@@ -17862,7 +17862,7 @@ routes: tuple[Route, ...] = (
             25258,
             25276,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -18036,7 +18036,7 @@ routes: tuple[Route, ...] = (
             45477,
             45332,
         ),
-        first_up_service=(
+        up_first=(
             360,
             362,
             364,
@@ -18275,7 +18275,7 @@ routes: tuple[Route, ...] = (
             5425,
             5414,
         ),
-        first_down_service=(
+        down_first=(
             360,
             362,
             364,
@@ -18523,7 +18523,7 @@ routes: tuple[Route, ...] = (
             60053,
             62905,
         ),
-        first_up_service=(
+        up_first=(
             360,
             362,
             364,
@@ -18720,7 +18720,7 @@ routes: tuple[Route, ...] = (
             4989,
             63045,
         ),
-        first_down_service=(
+        down_first=(
             360,
             362,
             364,
@@ -18926,7 +18926,7 @@ routes: tuple[Route, ...] = (
             53255,
             53259,
         ),
-        first_up_service=(
+        up_first=(
             360,
             362,
             364,
@@ -19146,7 +19146,7 @@ routes: tuple[Route, ...] = (
             818,
             21537,
         ),
-        first_down_service=(
+        down_first=(
             360,
             362,
             364,
@@ -19354,7 +19354,7 @@ routes: tuple[Route, ...] = (
             98675,
             37959,
         ),
-        first_up_service=(360, 366, 369, 373, 377, 381, 385, 390, 395, 400),
+        up_first=(360, 366, 369, 373, 377, 381, 385, 390, 395, 400),
         up_steps=(
             0,
             12,
@@ -19430,7 +19430,7 @@ routes: tuple[Route, ...] = (
             37934,
             98677,
         ),
-        first_down_service=(360, 365, 370, 375, 379, 383, 387, 391, 394, 400),
+        down_first=(360, 365, 370, 375, 379, 383, 387, 391, 394, 400),
         down_steps=(
             0,
             12,
@@ -19505,7 +19505,7 @@ routes: tuple[Route, ...] = (
         runtime="6:30-21:00",
         type="支线",
         up_stations=(2708, 2766, 2777, 2741, 2806, 2734, 2074, 2059, 3836),
-        first_up_service=(390, 392, 394, 396, 398, 400, 402, 404, 405),
+        up_first=(390, 392, 394, 396, 398, 400, 402, 404, 405),
         up_steps=(
             0,
             6,
@@ -19655,7 +19655,7 @@ routes: tuple[Route, ...] = (
             870,
         ),
         down_stations=(3839, 2073, 2725, 2800, 2758, 2788, 2769, 2714),
-        first_down_service=(390, 392, 394, 396, 398, 400, 402, 403),
+        down_first=(390, 392, 394, 396, 398, 400, 402, 403),
         down_steps=(
             0,
             6,
@@ -19849,7 +19849,7 @@ routes: tuple[Route, ...] = (
             55141,
             55091,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             394,
@@ -20034,7 +20034,7 @@ routes: tuple[Route, ...] = (
             818,
             21538,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -20215,7 +20215,7 @@ routes: tuple[Route, ...] = (
             53675,
             53258,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             394,
@@ -20418,7 +20418,7 @@ routes: tuple[Route, ...] = (
             53734,
             53726,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -20649,7 +20649,7 @@ routes: tuple[Route, ...] = (
             54586,
             54570,
         ),
-        first_up_service=(
+        up_first=(
             400,
             402,
             404,
@@ -20847,7 +20847,7 @@ routes: tuple[Route, ...] = (
             2059,
             54110,
         ),
-        first_down_service=(
+        down_first=(
             400,
             402,
             404,
@@ -21029,7 +21029,7 @@ routes: tuple[Route, ...] = (
             53255,
             54074,
         ),
-        first_up_service=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 439),
+        up_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 439),
         up_steps=(
             0,
             6,
@@ -21171,7 +21171,7 @@ routes: tuple[Route, ...] = (
             2059,
             54110,
         ),
-        first_down_service=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 439),
+        down_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 439),
         down_steps=(
             0,
             6,
@@ -21356,7 +21356,7 @@ routes: tuple[Route, ...] = (
             53255,
             53254,
         ),
-        first_up_service=(
+        up_first=(
             380,
             382,
             384,
@@ -21602,7 +21602,7 @@ routes: tuple[Route, ...] = (
             6999,
             61929,
         ),
-        first_down_service=(
+        down_first=(
             380,
             382,
             384,
@@ -21861,7 +21861,7 @@ routes: tuple[Route, ...] = (
             53255,
             53260,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             394,
@@ -22111,7 +22111,7 @@ routes: tuple[Route, ...] = (
             97417,
             97441,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -22323,7 +22323,7 @@ routes: tuple[Route, ...] = (
         runtime="5:50-21:00",
         type="驳接线",
         up_stations=(106932, 107112, 114349, 107083, 107078, 107108, 99594, 114470),
-        first_up_service=(330, 350, 352, 362, 364, 366, 386, 388),
+        up_first=(330, 350, 352, 362, 364, 366, 386, 388),
         up_steps=(
             0,
             20,
@@ -22385,7 +22385,7 @@ routes: tuple[Route, ...] = (
             107000,
             107034,
         ),
-        first_down_service=(350, 352, 354, 374, 376, 378, 388, 390, 409, 410),
+        down_first=(350, 352, 354, 374, 376, 378, 388, 390, 409, 410),
         down_steps=(
             0,
             20,
@@ -22445,7 +22445,7 @@ routes: tuple[Route, ...] = (
         runtime="5:30-21:40",
         type="城乡线",
         up_stations=(106932, 107112, 114349, 98049, 98071, 98726, 818, 21539),
-        first_up_service=(330, 356, 358, 380, 385, 387, 389, 390),
+        up_first=(330, 356, 358, 380, 385, 387, 389, 390),
         up_steps=(
             0,
             20,
@@ -22498,7 +22498,7 @@ routes: tuple[Route, ...] = (
             960,
         ),
         down_stations=(21444, 803, 104283, 98048, 114350, 107113, 107000, 107035),
-        first_down_service=(330, 332, 334, 338, 358, 360, 385, 386),
+        down_first=(330, 332, 334, 338, 358, 360, 385, 386),
         down_steps=(
             0,
             20,
@@ -22561,10 +22561,10 @@ routes: tuple[Route, ...] = (
         runtime="7:00-8:00",
         type="高峰线",
         up_stations=(21447, 23114, 63023, 60188, 62928, 62906),
-        first_up_service=(420, 430, 435, 438, 442, 446),
+        up_first=(420, 430, 435, 438, 442, 446),
         up_steps=(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60),
         down_stations=(63154, 62927, 63115, 60186, 23115, 98106, 818, 21540),
-        first_down_service=(420, 424, 427, 430, 435, 440, 445, 446),
+        down_first=(420, 424, 427, 430, 435, 440, 445, 446),
         down_steps=(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60),
     ),
     Route(
@@ -22577,10 +22577,10 @@ routes: tuple[Route, ...] = (
         runtime="7:30-7:50",
         type="高峰线",
         up_stations=(3539, 98106, 59549, 16116, 16852, 99324),
-        first_up_service=(450, 452, 454, 457, 459, 460),
+        up_first=(450, 452, 454, 457, 459, 460),
         up_steps=(0, 20),
         down_stations=(98707, 16115, 59548, 98783, 98309),
-        first_down_service=(450, 452, 455, 458, 460),
+        down_first=(450, 452, 455, 458, 460),
         down_steps=(0, 20),
     ),
     Route(
@@ -22593,10 +22593,10 @@ routes: tuple[Route, ...] = (
         runtime="7:00-7:40",
         type="高峰线",
         up_stations=(21447, 41749),
-        first_up_service=(420, 428),
+        up_first=(420, 428),
         up_steps=(0, 20, 40),
         down_stations=(62319, 56484, 818, 21540),
-        first_down_service=(420, 424, 428, 430),
+        down_first=(420, 424, 428, 430),
         down_steps=(0, 20, 40),
     ),
     Route(
@@ -22624,7 +22624,7 @@ routes: tuple[Route, ...] = (
             27680,
             62120,
         ),
-        first_up_service=(
+        up_first=(
             450,
             452,
             454,
@@ -22696,7 +22696,7 @@ routes: tuple[Route, ...] = (
             58225,
             58208,
         ),
-        first_down_service=(
+        down_first=(
             450,
             452,
             454,
@@ -22763,10 +22763,10 @@ routes: tuple[Route, ...] = (
         runtime="7:20-8:00",
         type="高峰线",
         up_stations=(56812, 62462, 62779, 62753, 59760, 60001, 60037, 62906),
-        first_up_service=(440, 442, 445, 447, 450, 452, 455, 458),
+        up_first=(440, 442, 445, 447, 450, 452, 455, 458),
         up_steps=(0, 5, 10, 15, 20, 25, 30, 35, 40),
         down_stations=(63154, 60040, 60002, 59761, 62752, 62778, 62463, 56747, 56819),
-        first_down_service=(440, 442, 445, 447, 450, 452, 455, 457, 458),
+        down_first=(440, 442, 445, 447, 450, 452, 455, 457, 458),
         down_steps=(0, 5, 10, 15, 20, 25, 30, 35, 40),
     ),
     Route(
@@ -22779,7 +22779,7 @@ routes: tuple[Route, ...] = (
         runtime="7:30-8:30\\17:30-18:30",
         type="高峰线",
         up_stations=(21459, 27120, 16501, 17823, 17826),
-        first_up_service=(450, 453, 456, 459, 462),
+        up_first=(450, 453, 456, 459, 462),
         up_steps=(
             0,
             5,
@@ -22809,7 +22809,7 @@ routes: tuple[Route, ...] = (
             660,
         ),
         down_stations=(17848, 17824, 98707, 5425, 818, 21542),
-        first_down_service=(450, 453, 456, 459, 461, 462),
+        down_first=(450, 453, 456, 459, 461, 462),
         down_steps=(
             0,
             5,
@@ -22849,7 +22849,7 @@ routes: tuple[Route, ...] = (
         runtime="6:45-21:30",
         type="高峰线",
         up_stations=(103131, 104207, 99648, 99594, 98071, 98726, 818, 21541),
-        first_up_service=(405, 407, 410, 413, 416, 419, 421, 422),
+        up_first=(405, 407, 410, 413, 416, 419, 421, 422),
         up_steps=(
             0,
             5,
@@ -23031,7 +23031,7 @@ routes: tuple[Route, ...] = (
             885,
         ),
         down_stations=(21459, 803, 104283, 99589, 99630, 104184, 103125),
-        first_down_service=(405, 408, 410, 413, 416, 419, 420),
+        down_first=(405, 408, 410, 413, 416, 419, 420),
         down_steps=(
             0,
             5,
@@ -23250,7 +23250,7 @@ routes: tuple[Route, ...] = (
             24738,
             24298,
         ),
-        first_service=(
+        first=(
             450,
             452,
             454,
@@ -23307,7 +23307,7 @@ routes: tuple[Route, ...] = (
             56371,
             56671,
         ),
-        first_service=(
+        first=(
             420,
             422,
             424,
@@ -23366,7 +23366,7 @@ routes: tuple[Route, ...] = (
         runtime="7:20-7:40",
         type="高峰线",
         stations=(56670, 20595, 5135, 23058, 23084, 63562, 63739, 63825, 62906),
-        first_service=(440, 444, 446, 450, 452, 456, 460, 463, 466),
+        first=(440, 444, 446, 450, 452, 456, 460, 463, 466),
         steps=(0, 10, 20),
     ),
     Route(
@@ -23379,7 +23379,7 @@ routes: tuple[Route, ...] = (
         runtime="8:00-9:00\\17:30-18:30",
         type="高峰线",
         stations=(16758, 17823, 17848, 16757),
-        first_service=(480, 484, 488, 492),
+        first=(480, 484, 488, 492),
         steps=(
             0,
             5,
@@ -23419,10 +23419,10 @@ routes: tuple[Route, ...] = (
         runtime="7:30-8:00",
         type="高峰线",
         up_stations=(62259, 26552, 26576, 64499, 60188, 62928, 62906),
-        first_up_service=(450, 454, 458, 462, 466, 470, 474),
+        up_first=(450, 454, 458, 462, 466, 470, 474),
         up_steps=(0, 15, 30),
         down_stations=(63154, 62927, 60186, 25874, 26524, 26602, 34597),
-        first_down_service=(450, 454, 458, 462, 466, 470, 474),
+        down_first=(450, 454, 458, 462, 466, 470, 474),
         down_steps=(0, 15, 30),
     ),
     Route(
@@ -23435,7 +23435,7 @@ routes: tuple[Route, ...] = (
         runtime="7:30-7:40",
         type="高峰线",
         stations=(64737, 14572, 23058, 23084, 63562, 63739, 63825, 64009, 64103, 59507),
-        first_service=(450, 454, 458, 460, 464, 466, 468, 470, 473, 475),
+        first=(450, 454, 458, 460, 464, 466, 468, 470, 473, 475),
         steps=(0, 5, 10),
     ),
     Route(
@@ -23462,7 +23462,7 @@ routes: tuple[Route, ...] = (
             58225,
             58207,
         ),
-        first_up_service=(
+        up_first=(
             420,
             424,
             430,
@@ -23493,7 +23493,7 @@ routes: tuple[Route, ...] = (
             53255,
             54073,
         ),
-        first_down_service=(
+        down_first=(
             420,
             426,
             430,
@@ -23520,7 +23520,7 @@ routes: tuple[Route, ...] = (
         runtime="7:00-21:35",
         type="高峰线",
         up_stations=(7527, 56484, 56545, 750, 59162, 57482),
-        first_up_service=(420, 424, 430, 440, 448, 450),
+        up_first=(420, 424, 430, 440, 448, 450),
         up_steps=(
             0,
             10,
@@ -23612,7 +23612,7 @@ routes: tuple[Route, ...] = (
             870,
         ),
         down_stations=(57729, 749, 56546, 56485, 98677),
-        first_down_service=(420, 430, 440, 446, 450),
+        down_first=(420, 430, 440, 446, 450),
         down_steps=(
             0,
             10,
@@ -23741,7 +23741,7 @@ routes: tuple[Route, ...] = (
             58225,
             58211,
         ),
-        first_up_service=(
+        up_first=(
             390,
             392,
             394,
@@ -24130,7 +24130,7 @@ routes: tuple[Route, ...] = (
             59162,
             57478,
         ),
-        first_down_service=(
+        down_first=(
             390,
             392,
             394,
@@ -24525,7 +24525,7 @@ routes: tuple[Route, ...] = (
             63213,
             59508,
         ),
-        first_up_service=(
+        up_first=(
             380,
             382,
             384,
@@ -24900,7 +24900,7 @@ routes: tuple[Route, ...] = (
             59162,
             57479,
         ),
-        first_down_service=(
+        down_first=(
             380,
             382,
             384,
@@ -25279,7 +25279,7 @@ routes: tuple[Route, ...] = (
             100676,
             100653,
         ),
-        first_up_service=(
+        up_first=(
             360,
             362,
             364,
@@ -25654,7 +25654,7 @@ routes: tuple[Route, ...] = (
             99648,
             99917,
         ),
-        first_down_service=(
+        down_first=(
             360,
             362,
             364,
@@ -26038,7 +26038,7 @@ routes: tuple[Route, ...] = (
             27680,
             62119,
         ),
-        first_up_service=(
+        up_first=(
             360,
             362,
             364,
@@ -26403,7 +26403,7 @@ routes: tuple[Route, ...] = (
             60883,
             60903,
         ),
-        first_down_service=(
+        down_first=(
             360,
             362,
             364,
@@ -26786,7 +26786,7 @@ routes: tuple[Route, ...] = (
             59162,
             57488,
         ),
-        first_up_service=(
+        up_first=(
             1410,
             1412,
             1413,
@@ -26875,7 +26875,7 @@ routes: tuple[Route, ...] = (
             6999,
             14495,
         ),
-        first_down_service=(
+        down_first=(
             1410,
             1411,
             1412,
@@ -26972,7 +26972,7 @@ routes: tuple[Route, ...] = (
             26144,
             26192,
         ),
-        first_service=(
+        first=(
             1350,
             1351,
             1352,
@@ -27026,7 +27026,7 @@ routes: tuple[Route, ...] = (
             6362,
             6420,
         ),
-        first_service=(
+        first=(
             1350,
             1351,
             1352,
@@ -27082,7 +27082,7 @@ routes: tuple[Route, ...] = (
             6999,
             6997,
         ),
-        first_up_service=(
+        up_first=(
             1410,
             1411,
             1412,
@@ -27170,7 +27170,7 @@ routes: tuple[Route, ...] = (
             818,
             21541,
         ),
-        first_down_service=(
+        down_first=(
             1410,
             1411,
             1412,
@@ -27270,7 +27270,7 @@ routes: tuple[Route, ...] = (
             6999,
             7384,
         ),
-        first_up_service=(
+        up_first=(
             1390,
             1391,
             1392,
@@ -27367,7 +27367,7 @@ routes: tuple[Route, ...] = (
             818,
             21542,
         ),
-        first_down_service=(
+        down_first=(
             1390,
             1392,
             1393,
@@ -27467,7 +27467,7 @@ routes: tuple[Route, ...] = (
             23469,
             23840,
         ),
-        first_up_service=(
+        up_first=(
             1380,
             1381,
             1382,
@@ -27550,7 +27550,7 @@ routes: tuple[Route, ...] = (
             5168,
             5023,
         ),
-        first_down_service=(
+        down_first=(
             1380,
             1381,
             1382,
@@ -27646,7 +27646,7 @@ routes: tuple[Route, ...] = (
             20190,
             20260,
         ),
-        first_up_service=(
+        up_first=(
             1380,
             1381,
             1382,
@@ -27736,7 +27736,7 @@ routes: tuple[Route, ...] = (
             26564,
             34595,
         ),
-        first_down_service=(
+        down_first=(
             1380,
             1381,
             1382,
@@ -27832,7 +27832,7 @@ routes: tuple[Route, ...] = (
             26564,
             34596,
         ),
-        first_up_service=(
+        up_first=(
             1380,
             1381,
             1382,
@@ -27910,7 +27910,7 @@ routes: tuple[Route, ...] = (
             2074,
             2070,
         ),
-        first_down_service=(
+        down_first=(
             1380,
             1381,
             1382,
@@ -28006,7 +28006,7 @@ routes: tuple[Route, ...] = (
             15034,
             14881,
         ),
-        first_up_service=(
+        up_first=(
             1380,
             1381,
             1382,
@@ -28102,7 +28102,7 @@ routes: tuple[Route, ...] = (
             2769,
             2714,
         ),
-        first_down_service=(
+        down_first=(
             1380,
             1381,
             1382,
@@ -28213,7 +28213,7 @@ routes: tuple[Route, ...] = (
             58225,
             58209,
         ),
-        first_up_service=(
+        up_first=(
             1410,
             1411,
             1412,
@@ -28315,7 +28315,7 @@ routes: tuple[Route, ...] = (
             59162,
             57481,
         ),
-        first_down_service=(
+        down_first=(
             1410,
             1411,
             1413,
@@ -28427,7 +28427,7 @@ routes: tuple[Route, ...] = (
             16432,
             2814,
         ),
-        first_up_service=(
+        up_first=(
             1360,
             1361,
             1362,
@@ -28535,7 +28535,7 @@ routes: tuple[Route, ...] = (
             53401,
             55729,
         ),
-        first_down_service=(
+        down_first=(
             1360,
             1361,
             1363,

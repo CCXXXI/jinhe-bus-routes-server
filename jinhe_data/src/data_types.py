@@ -49,7 +49,7 @@ class Route:
     stations: tuple[int, ...] = None
     """不分上下行的沿线站点的 `id`"""
 
-    first_service: tuple[int, ...] = None
+    first: tuple[int, ...] = None
     """不分上下行的首班沿线站点时间 (h * 60 + m)"""
 
     steps: tuple[int, ...] = None
@@ -58,7 +58,7 @@ class Route:
     up_stations: tuple[int, ...] = None
     """上行沿线站点的 `id`"""
 
-    first_up_service: tuple[int, ...] = None
+    up_first: tuple[int, ...] = None
     """上行首班沿线站点时间 (h * 60 + m)"""
 
     up_steps: tuple[int, ...] = None
@@ -67,7 +67,7 @@ class Route:
     down_stations: tuple[int, ...] = None
     """下行沿线站点的 `id`"""
 
-    first_down_service: tuple[int, ...] = None
+    down_first: tuple[int, ...] = None
     """下行首班沿线站点时间 (h * 60 + m)"""
 
     down_steps: tuple[int, ...] = None
@@ -90,9 +90,9 @@ class Route:
         )
 
         for stations, first, steps, ud in (
-            (self.stations, self.first_service, self.steps, ""),
-            (self.up_stations, self.first_up_service, self.up_steps, "u"),
-            (self.down_stations, self.first_down_service, self.down_steps, "d"),
+            (self.stations, self.first, self.steps, ""),
+            (self.up_stations, self.up_first, self.up_steps, "u"),
+            (self.down_stations, self.down_first, self.down_steps, "d"),
         ):
             if stations:
                 # graph

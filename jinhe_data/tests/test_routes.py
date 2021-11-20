@@ -55,13 +55,13 @@ class TestRoute:
     @staticmethod
     def test_service_time(route: Route):
         """The time is valid and unique."""
-        for service in filter(
+        for first in filter(
             None,
-            (route.first_service, route.first_up_service, route.first_down_service),
+            (route.first, route.up_first, route.down_first),
         ):
-            for time in service:
+            for time in first:
                 assert 0 <= time < 24 * 60
-            assert len(service) == len(set(service))
+            assert len(first) == len(set(first))
 
     @staticmethod
     def test_step(route: Route):
@@ -80,33 +80,33 @@ class TestRoute:
         """The route is up and down or none."""
         assert (
             route.stations is None
-            and route.first_service is None
+            and route.first is None
             and route.steps is None
             and route.up_stations is not None
-            and route.first_up_service is not None
+            and route.up_first is not None
             and route.up_steps is not None
             and route.down_stations is not None
-            and route.first_down_service is not None
+            and route.down_first is not None
             and route.down_steps is not None
         ) or (
             route.stations is not None
-            and route.first_service is not None
+            and route.first is not None
             and route.steps is not None
             and route.up_stations is None
-            and route.first_up_service is None
+            and route.up_first is None
             and route.up_steps is None
             and route.down_stations is None
-            and route.first_down_service is None
+            and route.down_first is None
             and route.down_steps is None
         )
 
     @staticmethod
     def test_stations_services(route: Route):
-        """The length of the service is equal to the number of the stations."""
-        for stations, service in (
-            (route.stations, route.first_service),
-            (route.up_stations, route.first_up_service),
-            (route.down_stations, route.first_down_service),
+        """The length of the first service is equal to the number of the stations."""
+        for stations, first in (
+            (route.stations, route.first),
+            (route.up_stations, route.up_first),
+            (route.down_stations, route.down_first),
         ):
             if stations:
-                assert len(service) == len(stations)
+                assert len(first) == len(stations)
