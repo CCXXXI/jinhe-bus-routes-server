@@ -5,7 +5,7 @@ from src.data_types import Station
 
 
 def test_id():
-    """id is unique"""
+    """The id is unique."""
     assert len({station.id for station in stations}) == len(stations)
 
 
@@ -15,5 +15,5 @@ class TestStation:
 
     @staticmethod
     def test_id(station: Station):
-        """id > 0"""
+        """The id is a positive number."""
         assert station.id > 0

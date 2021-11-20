@@ -5,12 +5,12 @@ from src.data_types import Route
 
 
 def test_name():
-    """name is unique"""
+    """The name is unique."""
     assert len({route.name for route in routes}) == len(routes)
 
 
 def test_length():
-    """93 routes"""
+    """There are 93 routes."""
     assert len(routes) == 93
 
 
@@ -20,13 +20,13 @@ class TestRoute:
 
     @staticmethod
     def test_name(route: Route):
-        """name is not empty"""
+        """The name is not empty."""
         assert route.name
 
     @staticmethod
     @mark.skip(reason="not implemented yet")
     def test_stations_services(route: Route):
-        """up and down or none"""
+        """The route should be up and down or none."""
         assert (
             route.stations is None
             and route.services is None
