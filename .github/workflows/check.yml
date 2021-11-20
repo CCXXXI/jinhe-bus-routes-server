@@ -18,6 +18,8 @@ jobs:
       - uses: mamba-org/provision-with-micromamba@v11
         with:
           environment-file: "jinhe_data/environment.yml"
+      - run: docker-compose up -d
+        working-directory: jinhe_data/tests
       - run: pytest --cov=./ --cov-report xml
         working-directory: jinhe_data
       - uses: codecov/codecov-action@v2
