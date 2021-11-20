@@ -112,3 +112,10 @@ class Route:
                     f"Route:{self.name}:steps",
                     *steps,
                 )
+
+                # for UC-8 & UC-9
+                for i, t in zip(stations, first):
+                    r.zadd(
+                        f"Station:{i}:first",
+                        mapping={t: self.name + ud},
+                    )
