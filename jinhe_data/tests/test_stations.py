@@ -13,6 +13,7 @@ def test_id():
 class TestStation:
     """Check per station."""
 
-    def test_id(self, station: Station):
+    @staticmethod
+    def test_id(station: Station):
         """id > 0"""
         assert station.id > 0

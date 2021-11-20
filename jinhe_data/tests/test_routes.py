@@ -18,12 +18,14 @@ def test_length():
 class TestRoute:
     """Check per route."""
 
-    def test_name(self, route: Route):
+    @staticmethod
+    def test_name(route: Route):
         """name is not empty"""
         assert route.name
 
+    @staticmethod
     @mark.skip(reason="not implemented yet")
-    def test_stations_services(self, route: Route):
+    def test_stations_services(route: Route):
         """up and down or none"""
         assert (
             route.stations is None
