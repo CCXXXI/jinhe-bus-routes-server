@@ -1,3 +1,6 @@
+from collections.abc import Iterable
+from itertools import chain
+
 from pytest import mark
 
 from data import routes
@@ -13,6 +16,20 @@ def test_name():
 def test_length():
     """There are 93 routes."""
     assert len(routes) == 93
+
+
+def test_stations():
+    """No isolated station."""
+
+    def flatten(stations_arr: Iterable[tuple[int, ...]]) -> set[int]:
+        return set(chain.from_iterable(filter(None, stations_arr)))
+
+    assert (
+        flatten(route.stations for route in routes)
+        | flatten(route.up_stations for route in routes)
+        | flatten(route.down_stations for route in routes)
+        == station_ids
+    )
 
 
 @mark.parametrize("route", routes)
