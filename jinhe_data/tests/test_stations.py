@@ -3,10 +3,12 @@ from pytest import mark
 from data import stations
 from src.data_types import Station
 
+station_ids = {station.id for station in stations}
+
 
 def test_id():
     """The id is unique."""
-    assert len({station.id for station in stations}) == len(stations)
+    assert len(station_ids) == len(stations)
 
 
 @mark.parametrize("station", stations)
