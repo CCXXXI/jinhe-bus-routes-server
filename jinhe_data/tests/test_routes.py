@@ -83,7 +83,7 @@ class TestRoute:
             route.stations is not None
             and route.services is not None
             and route.up_stations is None
-            and route.services is None
+            and route.up_services is None
             and route.down_stations is None
             and route.down_services is None
         )
