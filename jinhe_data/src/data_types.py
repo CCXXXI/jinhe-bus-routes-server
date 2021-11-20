@@ -89,6 +89,7 @@ class Route:
             if s:
                 for u, v in pairwise(s):
                     g.query(
-                        f"MATCH (u{{id:{u}}}), (v{{id:{v}}}) "
-                        f"CREATE (u)-[:r{{name:'{self.name}',d:'{d}'}}]->(v)",
+                        "MATCH (u{id:$u}), (v{id:$v}) "
+                        "CREATE (u)-[:r{name:$name,d:$d}]->(v)",
+                        {"u": u, "v": v, "name": self.name, "d": d},
                     )
