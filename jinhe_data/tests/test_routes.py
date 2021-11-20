@@ -58,7 +58,7 @@ class TestRoute:
 
     @staticmethod
     def test_service_time(route: Route):
-        """The time is valid."""
+        """The time is valid and unique."""
         for service in filter(
             None,
             (
@@ -69,6 +69,7 @@ class TestRoute:
         ):
             for time in service:
                 assert 0 <= time < 24 * 60
+            assert len(set(service)) == len(service)
 
     @staticmethod
     def test_up_down(route: Route):
