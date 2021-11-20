@@ -54,7 +54,7 @@ class TestRoute:
             ),
         ):
             assert set(stations) <= station_ids
-            assert len(set(stations)) == len(stations)
+            assert len(stations) == len(set(stations))
 
     @staticmethod
     def test_service_time(route: Route):
@@ -69,7 +69,16 @@ class TestRoute:
         ):
             for time in service:
                 assert 0 <= time < 24 * 60
-            assert len(set(service)) == len(service)
+            assert len(service) == len(set(service))
+
+    @staticmethod
+    def test_step(route: Route):
+        """The step is valid, unique and ascending."""
+        for steps in filter(None, (route.steps, route.up_steps, route.down_steps)):
+            for step in steps:
+                assert 0 <= step < 24 * 60
+            assert len(steps) == len(set(steps))
+            assert steps == tuple(sorted(steps))
 
     @staticmethod
     def test_up_down(route: Route):
