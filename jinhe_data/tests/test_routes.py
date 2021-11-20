@@ -24,6 +24,37 @@ class TestRoute:
         assert route.name
 
     @staticmethod
+    def test_services_time(route: Route):
+        """The service time is valid."""
+        for services in filter(
+            None,
+            (
+                route.services,
+                route.up_services,
+                route.down_services,
+            ),
+        ):
+            for service in services:
+                for time in service:
+                    h, m = map(int, time.split(":"))
+                    assert 0 <= h < 24
+                    assert 0 <= m < 60
+
+    @staticmethod
+    def test_services_ascending(route: Route):
+        """The service time is ascending."""
+        for services in filter(
+            None,
+            (
+                route.services,
+                route.up_services,
+                route.down_services,
+            ),
+        ):
+            for service in services:
+                assert service == tuple(sorted(service))
+
+    @staticmethod
     @mark.skip(reason="not implemented yet")
     def test_stations_services(route: Route):
         """The route is up and down or none."""
