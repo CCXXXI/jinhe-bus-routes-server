@@ -1,4 +1,4 @@
-from dataclasses import asdict, dataclass
+from dataclasses import dataclass
 from itertools import pairwise
 
 from redis import Redis
@@ -9,7 +9,7 @@ from redisgraph import Edge, Graph, Node
 class Route:
     """路线"""
 
-    directional: int
+    directional: bool
     """无向为false，不仅仅是环线，还有G62路等单向线路"""
 
     interval: int
@@ -21,7 +21,7 @@ class Route:
     name: str
     """线路名"""
 
-    onewayTime: str
+    oneway: str
     """运行时⻓"""
 
     route: str
@@ -36,23 +36,36 @@ class Route:
     stations: tuple[int, ...] = None
     """不分上下行的沿线站点的 `id`"""
 
+    services: tuple[tuple[str, ...], ...] = None
+    """不分上下行的班次沿线站点时间"""
+
     up_stations: tuple[int, ...] = None
     """上行沿线站点的 `id`"""
+
+    up_services: tuple[tuple[str, ...], ...] = None
+    """上行班次沿线站点时间"""
 
     down_stations: tuple[int, ...] = None
     """下行沿线站点的 `id`"""
 
-    def __post_init__(self):
-        """Convert bool to int as Redis doesn't support bool."""
-        self.directional = int(self.directional)
+    down_services: tuple[tuple[str, ...], ...] = None
+    """下行班次沿线站点时间"""
 
     def save(self, r: Redis, g: Graph):
         """Save self to the database."""
         # basic
-        mapping = asdict(self)
-        for key in ("name", "stations", "up_stations", "down_stations"):
-            del mapping[key]
-        r.hset(f"Route:{self.name}", mapping=mapping)
+        r.hset(
+            f"Route:{self.name}",
+            mapping={
+                "directional": int(self.directional),
+                "interval": self.interval,
+                "kilometer": self.kilometer,
+                "oneway": self.oneway,
+                "route": self.route,
+                "runtime": self.runtime,
+                "type": self.type,
+            },
+        )
 
         # graph
         for s, d in (
