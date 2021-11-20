@@ -2,6 +2,8 @@ version = 1
 
 test_patterns = ["**/test_*"]
 
+exclude_patterns = ["jinhe_data/data/*"]
+
 [[analyzers]]
 name = "python"
 enabled = true
