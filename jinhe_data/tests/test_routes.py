@@ -47,11 +47,7 @@ class TestRoute:
         """The station id is valid and unique."""
         for stations in filter(
             None,
-            (
-                route.stations,
-                route.up_stations,
-                route.down_stations,
-            ),
+            (route.stations, route.up_stations, route.down_stations),
         ):
             assert set(stations) <= station_ids
             assert len(stations) == len(set(stations))
@@ -61,11 +57,7 @@ class TestRoute:
         """The time is valid and unique."""
         for service in filter(
             None,
-            (
-                route.first_service,
-                route.first_up_service,
-                route.first_down_service,
-            ),
+            (route.first_service, route.first_up_service, route.first_down_service),
         ):
             for time in service:
                 assert 0 <= time < 24 * 60
@@ -74,7 +66,10 @@ class TestRoute:
     @staticmethod
     def test_step(route: Route):
         """The step is valid, unique and ascending."""
-        for steps in filter(None, (route.steps, route.up_steps, route.down_steps)):
+        for steps in filter(
+            None,
+            (route.steps, route.up_steps, route.down_steps),
+        ):
             for step in steps:
                 assert 0 <= step < 24 * 60
             assert len(steps) == len(set(steps))
