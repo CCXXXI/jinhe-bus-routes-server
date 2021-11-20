@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from itertools import pairwise
 
 from redis import Redis
-from redisgraph import Edge, Graph, Node
+from redisgraph import Graph, Node
 
 
 @dataclass
@@ -83,17 +83,12 @@ class Route:
         # graph
         for s, d in (
             (self.stations, ""),
-            (self.up_stations, "up"),
-            (self.down_stations, "down"),
+            (self.up_stations, "u"),
+            (self.down_stations, "d"),
         ):
             if s:
-                for u_id, v_id in pairwise(s):
-                    u: Node = g.query(
-                        "MATCH (p {id: $id}) RETURN p",
-                        {"id": u_id},
-                    ).result_set[0]
-                    v: Node = g.query(
-                        "MATCH (p {id: $id}) RETURN p",
-                        {"id": v_id},
-                    ).result_set[0]
-                    g.add_edge(Edge(u, self.name + d, v))
+                for u, v in pairwise(s):
+                    g.query(
+                        f"MATCH (u{{id:{u}}}), (v{{id:{v}}}) "
+                        f"CREATE (u)-[:r{{name:'{self.name}',d:'{d}'}}]->(v)",
+                    )
