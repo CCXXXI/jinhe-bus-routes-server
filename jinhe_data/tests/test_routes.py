@@ -35,7 +35,7 @@ class TestRoute:
                 route.down_stations,
             ),
         ):
-            assert set(stations) < station_ids
+            assert set(stations) <= station_ids
 
     @staticmethod
     def test_services_time(route: Route):
