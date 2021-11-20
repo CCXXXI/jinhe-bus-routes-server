@@ -2,6 +2,7 @@ from pytest import mark
 
 from data import routes
 from src.data_types import Route
+from .test_stations import station_ids
 
 
 def test_name():
@@ -22,6 +23,19 @@ class TestRoute:
     def test_name(route: Route):
         """The name is not empty."""
         assert route.name
+
+    @staticmethod
+    def test_stations(route: Route):
+        """The station id is valid."""
+        for stations in filter(
+            None,
+            (
+                route.stations,
+                route.up_stations,
+                route.down_stations,
+            ),
+        ):
+            assert set(stations) < station_ids
 
     @staticmethod
     def test_services_time(route: Route):
