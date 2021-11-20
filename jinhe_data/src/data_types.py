@@ -55,22 +55,22 @@ class Route:
     steps: tuple[int, ...] = None
     """不分上下行的每个班次离首班的分钟数"""
 
-    up_stations: tuple[int, ...] = None
+    u_stations: tuple[int, ...] = None
     """上行沿线站点的 `id`"""
 
-    up_first: tuple[int, ...] = None
+    u_first: tuple[int, ...] = None
     """上行首班沿线站点时间 (h * 60 + m)"""
 
-    up_steps: tuple[int, ...] = None
+    u_steps: tuple[int, ...] = None
     """上行每个班次离首班的分钟数"""
 
-    down_stations: tuple[int, ...] = None
+    d_stations: tuple[int, ...] = None
     """下行沿线站点的 `id`"""
 
-    down_first: tuple[int, ...] = None
+    d_first: tuple[int, ...] = None
     """下行首班沿线站点时间 (h * 60 + m)"""
 
-    down_steps: tuple[int, ...] = None
+    d_steps: tuple[int, ...] = None
     """下行每个班次离首班的分钟数"""
 
     def save(self, r: Redis, g: Graph):
@@ -91,8 +91,8 @@ class Route:
 
         for stations, first, steps, ud in (
             (self.stations, self.first, self.steps, ""),
-            (self.up_stations, self.up_first, self.up_steps, "u"),
-            (self.down_stations, self.down_first, self.down_steps, "d"),
+            (self.u_stations, self.u_first, self.u_steps, "u"),
+            (self.d_stations, self.d_first, self.d_steps, "d"),
         ):
             if stations:
                 # graph

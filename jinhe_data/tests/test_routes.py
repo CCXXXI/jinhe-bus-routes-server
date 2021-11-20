@@ -27,86 +27,77 @@ def test_stations():
 
     assert (
         flatten(route.stations for route in routes)
-        | flatten(route.up_stations for route in routes)
-        | flatten(route.down_stations for route in routes)
+        | flatten(route.u_stations for route in routes)
+        | flatten(route.d_stations for route in routes)
         == station_ids
     )
 
 
-@mark.parametrize("route", routes)
+@mark.parametrize("r", routes)
 class TestRoute:
     """Check per route."""
 
     @staticmethod
-    def test_name(route: Route):
+    def test_name(r: Route):
         """The name is not empty."""
-        assert route.name
+        assert r.name
 
     @staticmethod
-    def test_stations(route: Route):
+    def test_stations(r: Route):
         """The station id is valid and unique."""
-        for stations in filter(
-            None,
-            (route.stations, route.up_stations, route.down_stations),
-        ):
+        for stations in filter(None, (r.stations, r.u_stations, r.d_stations)):
             assert set(stations) <= station_ids
             assert len(stations) == len(set(stations))
 
     @staticmethod
-    def test_service_time(route: Route):
+    def test_service_time(r: Route):
         """The time is valid and unique."""
-        for first in filter(
-            None,
-            (route.first, route.up_first, route.down_first),
-        ):
+        for first in filter(None, (r.first, r.u_first, r.d_first)):
             for time in first:
                 assert 0 <= time < 24 * 60
             assert len(first) == len(set(first))
 
     @staticmethod
-    def test_step(route: Route):
+    def test_step(r: Route):
         """The step is valid, unique and ascending."""
-        for steps in filter(
-            None,
-            (route.steps, route.up_steps, route.down_steps),
-        ):
+        for steps in filter(None, (r.steps, r.u_steps, r.d_steps)):
             for step in steps:
                 assert 0 <= step < 24 * 60
             assert len(steps) == len(set(steps))
             assert steps == tuple(sorted(steps))
 
     @staticmethod
-    def test_up_down(route: Route):
+    def test_up_down(r: Route):
         """The route is up and down or none."""
         assert (
-            route.stations is None
-            and route.first is None
-            and route.steps is None
-            and route.up_stations is not None
-            and route.up_first is not None
-            and route.up_steps is not None
-            and route.down_stations is not None
-            and route.down_first is not None
-            and route.down_steps is not None
+            r.stations is None
+            and r.first is None
+            and r.steps is None
+            and r.u_stations is not None
+            and r.u_first is not None
+            and r.u_steps is not None
+            and r.d_stations is not None
+            and r.d_first is not None
+            and r.d_steps is not None
         ) or (
-            route.stations is not None
-            and route.first is not None
-            and route.steps is not None
-            and route.up_stations is None
-            and route.up_first is None
-            and route.up_steps is None
-            and route.down_stations is None
-            and route.down_first is None
-            and route.down_steps is None
+            r.stations is not None
+            and r.first is not None
+            and r.steps is not None
+            and r.u_stations is None
+            and r.u_first is None
+            and r.u_steps is None
+            and r.d_stations is None
+            and r.d_first is None
+            and r.d_steps is None
         )
 
     @staticmethod
-    def test_stations_services(route: Route):
+    def test_stations_services(r: Route):
         """The length of the first service is equal to the number of the stations."""
         for stations, first in (
-            (route.stations, route.first),
-            (route.up_stations, route.up_first),
-            (route.down_stations, route.down_first),
+            (r.stations, r.first),
+            (r.u_stations, r.u_first),
+            (r.d_stations, r.d_first),
         ):
             if stations:
                 assert len(first) == len(stations)

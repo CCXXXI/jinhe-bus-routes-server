@@ -10,7 +10,7 @@ routes: tuple[Route, ...] = (
         route="金河客运站-花明公交站",
         runtime="6:00-23:59",
         type="干线",
-        up_stations=(
+        u_stations=(
             16560,
             803,
             98730,
@@ -41,7 +41,7 @@ routes: tuple[Route, ...] = (
             23351,
             27676,
         ),
-        up_first=(
+        u_first=(
             360,
             362,
             364,
@@ -72,7 +72,7 @@ routes: tuple[Route, ...] = (
             414,
             415,
         ),
-        up_steps=(
+        u_steps=(
             0,
             5,
             10,
@@ -290,7 +290,7 @@ routes: tuple[Route, ...] = (
             1070,
             1075,
         ),
-        down_stations=(
+        d_stations=(
             27675,
             27699,
             27733,
@@ -321,7 +321,7 @@ routes: tuple[Route, ...] = (
             818,
             821,
         ),
-        down_first=(
+        d_first=(
             360,
             361,
             362,
@@ -352,7 +352,7 @@ routes: tuple[Route, ...] = (
             411,
             412,
         ),
-        down_steps=(
+        d_steps=(
             0,
             5,
             10,
@@ -580,12 +580,12 @@ routes: tuple[Route, ...] = (
         route="合江客运站→环球中心",
         runtime="6:30-7:00",
         type="高峰线",
-        up_stations=(114518, 98310),
-        up_first=(390, 440),
-        up_steps=(0, 30),
-        down_stations=(114519, 107000, 107036),
-        down_first=(390, 438, 440),
-        down_steps=(0, 30),
+        u_stations=(114518, 98310),
+        u_first=(390, 440),
+        u_steps=(0, 30),
+        d_stations=(114519, 107000, 107036),
+        d_first=(390, 438, 440),
+        d_steps=(0, 30),
     ),
     Route(
         directional=True,
@@ -596,7 +596,7 @@ routes: tuple[Route, ...] = (
         route="火车西站公交站-动物园公交站",
         runtime="6:30-22:30",
         type="快速公交",
-        up_stations=(
+        u_stations=(
             5027,
             7217,
             7232,
@@ -614,7 +614,7 @@ routes: tuple[Route, ...] = (
             6999,
             6997,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             393,
@@ -632,7 +632,7 @@ routes: tuple[Route, ...] = (
             409,
             410,
         ),
-        up_steps=(
+        u_steps=(
             0,
             3,
             6,
@@ -955,7 +955,7 @@ routes: tuple[Route, ...] = (
             957,
             960,
         ),
-        down_stations=(
+        d_stations=(
             6996,
             7370,
             7368,
@@ -972,7 +972,7 @@ routes: tuple[Route, ...] = (
             7223,
             98777,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -989,7 +989,7 @@ routes: tuple[Route, ...] = (
             408,
             410,
         ),
-        down_steps=(
+        d_steps=(
             0,
             3,
             6,
@@ -1322,7 +1322,7 @@ routes: tuple[Route, ...] = (
         route="火车西站公交站-金河南站公交站",
         runtime="6:30-22:10",
         type="快速公交",
-        up_stations=(
+        u_stations=(
             7386,
             64838,
             64826,
@@ -1337,7 +1337,7 @@ routes: tuple[Route, ...] = (
             59162,
             57487,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             394,
@@ -1352,7 +1352,7 @@ routes: tuple[Route, ...] = (
             405,
             406,
         ),
-        up_steps=(
+        u_steps=(
             0,
             3,
             6,
@@ -1668,7 +1668,7 @@ routes: tuple[Route, ...] = (
             936,
             939,
         ),
-        down_stations=(
+        d_stations=(
             57729,
             59160,
             59149,
@@ -1683,7 +1683,7 @@ routes: tuple[Route, ...] = (
             6999,
             7384,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -1698,7 +1698,7 @@ routes: tuple[Route, ...] = (
             406,
             407,
         ),
-        down_steps=(
+        d_steps=(
             0,
             3,
             6,
@@ -2024,7 +2024,7 @@ routes: tuple[Route, ...] = (
         route="钟楼-环球中心",
         runtime="6:15-21:50",
         type="快速公交",
-        up_stations=(
+        u_stations=(
             99947,
             100125,
             100163,
@@ -2038,8 +2038,8 @@ routes: tuple[Route, ...] = (
             3654,
             98308,
         ),
-        up_first=(375, 377, 379, 380, 382, 383, 384, 385, 386, 388, 390, 392),
-        up_steps=(
+        u_first=(375, 377, 379, 380, 382, 383, 384, 385, 386, 388, 390, 392),
+        u_steps=(
             0,
             3,
             6,
@@ -2353,7 +2353,7 @@ routes: tuple[Route, ...] = (
             930,
             933,
         ),
-        down_stations=(
+        d_stations=(
             3539,
             1129,
             98784,
@@ -2367,8 +2367,8 @@ routes: tuple[Route, ...] = (
             100126,
             99916,
         ),
-        down_first=(375, 377, 379, 381, 382, 383, 384, 385, 387, 389, 391, 393),
-        down_steps=(
+        d_first=(375, 377, 379, 381, 382, 383, 384, 385, 387, 389, 391, 393),
+        d_steps=(
             0,
             3,
             6,
@@ -2692,7 +2692,7 @@ routes: tuple[Route, ...] = (
         route="兴义镇-火车西站公交站",
         runtime="5:50-23:00",
         type="城乡线",
-        up_stations=(
+        u_stations=(
             7542,
             7527,
             7504,
@@ -2722,7 +2722,7 @@ routes: tuple[Route, ...] = (
             6818,
             14495,
         ),
-        up_first=(
+        u_first=(
             350,
             356,
             358,
@@ -2752,7 +2752,7 @@ routes: tuple[Route, ...] = (
             408,
             410,
         ),
-        up_steps=(
+        u_steps=(
             0,
             6,
             12,
@@ -2926,7 +2926,7 @@ routes: tuple[Route, ...] = (
             1020,
             1026,
         ),
-        down_stations=(
+        d_stations=(
             14497,
             6819,
             6884,
@@ -2956,7 +2956,7 @@ routes: tuple[Route, ...] = (
             7528,
             7550,
         ),
-        down_first=(
+        d_first=(
             360,
             362,
             364,
@@ -2986,7 +2986,7 @@ routes: tuple[Route, ...] = (
             415,
             420,
         ),
-        down_steps=(
+        d_steps=(
             0,
             6,
             12,
@@ -3169,7 +3169,7 @@ routes: tuple[Route, ...] = (
         route="北路湾公交站-金河南站公交站",
         runtime="6:00-23:59",
         type="干线",
-        up_stations=(
+        u_stations=(
             34656,
             26552,
             60640,
@@ -3192,7 +3192,7 @@ routes: tuple[Route, ...] = (
             59162,
             57489,
         ),
-        up_first=(
+        u_first=(
             360,
             362,
             364,
@@ -3215,7 +3215,7 @@ routes: tuple[Route, ...] = (
             399,
             400,
         ),
-        up_steps=(
+        u_steps=(
             0,
             5,
             10,
@@ -3433,7 +3433,7 @@ routes: tuple[Route, ...] = (
             1070,
             1075,
         ),
-        down_stations=(
+        d_stations=(
             57727,
             59160,
             59149,
@@ -3456,7 +3456,7 @@ routes: tuple[Route, ...] = (
             26564,
             34591,
         ),
-        down_first=(
+        d_first=(
             360,
             363,
             365,
@@ -3479,7 +3479,7 @@ routes: tuple[Route, ...] = (
             401,
             402,
         ),
-        down_steps=(
+        d_steps=(
             0,
             5,
             10,
@@ -3707,7 +3707,7 @@ routes: tuple[Route, ...] = (
         route="庆安公交站-鱼凫西路南",
         runtime="6:30-21:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             17160,
             23712,
             23734,
@@ -3730,7 +3730,7 @@ routes: tuple[Route, ...] = (
             23469,
             23840,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             394,
@@ -3753,7 +3753,7 @@ routes: tuple[Route, ...] = (
             429,
             430,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -3868,7 +3868,7 @@ routes: tuple[Route, ...] = (
             888,
             896,
         ),
-        down_stations=(
+        d_stations=(
             23850,
             23851,
             23470,
@@ -3892,7 +3892,7 @@ routes: tuple[Route, ...] = (
             23713,
             23836,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -3916,7 +3916,7 @@ routes: tuple[Route, ...] = (
             432,
             434,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -4041,7 +4041,7 @@ routes: tuple[Route, ...] = (
         route="金河客运站-庆安小区",
         runtime="6:40-22:00",
         type="干线",
-        up_stations=(
+        u_stations=(
             16560,
             56503,
             56485,
@@ -4058,7 +4058,7 @@ routes: tuple[Route, ...] = (
             99736,
             99794,
         ),
-        up_first=(
+        u_first=(
             400,
             402,
             404,
@@ -4075,7 +4075,7 @@ routes: tuple[Route, ...] = (
             424,
             425,
         ),
-        up_steps=(
+        u_steps=(
             0,
             10,
             20,
@@ -4170,7 +4170,7 @@ routes: tuple[Route, ...] = (
             910,
             920,
         ),
-        down_stations=(
+        d_stations=(
             99796,
             99737,
             17160,
@@ -4189,7 +4189,7 @@ routes: tuple[Route, ...] = (
             818,
             822,
         ),
-        down_first=(
+        d_first=(
             400,
             401,
             402,
@@ -4208,7 +4208,7 @@ routes: tuple[Route, ...] = (
             427,
             428,
         ),
-        down_steps=(
+        d_steps=(
             0,
             10,
             20,
@@ -4313,7 +4313,7 @@ routes: tuple[Route, ...] = (
         route="科北路-永丰公交站",
         runtime="6:20-21:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             56809,
             62368,
             46556,
@@ -4340,7 +4340,7 @@ routes: tuple[Route, ...] = (
             2074,
             2070,
         ),
-        up_first=(
+        u_first=(
             380,
             381,
             383,
@@ -4367,7 +4367,7 @@ routes: tuple[Route, ...] = (
             426,
             428,
         ),
-        up_steps=(
+        u_steps=(
             0,
             6,
             12,
@@ -4521,7 +4521,7 @@ routes: tuple[Route, ...] = (
             900,
             906,
         ),
-        down_stations=(
+        d_stations=(
             2827,
             2073,
             2094,
@@ -4549,7 +4549,7 @@ routes: tuple[Route, ...] = (
             56747,
             56821,
         ),
-        down_first=(
+        d_first=(
             380,
             382,
             384,
@@ -4577,7 +4577,7 @@ routes: tuple[Route, ...] = (
             428,
             429,
         ),
-        down_steps=(
+        d_steps=(
             0,
             6,
             12,
@@ -4741,7 +4741,7 @@ routes: tuple[Route, ...] = (
         route="北客站-桦林园",
         runtime="6:20-22:00",
         type="干线",
-        up_stations=(
+        u_stations=(
             20259,
             20156,
             20189,
@@ -4767,7 +4767,7 @@ routes: tuple[Route, ...] = (
             20878,
             20765,
         ),
-        up_first=(
+        u_first=(
             380,
             381,
             383,
@@ -4793,7 +4793,7 @@ routes: tuple[Route, ...] = (
             424,
             426,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -4913,7 +4913,7 @@ routes: tuple[Route, ...] = (
             928,
             936,
         ),
-        down_stations=(
+        d_stations=(
             20758,
             20879,
             20842,
@@ -4937,7 +4937,7 @@ routes: tuple[Route, ...] = (
             20190,
             20260,
         ),
-        down_first=(
+        d_first=(
             380,
             382,
             384,
@@ -4961,7 +4961,7 @@ routes: tuple[Route, ...] = (
             422,
             424,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -5091,7 +5091,7 @@ routes: tuple[Route, ...] = (
         route="北客站-地铁金河大道东",
         runtime="6:20-22:00",
         type="驳接线",
-        up_stations=(
+        u_stations=(
             20493,
             20156,
             20189,
@@ -5117,7 +5117,7 @@ routes: tuple[Route, ...] = (
             14621,
             702,
         ),
-        up_first=(
+        u_first=(
             380,
             381,
             383,
@@ -5143,7 +5143,7 @@ routes: tuple[Route, ...] = (
             423,
             425,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -5263,7 +5263,7 @@ routes: tuple[Route, ...] = (
             928,
             936,
         ),
-        down_stations=(
+        d_stations=(
             693,
             102017,
             20596,
@@ -5287,7 +5287,7 @@ routes: tuple[Route, ...] = (
             20190,
             20492,
         ),
-        down_first=(
+        d_first=(
             380,
             382,
             384,
@@ -5311,7 +5311,7 @@ routes: tuple[Route, ...] = (
             422,
             424,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -5441,7 +5441,7 @@ routes: tuple[Route, ...] = (
         route="高新新区公交站-金河南站公交站",
         runtime="6:00-22:20",
         type="干线",
-        up_stations=(
+        u_stations=(
             57727,
             59160,
             59149,
@@ -5477,7 +5477,7 @@ routes: tuple[Route, ...] = (
             58225,
             58210,
         ),
-        up_first=(
+        u_first=(
             370,
             372,
             374,
@@ -5513,7 +5513,7 @@ routes: tuple[Route, ...] = (
             434,
             435,
         ),
-        up_steps=(
+        u_steps=(
             0,
             6,
             12,
@@ -5677,7 +5677,7 @@ routes: tuple[Route, ...] = (
             960,
             966,
         ),
-        down_stations=(
+        d_stations=(
             58204,
             58252,
             64355,
@@ -5713,7 +5713,7 @@ routes: tuple[Route, ...] = (
             59162,
             57480,
         ),
-        down_first=(
+        d_first=(
             360,
             362,
             364,
@@ -5749,7 +5749,7 @@ routes: tuple[Route, ...] = (
             424,
             425,
         ),
-        down_steps=(
+        d_steps=(
             0,
             6,
             12,
@@ -5925,7 +5925,7 @@ routes: tuple[Route, ...] = (
         route="高朋路首末站-植物园",
         runtime="6:40-21:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             2708,
             2766,
             61828,
@@ -5947,7 +5947,7 @@ routes: tuple[Route, ...] = (
             61915,
             60914,
         ),
-        up_first=(
+        u_first=(
             400,
             402,
             404,
@@ -5969,7 +5969,7 @@ routes: tuple[Route, ...] = (
             436,
             438,
         ),
-        up_steps=(
+        u_steps=(
             0,
             10,
             20,
@@ -6061,7 +6061,7 @@ routes: tuple[Route, ...] = (
             880,
             890,
         ),
-        down_stations=(
+        d_stations=(
             60933,
             61914,
             61901,
@@ -6083,7 +6083,7 @@ routes: tuple[Route, ...] = (
             2769,
             2714,
         ),
-        down_first=(
+        d_first=(
             400,
             402,
             404,
@@ -6105,7 +6105,7 @@ routes: tuple[Route, ...] = (
             436,
             438,
         ),
-        down_steps=(
+        d_steps=(
             0,
             10,
             20,
@@ -6207,7 +6207,7 @@ routes: tuple[Route, ...] = (
         route="燎原-北路湾公交站",
         runtime="6:30-22:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             16500,
             16483,
             17808,
@@ -6234,7 +6234,7 @@ routes: tuple[Route, ...] = (
             26564,
             34592,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             394,
@@ -6261,7 +6261,7 @@ routes: tuple[Route, ...] = (
             436,
             437,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -6384,7 +6384,7 @@ routes: tuple[Route, ...] = (
             952,
             960,
         ),
-        down_stations=(
+        d_stations=(
             34658,
             26552,
             26576,
@@ -6412,7 +6412,7 @@ routes: tuple[Route, ...] = (
             16852,
             17779,
         ),
-        down_first=(
+        d_first=(
             390,
             391,
             393,
@@ -6440,7 +6440,7 @@ routes: tuple[Route, ...] = (
             438,
             439,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -6573,7 +6573,7 @@ routes: tuple[Route, ...] = (
         route="金河旅游区-新兴工业园",
         runtime="6:50-21:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             17984,
             41392,
             41507,
@@ -6595,7 +6595,7 @@ routes: tuple[Route, ...] = (
             41619,
             41749,
         ),
-        up_first=(
+        u_first=(
             410,
             412,
             414,
@@ -6617,7 +6617,7 @@ routes: tuple[Route, ...] = (
             446,
             448,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -6730,7 +6730,7 @@ routes: tuple[Route, ...] = (
             872,
             880,
         ),
-        down_stations=(
+        d_stations=(
             41748,
             41618,
             41630,
@@ -6752,7 +6752,7 @@ routes: tuple[Route, ...] = (
             4989,
             17995,
         ),
-        down_first=(
+        d_first=(
             410,
             412,
             414,
@@ -6774,7 +6774,7 @@ routes: tuple[Route, ...] = (
             446,
             447,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -6897,7 +6897,7 @@ routes: tuple[Route, ...] = (
         route="北路湾公交站-永盛",
         runtime="6:10-22:30",
         type="城乡线",
-        up_stations=(
+        u_stations=(
             34659,
             26552,
             26576,
@@ -6932,7 +6932,7 @@ routes: tuple[Route, ...] = (
             7528,
             56110,
         ),
-        up_first=(
+        u_first=(
             380,
             381,
             383,
@@ -6967,7 +6967,7 @@ routes: tuple[Route, ...] = (
             441,
             442,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -7091,7 +7091,7 @@ routes: tuple[Route, ...] = (
             960,
             968,
         ),
-        down_stations=(
+        d_stations=(
             7527,
             56112,
             56484,
@@ -7125,7 +7125,7 @@ routes: tuple[Route, ...] = (
             26564,
             34593,
         ),
-        down_first=(
+        d_first=(
             370,
             372,
             374,
@@ -7159,7 +7159,7 @@ routes: tuple[Route, ...] = (
             430,
             431,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -7294,7 +7294,7 @@ routes: tuple[Route, ...] = (
         route="庆安公交站-科北路",
         runtime="6:40-23:00",
         type="干线",
-        up_stations=(
+        u_stations=(
             17160,
             17288,
             17337,
@@ -7316,7 +7316,7 @@ routes: tuple[Route, ...] = (
             16432,
             2814,
         ),
-        up_first=(
+        u_first=(
             400,
             402,
             404,
@@ -7338,7 +7338,7 @@ routes: tuple[Route, ...] = (
             437,
             438,
         ),
-        up_steps=(
+        u_steps=(
             0,
             6,
             12,
@@ -7504,7 +7504,7 @@ routes: tuple[Route, ...] = (
             972,
             978,
         ),
-        down_stations=(
+        d_stations=(
             2058,
             16433,
             16419,
@@ -7527,7 +7527,7 @@ routes: tuple[Route, ...] = (
             17295,
             17737,
         ),
-        down_first=(
+        d_first=(
             400,
             401,
             404,
@@ -7550,7 +7550,7 @@ routes: tuple[Route, ...] = (
             438,
             440,
         ),
-        down_steps=(
+        d_steps=(
             0,
             6,
             12,
@@ -7726,7 +7726,7 @@ routes: tuple[Route, ...] = (
         route="永丰公交站-机投公交站",
         runtime="6:40-22:00",
         type="干线",
-        up_stations=(
+        u_stations=(
             45226,
             45056,
             45026,
@@ -7752,7 +7752,7 @@ routes: tuple[Route, ...] = (
             56747,
             56822,
         ),
-        up_first=(
+        u_first=(
             400,
             402,
             404,
@@ -7778,7 +7778,7 @@ routes: tuple[Route, ...] = (
             444,
             445,
         ),
-        up_steps=(
+        u_steps=(
             0,
             6,
             12,
@@ -7934,7 +7934,7 @@ routes: tuple[Route, ...] = (
             912,
             918,
         ),
-        down_stations=(
+        d_stations=(
             56810,
             56901,
             56910,
@@ -7960,7 +7960,7 @@ routes: tuple[Route, ...] = (
             45217,
             45222,
         ),
-        down_first=(
+        d_first=(
             400,
             402,
             404,
@@ -7986,7 +7986,7 @@ routes: tuple[Route, ...] = (
             444,
             445,
         ),
-        down_steps=(
+        d_steps=(
             0,
             6,
             12,
@@ -8152,7 +8152,7 @@ routes: tuple[Route, ...] = (
         route="桦林园-植物园",
         runtime="6:40-22:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             20763,
             27015,
             27280,
@@ -8179,7 +8179,7 @@ routes: tuple[Route, ...] = (
             60883,
             60900,
         ),
-        up_first=(
+        u_first=(
             400,
             402,
             404,
@@ -8206,7 +8206,7 @@ routes: tuple[Route, ...] = (
             446,
             448,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -8327,7 +8327,7 @@ routes: tuple[Route, ...] = (
             936,
             944,
         ),
-        down_stations=(
+        d_stations=(
             60932,
             60884,
             60854,
@@ -8354,7 +8354,7 @@ routes: tuple[Route, ...] = (
             27016,
             20768,
         ),
-        down_first=(
+        d_first=(
             400,
             402,
             404,
@@ -8381,7 +8381,7 @@ routes: tuple[Route, ...] = (
             446,
             448,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -8512,7 +8512,7 @@ routes: tuple[Route, ...] = (
         route="曾家坡公交站-动物园公交站",
         runtime="6:40-21:00",
         type="干线",
-        up_stations=(
+        u_stations=(
             24271,
             24737,
             24750,
@@ -8535,7 +8535,7 @@ routes: tuple[Route, ...] = (
             5168,
             5456,
         ),
-        up_first=(
+        u_first=(
             400,
             402,
             404,
@@ -8558,7 +8558,7 @@ routes: tuple[Route, ...] = (
             438,
             440,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -8668,7 +8668,7 @@ routes: tuple[Route, ...] = (
             848,
             856,
         ),
-        down_stations=(
+        d_stations=(
             5027,
             5214,
             5167,
@@ -8692,7 +8692,7 @@ routes: tuple[Route, ...] = (
             24738,
             24296,
         ),
-        down_first=(
+        d_first=(
             400,
             401,
             403,
@@ -8716,7 +8716,7 @@ routes: tuple[Route, ...] = (
             440,
             442,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -8836,7 +8836,7 @@ routes: tuple[Route, ...] = (
         route="金河客运站-三里坪公交站",
         runtime="6:30-22:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             97424,
             97507,
             60669,
@@ -8866,7 +8866,7 @@ routes: tuple[Route, ...] = (
             818,
             21379,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             394,
@@ -8896,7 +8896,7 @@ routes: tuple[Route, ...] = (
             442,
             443,
         ),
-        up_steps=(
+        u_steps=(
             0,
             6,
             12,
@@ -9059,7 +9059,7 @@ routes: tuple[Route, ...] = (
             954,
             960,
         ),
-        down_stations=(
+        d_stations=(
             21426,
             803,
             98730,
@@ -9088,7 +9088,7 @@ routes: tuple[Route, ...] = (
             97506,
             97439,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -9117,7 +9117,7 @@ routes: tuple[Route, ...] = (
             440,
             442,
         ),
-        down_steps=(
+        d_steps=(
             0,
             6,
             12,
@@ -9290,7 +9290,7 @@ routes: tuple[Route, ...] = (
         route="曾家坡公交站-海椒市",
         runtime="6:30-22:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             24270,
             24737,
             24750,
@@ -9317,7 +9317,7 @@ routes: tuple[Route, ...] = (
             25928,
             25908,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             394,
@@ -9344,7 +9344,7 @@ routes: tuple[Route, ...] = (
             436,
             438,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -9467,7 +9467,7 @@ routes: tuple[Route, ...] = (
             952,
             960,
         ),
-        down_stations=(
+        d_stations=(
             25909,
             25919,
             25944,
@@ -9493,7 +9493,7 @@ routes: tuple[Route, ...] = (
             24738,
             24295,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -9519,7 +9519,7 @@ routes: tuple[Route, ...] = (
             434,
             436,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -9652,7 +9652,7 @@ routes: tuple[Route, ...] = (
         route="花明公交站-金融城",
         runtime="6:00-22:00",
         type="干线",
-        up_stations=(
+        u_stations=(
             62105,
             27699,
             27733,
@@ -9677,7 +9677,7 @@ routes: tuple[Route, ...] = (
             64636,
             64625,
         ),
-        up_first=(
+        u_first=(
             360,
             361,
             363,
@@ -9702,7 +9702,7 @@ routes: tuple[Route, ...] = (
             401,
             403,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -9825,7 +9825,7 @@ routes: tuple[Route, ...] = (
             952,
             960,
         ),
-        down_stations=(
+        d_stations=(
             60200,
             64635,
             64645,
@@ -9852,7 +9852,7 @@ routes: tuple[Route, ...] = (
             27680,
             62116,
         ),
-        down_first=(
+        d_first=(
             360,
             362,
             364,
@@ -9879,7 +9879,7 @@ routes: tuple[Route, ...] = (
             404,
             405,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -10012,7 +10012,7 @@ routes: tuple[Route, ...] = (
         route="花明公交站-庆安公交站",
         runtime="6:00-23:00",
         type="干线",
-        up_stations=(
+        u_stations=(
             17160,
             23712,
             62803,
@@ -10049,7 +10049,7 @@ routes: tuple[Route, ...] = (
             27680,
             62117,
         ),
-        up_first=(
+        u_first=(
             360,
             362,
             364,
@@ -10086,7 +10086,7 @@ routes: tuple[Route, ...] = (
             423,
             424,
         ),
-        up_steps=(
+        u_steps=(
             0,
             6,
             12,
@@ -10259,7 +10259,7 @@ routes: tuple[Route, ...] = (
             1014,
             1020,
         ),
-        down_stations=(
+        d_stations=(
             62106,
             27699,
             27733,
@@ -10294,7 +10294,7 @@ routes: tuple[Route, ...] = (
             23713,
             62794,
         ),
-        down_first=(
+        d_first=(
             360,
             361,
             363,
@@ -10329,7 +10329,7 @@ routes: tuple[Route, ...] = (
             420,
             422,
         ),
-        down_steps=(
+        d_steps=(
             0,
             6,
             12,
@@ -10512,7 +10512,7 @@ routes: tuple[Route, ...] = (
         route="金河市政府-钟楼",
         runtime="6:30-21:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             99928,
             99487,
             99561,
@@ -10531,7 +10531,7 @@ routes: tuple[Route, ...] = (
             17823,
             17826,
         ),
-        up_first=(
+        u_first=(
             390,
             391,
             393,
@@ -10550,7 +10550,7 @@ routes: tuple[Route, ...] = (
             420,
             422,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -10665,7 +10665,7 @@ routes: tuple[Route, ...] = (
             888,
             896,
         ),
-        down_stations=(
+        d_stations=(
             17848,
             17824,
             17809,
@@ -10684,7 +10684,7 @@ routes: tuple[Route, ...] = (
             99488,
             99913,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             395,
@@ -10703,7 +10703,7 @@ routes: tuple[Route, ...] = (
             421,
             422,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -10828,7 +10828,7 @@ routes: tuple[Route, ...] = (
         route="火车西站公交站-八里小区",
         runtime="6:00-22:00",
         type="干线",
-        up_stations=(
+        u_stations=(
             26070,
             26145,
             26140,
@@ -10851,7 +10851,7 @@ routes: tuple[Route, ...] = (
             6999,
             27295,
         ),
-        up_first=(
+        u_first=(
             360,
             361,
             363,
@@ -10874,7 +10874,7 @@ routes: tuple[Route, ...] = (
             395,
             396,
         ),
-        up_steps=(
+        u_steps=(
             0,
             5,
             10,
@@ -11069,7 +11069,7 @@ routes: tuple[Route, ...] = (
             955,
             960,
         ),
-        down_stations=(
+        d_stations=(
             27297,
             6788,
             6819,
@@ -11091,7 +11091,7 @@ routes: tuple[Route, ...] = (
             26144,
             26192,
         ),
-        down_first=(
+        d_first=(
             360,
             362,
             364,
@@ -11113,7 +11113,7 @@ routes: tuple[Route, ...] = (
             394,
             395,
         ),
-        down_steps=(
+        d_steps=(
             0,
             5,
             10,
@@ -11318,7 +11318,7 @@ routes: tuple[Route, ...] = (
         route="环球中心-天华一路",
         runtime="6:30-22:15",
         type="干线",
-        up_stations=(
+        u_stations=(
             15343,
             22007,
             22011,
@@ -11336,7 +11336,7 @@ routes: tuple[Route, ...] = (
             60066,
             60081,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             394,
@@ -11354,7 +11354,7 @@ routes: tuple[Route, ...] = (
             418,
             420,
         ),
-        up_steps=(
+        u_steps=(
             0,
             6,
             12,
@@ -11514,7 +11514,7 @@ routes: tuple[Route, ...] = (
             936,
             942,
         ),
-        down_stations=(
+        d_stations=(
             60087,
             60105,
             60060,
@@ -11533,7 +11533,7 @@ routes: tuple[Route, ...] = (
             22008,
             98305,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -11552,7 +11552,7 @@ routes: tuple[Route, ...] = (
             420,
             422,
         ),
-        down_steps=(
+        d_steps=(
             0,
             6,
             12,
@@ -12272,7 +12272,7 @@ routes: tuple[Route, ...] = (
         route="永丰公交站-金河南站公交站",
         runtime="6:10-22:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             56811,
             62368,
             62428,
@@ -12305,7 +12305,7 @@ routes: tuple[Route, ...] = (
             59162,
             57488,
         ),
-        up_first=(
+        u_first=(
             370,
             371,
             373,
@@ -12338,7 +12338,7 @@ routes: tuple[Route, ...] = (
             425,
             426,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -12463,7 +12463,7 @@ routes: tuple[Route, ...] = (
             968,
             976,
         ),
-        down_stations=(
+        d_stations=(
             57728,
             64549,
             64535,
@@ -12496,7 +12496,7 @@ routes: tuple[Route, ...] = (
             56747,
             56820,
         ),
-        down_first=(
+        d_first=(
             370,
             372,
             374,
@@ -12529,7 +12529,7 @@ routes: tuple[Route, ...] = (
             426,
             427,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -12664,7 +12664,7 @@ routes: tuple[Route, ...] = (
         route="三里坪公交站-花明公交站",
         runtime="6:30-22:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             97424,
             97507,
             60669,
@@ -12688,7 +12688,7 @@ routes: tuple[Route, ...] = (
             27680,
             62118,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             394,
@@ -12712,7 +12712,7 @@ routes: tuple[Route, ...] = (
             428,
             429,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -12835,7 +12835,7 @@ routes: tuple[Route, ...] = (
             952,
             960,
         ),
-        down_stations=(
+        d_stations=(
             62107,
             27699,
             27733,
@@ -12858,7 +12858,7 @@ routes: tuple[Route, ...] = (
             97417,
             97440,
         ),
-        down_first=(
+        d_first=(
             390,
             391,
             393,
@@ -12881,7 +12881,7 @@ routes: tuple[Route, ...] = (
             427,
             428,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -13014,7 +13014,7 @@ routes: tuple[Route, ...] = (
         route="新南天地-东林小区",
         runtime="6:30-21:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             98049,
             98071,
             56545,
@@ -13035,7 +13035,7 @@ routes: tuple[Route, ...] = (
             6362,
             6420,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             394,
@@ -13056,7 +13056,7 @@ routes: tuple[Route, ...] = (
             424,
             426,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -13171,7 +13171,7 @@ routes: tuple[Route, ...] = (
             888,
             896,
         ),
-        down_stations=(
+        d_stations=(
             62709,
             22008,
             15343,
@@ -13192,7 +13192,7 @@ routes: tuple[Route, ...] = (
             98072,
             98050,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -13213,7 +13213,7 @@ routes: tuple[Route, ...] = (
             424,
             426,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -13338,7 +13338,7 @@ routes: tuple[Route, ...] = (
         route="金河旅游区-动物园公交站",
         runtime="6:30-22:00",
         type="干线",
-        up_stations=(
+        u_stations=(
             5027,
             5214,
             5167,
@@ -13361,7 +13361,7 @@ routes: tuple[Route, ...] = (
             4998,
             4991,
         ),
-        up_first=(
+        u_first=(
             390,
             391,
             393,
@@ -13384,7 +13384,7 @@ routes: tuple[Route, ...] = (
             427,
             429,
         ),
-        up_steps=(
+        u_steps=(
             0,
             10,
             20,
@@ -13480,7 +13480,7 @@ routes: tuple[Route, ...] = (
             920,
             930,
         ),
-        down_stations=(
+        d_stations=(
             4985,
             4997,
             5007,
@@ -13503,7 +13503,7 @@ routes: tuple[Route, ...] = (
             5168,
             5023,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -13526,7 +13526,7 @@ routes: tuple[Route, ...] = (
             428,
             430,
         ),
-        down_steps=(
+        d_steps=(
             0,
             10,
             20,
@@ -13632,7 +13632,7 @@ routes: tuple[Route, ...] = (
         route="环球中心-地铁四河站",
         runtime="6:30-22:00",
         type="驳接线",
-        up_stations=(
+        u_stations=(
             15343,
             14571,
             6377,
@@ -13655,7 +13655,7 @@ routes: tuple[Route, ...] = (
             15034,
             14881,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             394,
@@ -13678,7 +13678,7 @@ routes: tuple[Route, ...] = (
             428,
             430,
         ),
-        up_steps=(
+        u_steps=(
             0,
             10,
             20,
@@ -13774,7 +13774,7 @@ routes: tuple[Route, ...] = (
             920,
             930,
         ),
-        down_stations=(
+        d_stations=(
             14880,
             15035,
             15074,
@@ -13797,7 +13797,7 @@ routes: tuple[Route, ...] = (
             14572,
             98306,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -13820,7 +13820,7 @@ routes: tuple[Route, ...] = (
             428,
             430,
         ),
-        down_steps=(
+        d_steps=(
             0,
             10,
             20,
@@ -13926,7 +13926,7 @@ routes: tuple[Route, ...] = (
         route="鱼凫西路南-机投公交站",
         runtime="6:30-20:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             23850,
             44929,
             4057,
@@ -13948,7 +13948,7 @@ routes: tuple[Route, ...] = (
             45057,
             45223,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             394,
@@ -13970,7 +13970,7 @@ routes: tuple[Route, ...] = (
             426,
             428,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -14078,7 +14078,7 @@ routes: tuple[Route, ...] = (
             832,
             840,
         ),
-        down_stations=(
+        d_stations=(
             45226,
             45056,
             45026,
@@ -14100,7 +14100,7 @@ routes: tuple[Route, ...] = (
             23851,
             44917,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -14122,7 +14122,7 @@ routes: tuple[Route, ...] = (
             426,
             428,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -14240,7 +14240,7 @@ routes: tuple[Route, ...] = (
         route="施家沟-清河镇",
         runtime="6:30-19:00",
         type="城乡线",
-        up_stations=(
+        u_stations=(
             55920,
             55928,
             55905,
@@ -14255,7 +14255,7 @@ routes: tuple[Route, ...] = (
             55870,
             55846,
         ),
-        up_first=(
+        u_first=(
             390,
             391,
             392,
@@ -14270,7 +14270,7 @@ routes: tuple[Route, ...] = (
             402,
             403,
         ),
-        up_steps=(
+        u_steps=(
             0,
             10,
             20,
@@ -14348,7 +14348,7 @@ routes: tuple[Route, ...] = (
             740,
             750,
         ),
-        down_stations=(
+        d_stations=(
             55845,
             55871,
             55880,
@@ -14362,8 +14362,8 @@ routes: tuple[Route, ...] = (
             55904,
             55919,
         ),
-        down_first=(390, 391, 392, 393, 394, 395, 396, 398, 399, 400, 401, 402),
-        down_steps=(
+        d_first=(390, 391, 392, 393, 394, 395, 396, 398, 399, 400, 401, 402),
+        d_steps=(
             0,
             10,
             20,
@@ -14451,7 +14451,7 @@ routes: tuple[Route, ...] = (
         route="银杏园公交站-万寿乡",
         runtime="7:00-20:00",
         type="城乡线",
-        up_stations=(
+        u_stations=(
             45945,
             45917,
             45909,
@@ -14467,7 +14467,7 @@ routes: tuple[Route, ...] = (
             45960,
             37959,
         ),
-        up_first=(
+        u_first=(
             420,
             421,
             422,
@@ -14483,7 +14483,7 @@ routes: tuple[Route, ...] = (
             435,
             436,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -14583,7 +14583,7 @@ routes: tuple[Route, ...] = (
             768,
             776,
         ),
-        down_stations=(
+        d_stations=(
             21924,
             37966,
             45961,
@@ -14601,7 +14601,7 @@ routes: tuple[Route, ...] = (
             45953,
             45931,
         ),
-        down_first=(
+        d_first=(
             420,
             421,
             422,
@@ -14619,7 +14619,7 @@ routes: tuple[Route, ...] = (
             437,
             438,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -14729,7 +14729,7 @@ routes: tuple[Route, ...] = (
         route="银杏园公交站→地铁七河路口",
         runtime="6:10-22:40",
         type="驳接线",
-        up_stations=(
+        u_stations=(
             45826,
             45847,
             45860,
@@ -14749,7 +14749,7 @@ routes: tuple[Route, ...] = (
             45953,
             45935,
         ),
-        up_first=(
+        u_first=(
             370,
             371,
             372,
@@ -14769,7 +14769,7 @@ routes: tuple[Route, ...] = (
             389,
             390,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -14895,7 +14895,7 @@ routes: tuple[Route, ...] = (
             976,
             984,
         ),
-        down_stations=(
+        d_stations=(
             45944,
             45917,
             45909,
@@ -14912,7 +14912,7 @@ routes: tuple[Route, ...] = (
             45868,
             45825,
         ),
-        down_first=(
+        d_first=(
             370,
             371,
             372,
@@ -14929,7 +14929,7 @@ routes: tuple[Route, ...] = (
             387,
             388,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -15065,7 +15065,7 @@ routes: tuple[Route, ...] = (
         route="金河旅游区-东源路",
         runtime="7:00-21:00",
         type="支线",
-        up_stations=(
+        u_stations=(
             6956,
             18000,
             18027,
@@ -15078,8 +15078,8 @@ routes: tuple[Route, ...] = (
             18093,
             17936,
         ),
-        up_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
-        up_steps=(
+        u_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
+        u_steps=(
             0,
             8,
             16,
@@ -15187,7 +15187,7 @@ routes: tuple[Route, ...] = (
             832,
             840,
         ),
-        down_stations=(
+        d_stations=(
             17939,
             18072,
             18079,
@@ -15202,7 +15202,7 @@ routes: tuple[Route, ...] = (
             4989,
             6962,
         ),
-        down_first=(
+        d_first=(
             420,
             422,
             424,
@@ -15217,7 +15217,7 @@ routes: tuple[Route, ...] = (
             441,
             442,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -15658,7 +15658,7 @@ routes: tuple[Route, ...] = (
         route="机投公交站-癀后门",
         runtime="6:30-20:30",
         type="支线",
-        up_stations=(
+        u_stations=(
             45226,
             45056,
             55602,
@@ -15672,8 +15672,8 @@ routes: tuple[Route, ...] = (
             56627,
             56618,
         ),
-        up_first=(390, 392, 394, 396, 398, 400, 402, 404, 406, 408, 410, 412),
-        up_steps=(
+        u_first=(390, 392, 394, 396, 398, 400, 402, 404, 406, 408, 410, 412),
+        u_steps=(
             0,
             8,
             16,
@@ -15781,7 +15781,7 @@ routes: tuple[Route, ...] = (
             832,
             840,
         ),
-        down_stations=(
+        d_stations=(
             56617,
             56628,
             17626,
@@ -15796,7 +15796,7 @@ routes: tuple[Route, ...] = (
             45217,
             45224,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -15811,7 +15811,7 @@ routes: tuple[Route, ...] = (
             412,
             413,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -15929,7 +15929,7 @@ routes: tuple[Route, ...] = (
         route="金河客运站-动物园公交站",
         runtime="7:00-20:00",
         type="支线",
-        up_stations=(
+        u_stations=(
             5027,
             5214,
             5167,
@@ -15942,8 +15942,8 @@ routes: tuple[Route, ...] = (
             818,
             21535,
         ),
-        up_first=(420, 421, 423, 425, 427, 429, 431, 433, 435, 436, 437),
-        up_steps=(
+        u_first=(420, 421, 423, 425, 427, 429, 431, 433, 435, 436, 437),
+        u_steps=(
             0,
             8,
             16,
@@ -16043,9 +16043,9 @@ routes: tuple[Route, ...] = (
             768,
             776,
         ),
-        down_stations=(21426, 803, 98730, 17693, 56570, 56445, 98755, 5168, 7229),
-        down_first=(420, 422, 424, 426, 428, 430, 432, 434, 436),
-        down_steps=(
+        d_stations=(21426, 803, 98730, 17693, 56570, 56445, 98755, 5168, 7229),
+        d_first=(420, 422, 424, 426, 428, 430, 432, 434, 436),
+        d_steps=(
             0,
             8,
             16,
@@ -16155,7 +16155,7 @@ routes: tuple[Route, ...] = (
         route="鸿石社区-四医院",
         runtime="6:30-20:00",
         type="支线",
-        up_stations=(
+        u_stations=(
             55097,
             55152,
             55161,
@@ -16170,7 +16170,7 @@ routes: tuple[Route, ...] = (
             55768,
             55761,
         ),
-        up_first=(
+        u_first=(
             390,
             391,
             392,
@@ -16185,7 +16185,7 @@ routes: tuple[Route, ...] = (
             409,
             411,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -16289,7 +16289,7 @@ routes: tuple[Route, ...] = (
             800,
             808,
         ),
-        down_stations=(
+        d_stations=(
             54746,
             54723,
             54545,
@@ -16305,7 +16305,7 @@ routes: tuple[Route, ...] = (
             55141,
             55092,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -16321,7 +16321,7 @@ routes: tuple[Route, ...] = (
             411,
             412,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -16435,9 +16435,9 @@ routes: tuple[Route, ...] = (
         route="曾家坡公交站→文家场",
         runtime="7:00-19:30",
         type="城乡线",
-        up_stations=(24273, 55438, 55448, 55353, 55341, 55492, 55487, 55471),
-        up_first=(420, 422, 424, 426, 428, 430, 432, 434),
-        up_steps=(
+        u_stations=(24273, 55438, 55448, 55353, 55341, 55492, 55487, 55471),
+        u_first=(420, 422, 424, 426, 428, 430, 432, 434),
+        u_steps=(
             0,
             6,
             12,
@@ -16565,9 +16565,9 @@ routes: tuple[Route, ...] = (
             744,
             750,
         ),
-        down_stations=(55472, 55486, 55491, 55342, 55352, 55450, 55437, 24298),
-        down_first=(420, 422, 424, 426, 428, 430, 432, 434),
-        down_steps=(
+        d_stations=(55472, 55486, 55491, 55342, 55352, 55450, 55437, 24298),
+        d_first=(420, 422, 424, 426, 428, 430, 432, 434),
+        d_steps=(
             0,
             6,
             12,
@@ -16705,7 +16705,7 @@ routes: tuple[Route, ...] = (
         route="燎原-地铁东井巷",
         runtime="7:00-21:00",
         type="驳接线",
-        up_stations=(
+        u_stations=(
             16500,
             16483,
             16418,
@@ -16719,8 +16719,8 @@ routes: tuple[Route, ...] = (
             15547,
             16757,
         ),
-        up_first=(420, 423, 425, 427, 429, 431, 433, 435, 437, 439, 441, 443),
-        up_steps=(
+        u_first=(420, 423, 425, 427, 429, 431, 433, 435, 437, 439, 441, 443),
+        u_steps=(
             0,
             6,
             12,
@@ -16863,7 +16863,7 @@ routes: tuple[Route, ...] = (
             834,
             840,
         ),
-        down_stations=(
+        d_stations=(
             16758,
             16772,
             2734,
@@ -16878,7 +16878,7 @@ routes: tuple[Route, ...] = (
             16852,
             16851,
         ),
-        down_first=(
+        d_first=(
             420,
             422,
             424,
@@ -16893,7 +16893,7 @@ routes: tuple[Route, ...] = (
             443,
             444,
         ),
-        down_steps=(
+        d_steps=(
             0,
             6,
             12,
@@ -17046,7 +17046,7 @@ routes: tuple[Route, ...] = (
         route="环球中心-驿都路",
         runtime="7:00-21:00",
         type="支线",
-        up_stations=(
+        u_stations=(
             15343,
             27223,
             20841,
@@ -17059,8 +17059,8 @@ routes: tuple[Route, ...] = (
             46588,
             46569,
         ),
-        up_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
-        up_steps=(
+        u_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
+        u_steps=(
             0,
             6,
             12,
@@ -17203,7 +17203,7 @@ routes: tuple[Route, ...] = (
             834,
             840,
         ),
-        down_stations=(
+        d_stations=(
             46556,
             46589,
             46785,
@@ -17216,8 +17216,8 @@ routes: tuple[Route, ...] = (
             27224,
             98307,
         ),
-        down_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
-        down_steps=(
+        d_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
+        d_steps=(
             0,
             6,
             12,
@@ -17370,7 +17370,7 @@ routes: tuple[Route, ...] = (
         route="环球中心-驿都路",
         runtime="7:00-21:00",
         type="支线",
-        up_stations=(
+        u_stations=(
             3539,
             1129,
             1154,
@@ -17383,8 +17383,8 @@ routes: tuple[Route, ...] = (
             46588,
             46569,
         ),
-        up_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
-        up_steps=(
+        u_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
+        u_steps=(
             0,
             6,
             12,
@@ -17527,7 +17527,7 @@ routes: tuple[Route, ...] = (
             834,
             840,
         ),
-        down_stations=(
+        d_stations=(
             46556,
             46589,
             46609,
@@ -17540,8 +17540,8 @@ routes: tuple[Route, ...] = (
             3654,
             98307,
         ),
-        down_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
-        down_steps=(
+        d_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 440),
+        d_steps=(
             0,
             6,
             12,
@@ -17694,7 +17694,7 @@ routes: tuple[Route, ...] = (
         route="曾家坡公交站→高朋路首末站",
         runtime="6:30-20:30",
         type="支线",
-        up_stations=(
+        u_stations=(
             25281,
             25256,
             25240,
@@ -17714,7 +17714,7 @@ routes: tuple[Route, ...] = (
             24738,
             24297,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             394,
@@ -17734,7 +17734,7 @@ routes: tuple[Route, ...] = (
             422,
             424,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -17842,7 +17842,7 @@ routes: tuple[Route, ...] = (
             832,
             840,
         ),
-        down_stations=(
+        d_stations=(
             24272,
             24737,
             24750,
@@ -17862,7 +17862,7 @@ routes: tuple[Route, ...] = (
             25258,
             25276,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -17882,7 +17882,7 @@ routes: tuple[Route, ...] = (
             422,
             424,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -18000,7 +18000,7 @@ routes: tuple[Route, ...] = (
         route="两河路-大同镇",
         runtime="6:00-22:20",
         type="城乡线",
-        up_stations=(
+        u_stations=(
             5413,
             16116,
             16078,
@@ -18036,7 +18036,7 @@ routes: tuple[Route, ...] = (
             45477,
             45332,
         ),
-        up_first=(
+        u_first=(
             360,
             362,
             364,
@@ -18072,7 +18072,7 @@ routes: tuple[Route, ...] = (
             418,
             420,
         ),
-        up_steps=(
+        u_steps=(
             0,
             6,
             12,
@@ -18238,7 +18238,7 @@ routes: tuple[Route, ...] = (
             972,
             978,
         ),
-        down_stations=(
+        d_stations=(
             45331,
             45478,
             45541,
@@ -18275,7 +18275,7 @@ routes: tuple[Route, ...] = (
             5425,
             5414,
         ),
-        down_first=(
+        d_first=(
             360,
             362,
             364,
@@ -18312,7 +18312,7 @@ routes: tuple[Route, ...] = (
             419,
             420,
         ),
-        down_steps=(
+        d_steps=(
             0,
             6,
             12,
@@ -18488,7 +18488,7 @@ routes: tuple[Route, ...] = (
         route="金河旅游区-锦城西路",
         runtime="6:00-22:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             63049,
             4997,
             5007,
@@ -18523,7 +18523,7 @@ routes: tuple[Route, ...] = (
             60053,
             62905,
         ),
-        up_first=(
+        u_first=(
             360,
             362,
             364,
@@ -18558,7 +18558,7 @@ routes: tuple[Route, ...] = (
             422,
             424,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -18684,7 +18684,7 @@ routes: tuple[Route, ...] = (
             976,
             984,
         ),
-        down_stations=(
+        d_stations=(
             62898,
             60052,
             60040,
@@ -18720,7 +18720,7 @@ routes: tuple[Route, ...] = (
             4989,
             63045,
         ),
-        down_first=(
+        d_first=(
             360,
             362,
             364,
@@ -18756,7 +18756,7 @@ routes: tuple[Route, ...] = (
             424,
             425,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -18892,7 +18892,7 @@ routes: tuple[Route, ...] = (
         route="金河客运站-天河区公交站",
         runtime="6:00-21:00",
         type="干线",
-        up_stations=(
+        u_stations=(
             21427,
             5358,
             5437,
@@ -18926,7 +18926,7 @@ routes: tuple[Route, ...] = (
             53255,
             53259,
         ),
-        up_first=(
+        u_first=(
             360,
             362,
             364,
@@ -18960,7 +18960,7 @@ routes: tuple[Route, ...] = (
             419,
             420,
         ),
-        up_steps=(
+        u_steps=(
             0,
             6,
             12,
@@ -19113,7 +19113,7 @@ routes: tuple[Route, ...] = (
             894,
             900,
         ),
-        down_stations=(
+        d_stations=(
             53055,
             53400,
             55552,
@@ -19146,7 +19146,7 @@ routes: tuple[Route, ...] = (
             818,
             21537,
         ),
-        down_first=(
+        d_first=(
             360,
             362,
             364,
@@ -19179,7 +19179,7 @@ routes: tuple[Route, ...] = (
             418,
             419,
         ),
-        down_steps=(
+        d_steps=(
             0,
             6,
             12,
@@ -19342,7 +19342,7 @@ routes: tuple[Route, ...] = (
         route="万寿乡→永盛",
         runtime="6:00-18:00",
         type="城乡线",
-        up_stations=(
+        u_stations=(
             98619,
             7540,
             37926,
@@ -19354,8 +19354,8 @@ routes: tuple[Route, ...] = (
             98675,
             37959,
         ),
-        up_first=(360, 366, 369, 373, 377, 381, 385, 390, 395, 400),
-        up_steps=(
+        u_first=(360, 366, 369, 373, 377, 381, 385, 390, 395, 400),
+        u_steps=(
             0,
             12,
             24,
@@ -19418,7 +19418,7 @@ routes: tuple[Route, ...] = (
             708,
             720,
         ),
-        down_stations=(
+        d_stations=(
             21924,
             98676,
             98657,
@@ -19430,8 +19430,8 @@ routes: tuple[Route, ...] = (
             37934,
             98677,
         ),
-        down_first=(360, 365, 370, 375, 379, 383, 387, 391, 394, 400),
-        down_steps=(
+        d_first=(360, 365, 370, 375, 379, 383, 387, 391, 394, 400),
+        d_steps=(
             0,
             12,
             24,
@@ -19504,9 +19504,9 @@ routes: tuple[Route, ...] = (
         route="科北路-高朋路首末站",
         runtime="6:30-21:00",
         type="支线",
-        up_stations=(2708, 2766, 2777, 2741, 2806, 2734, 2074, 2059, 3836),
-        up_first=(390, 392, 394, 396, 398, 400, 402, 404, 405),
-        up_steps=(
+        u_stations=(2708, 2766, 2777, 2741, 2806, 2734, 2074, 2059, 3836),
+        u_first=(390, 392, 394, 396, 398, 400, 402, 404, 405),
+        u_steps=(
             0,
             6,
             12,
@@ -19654,9 +19654,9 @@ routes: tuple[Route, ...] = (
             864,
             870,
         ),
-        down_stations=(3839, 2073, 2725, 2800, 2758, 2788, 2769, 2714),
-        down_first=(390, 392, 394, 396, 398, 400, 402, 403),
-        down_steps=(
+        d_stations=(3839, 2073, 2725, 2800, 2758, 2788, 2769, 2714),
+        d_first=(390, 392, 394, 396, 398, 400, 402, 403),
+        d_steps=(
             0,
             6,
             12,
@@ -19814,7 +19814,7 @@ routes: tuple[Route, ...] = (
         route="金河客运站-鸿石社区",
         runtime="6:30-21:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             21427,
             55601,
             45057,
@@ -19849,7 +19849,7 @@ routes: tuple[Route, ...] = (
             55141,
             55091,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             394,
@@ -19884,7 +19884,7 @@ routes: tuple[Route, ...] = (
             452,
             454,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -19999,7 +19999,7 @@ routes: tuple[Route, ...] = (
             888,
             896,
         ),
-        down_stations=(
+        d_stations=(
             55097,
             55152,
             55161,
@@ -20034,7 +20034,7 @@ routes: tuple[Route, ...] = (
             818,
             21538,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -20069,7 +20069,7 @@ routes: tuple[Route, ...] = (
             452,
             453,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -20194,7 +20194,7 @@ routes: tuple[Route, ...] = (
         route="北客站-天河区公交站",
         runtime="6:30-22:20",
         type="干线",
-        up_stations=(
+        u_stations=(
             53725,
             53733,
             53772,
@@ -20215,7 +20215,7 @@ routes: tuple[Route, ...] = (
             53675,
             53258,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             394,
@@ -20236,7 +20236,7 @@ routes: tuple[Route, ...] = (
             424,
             426,
         ),
-        up_steps=(
+        u_steps=(
             0,
             6,
             12,
@@ -20397,7 +20397,7 @@ routes: tuple[Route, ...] = (
             942,
             948,
         ),
-        down_stations=(
+        d_stations=(
             53071,
             53674,
             53703,
@@ -20418,7 +20418,7 @@ routes: tuple[Route, ...] = (
             53734,
             53726,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -20439,7 +20439,7 @@ routes: tuple[Route, ...] = (
             424,
             426,
         ),
-        down_steps=(
+        d_steps=(
             0,
             6,
             12,
@@ -20610,7 +20610,7 @@ routes: tuple[Route, ...] = (
         route="科北路-帀家店",
         runtime="6:40-22:00",
         type="干线",
-        up_stations=(
+        u_stations=(
             54113,
             16433,
             16419,
@@ -20649,7 +20649,7 @@ routes: tuple[Route, ...] = (
             54586,
             54570,
         ),
-        up_first=(
+        u_first=(
             400,
             402,
             404,
@@ -20688,7 +20688,7 @@ routes: tuple[Route, ...] = (
             470,
             472,
         ),
-        up_steps=(
+        u_steps=(
             0,
             8,
             16,
@@ -20806,7 +20806,7 @@ routes: tuple[Route, ...] = (
             912,
             920,
         ),
-        down_stations=(
+        d_stations=(
             54572,
             54585,
             54588,
@@ -20847,7 +20847,7 @@ routes: tuple[Route, ...] = (
             2059,
             54110,
         ),
-        down_first=(
+        d_first=(
             400,
             402,
             404,
@@ -20888,7 +20888,7 @@ routes: tuple[Route, ...] = (
             474,
             475,
         ),
-        down_steps=(
+        d_steps=(
             0,
             8,
             16,
@@ -21016,7 +21016,7 @@ routes: tuple[Route, ...] = (
         route="科北路→天河区公交站",
         runtime="7:00-19:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             54113,
             16433,
             24646,
@@ -21029,8 +21029,8 @@ routes: tuple[Route, ...] = (
             53255,
             54074,
         ),
-        up_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 439),
-        up_steps=(
+        u_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 439),
+        u_steps=(
             0,
             6,
             12,
@@ -21158,7 +21158,7 @@ routes: tuple[Route, ...] = (
             744,
             750,
         ),
-        down_stations=(
+        d_stations=(
             53055,
             53400,
             52824,
@@ -21171,8 +21171,8 @@ routes: tuple[Route, ...] = (
             2059,
             54110,
         ),
-        down_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 439),
-        down_steps=(
+        d_first=(420, 422, 424, 426, 428, 430, 432, 434, 436, 438, 439),
+        d_steps=(
             0,
             6,
             12,
@@ -21310,7 +21310,7 @@ routes: tuple[Route, ...] = (
         route="火车西站公交站-天河区公交站",
         runtime="6:20-21:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             61933,
             52661,
             52681,
@@ -21356,7 +21356,7 @@ routes: tuple[Route, ...] = (
             53255,
             53254,
         ),
-        up_first=(
+        u_first=(
             380,
             382,
             384,
@@ -21402,7 +21402,7 @@ routes: tuple[Route, ...] = (
             465,
             466,
         ),
-        up_steps=(
+        u_steps=(
             0,
             6,
             12,
@@ -21556,7 +21556,7 @@ routes: tuple[Route, ...] = (
             900,
             906,
         ),
-        down_stations=(
+        d_stations=(
             53072,
             53400,
             53418,
@@ -21602,7 +21602,7 @@ routes: tuple[Route, ...] = (
             6999,
             61929,
         ),
-        down_first=(
+        d_first=(
             380,
             382,
             384,
@@ -21648,7 +21648,7 @@ routes: tuple[Route, ...] = (
             465,
             466,
         ),
-        down_steps=(
+        d_steps=(
             0,
             6,
             12,
@@ -21812,7 +21812,7 @@ routes: tuple[Route, ...] = (
         route="三里坪公交站-天河区公交站",
         runtime="6:30-21:30",
         type="干线",
-        up_stations=(
+        u_stations=(
             97424,
             97507,
             60641,
@@ -21861,7 +21861,7 @@ routes: tuple[Route, ...] = (
             53255,
             53260,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             394,
@@ -21910,7 +21910,7 @@ routes: tuple[Route, ...] = (
             479,
             480,
         ),
-        up_steps=(
+        u_steps=(
             0,
             6,
             12,
@@ -22063,7 +22063,7 @@ routes: tuple[Route, ...] = (
             894,
             900,
         ),
-        down_stations=(
+        d_stations=(
             53073,
             53400,
             53418,
@@ -22111,7 +22111,7 @@ routes: tuple[Route, ...] = (
             97417,
             97441,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -22159,7 +22159,7 @@ routes: tuple[Route, ...] = (
             478,
             480,
         ),
-        down_steps=(
+        d_steps=(
             0,
             6,
             12,
@@ -22322,9 +22322,9 @@ routes: tuple[Route, ...] = (
         route="合江客运站→地铁钟楼站",
         runtime="5:50-21:00",
         type="驳接线",
-        up_stations=(106932, 107112, 114349, 107083, 107078, 107108, 99594, 114470),
-        up_first=(330, 350, 352, 362, 364, 366, 386, 388),
-        up_steps=(
+        u_stations=(106932, 107112, 114349, 107083, 107078, 107108, 99594, 114470),
+        u_first=(330, 350, 352, 362, 364, 366, 386, 388),
+        u_steps=(
             0,
             20,
             40,
@@ -22373,7 +22373,7 @@ routes: tuple[Route, ...] = (
             900,
             920,
         ),
-        down_stations=(
+        d_stations=(
             114472,
             99561,
             99496,
@@ -22385,8 +22385,8 @@ routes: tuple[Route, ...] = (
             107000,
             107034,
         ),
-        down_first=(350, 352, 354, 374, 376, 378, 388, 390, 409, 410),
-        down_steps=(
+        d_first=(350, 352, 354, 374, 376, 378, 388, 390, 409, 410),
+        d_steps=(
             0,
             20,
             40,
@@ -22444,9 +22444,9 @@ routes: tuple[Route, ...] = (
         route="合江客运站-金河客运站",
         runtime="5:30-21:40",
         type="城乡线",
-        up_stations=(106932, 107112, 114349, 98049, 98071, 98726, 818, 21539),
-        up_first=(330, 356, 358, 380, 385, 387, 389, 390),
-        up_steps=(
+        u_stations=(106932, 107112, 114349, 98049, 98071, 98726, 818, 21539),
+        u_first=(330, 356, 358, 380, 385, 387, 389, 390),
+        u_steps=(
             0,
             20,
             40,
@@ -22497,9 +22497,9 @@ routes: tuple[Route, ...] = (
             940,
             960,
         ),
-        down_stations=(21444, 803, 104283, 98048, 114350, 107113, 107000, 107035),
-        down_first=(330, 332, 334, 338, 358, 360, 385, 386),
-        down_steps=(
+        d_stations=(21444, 803, 104283, 98048, 114350, 107113, 107000, 107035),
+        d_first=(330, 332, 334, 338, 358, 360, 385, 386),
+        d_steps=(
             0,
             20,
             40,
@@ -22560,12 +22560,12 @@ routes: tuple[Route, ...] = (
         route="金河客运站→锦城西路",
         runtime="7:00-8:00",
         type="高峰线",
-        up_stations=(21447, 23114, 63023, 60188, 62928, 62906),
-        up_first=(420, 430, 435, 438, 442, 446),
-        up_steps=(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60),
-        down_stations=(63154, 62927, 63115, 60186, 23115, 98106, 818, 21540),
-        down_first=(420, 424, 427, 430, 435, 440, 445, 446),
-        down_steps=(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60),
+        u_stations=(21447, 23114, 63023, 60188, 62928, 62906),
+        u_first=(420, 430, 435, 438, 442, 446),
+        u_steps=(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60),
+        d_stations=(63154, 62927, 63115, 60186, 23115, 98106, 818, 21540),
+        d_first=(420, 424, 427, 430, 435, 440, 445, 446),
+        d_steps=(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60),
     ),
     Route(
         directional=True,
@@ -22576,12 +22576,12 @@ routes: tuple[Route, ...] = (
         route="燎原→环球中心",
         runtime="7:30-7:50",
         type="高峰线",
-        up_stations=(3539, 98106, 59549, 16116, 16852, 99324),
-        up_first=(450, 452, 454, 457, 459, 460),
-        up_steps=(0, 20),
-        down_stations=(98707, 16115, 59548, 98783, 98309),
-        down_first=(450, 452, 455, 458, 460),
-        down_steps=(0, 20),
+        u_stations=(3539, 98106, 59549, 16116, 16852, 99324),
+        u_first=(450, 452, 454, 457, 459, 460),
+        u_steps=(0, 20),
+        d_stations=(98707, 16115, 59548, 98783, 98309),
+        d_first=(450, 452, 455, 458, 460),
+        d_steps=(0, 20),
     ),
     Route(
         directional=True,
@@ -22592,12 +22592,12 @@ routes: tuple[Route, ...] = (
         route="金河客运站→新兴工业园",
         runtime="7:00-7:40",
         type="高峰线",
-        up_stations=(21447, 41749),
-        up_first=(420, 428),
-        up_steps=(0, 20, 40),
-        down_stations=(62319, 56484, 818, 21540),
-        down_first=(420, 424, 428, 430),
-        down_steps=(0, 20, 40),
+        u_stations=(21447, 41749),
+        u_first=(420, 428),
+        u_steps=(0, 20, 40),
+        d_stations=(62319, 56484, 818, 21540),
+        d_first=(420, 424, 428, 430),
+        d_steps=(0, 20, 40),
     ),
     Route(
         directional=True,
@@ -22608,7 +22608,7 @@ routes: tuple[Route, ...] = (
         route="花明公交站-高新新区公交站",
         runtime="7:30-9:00\\17:00-18:30",
         type="高峰线",
-        up_stations=(
+        u_stations=(
             58202,
             64355,
             60211,
@@ -22624,7 +22624,7 @@ routes: tuple[Route, ...] = (
             27680,
             62120,
         ),
-        up_first=(
+        u_first=(
             450,
             452,
             454,
@@ -22640,7 +22640,7 @@ routes: tuple[Route, ...] = (
             474,
             475,
         ),
-        up_steps=(
+        u_steps=(
             0,
             5,
             10,
@@ -22680,7 +22680,7 @@ routes: tuple[Route, ...] = (
             655,
             660,
         ),
-        down_stations=(
+        d_stations=(
             62109,
             27733,
             60188,
@@ -22696,7 +22696,7 @@ routes: tuple[Route, ...] = (
             58225,
             58208,
         ),
-        down_first=(
+        d_first=(
             450,
             452,
             454,
@@ -22712,7 +22712,7 @@ routes: tuple[Route, ...] = (
             474,
             475,
         ),
-        down_steps=(
+        d_steps=(
             0,
             5,
             10,
@@ -22762,12 +22762,12 @@ routes: tuple[Route, ...] = (
         route="永丰公交站→锦城西路",
         runtime="7:20-8:00",
         type="高峰线",
-        up_stations=(56812, 62462, 62779, 62753, 59760, 60001, 60037, 62906),
-        up_first=(440, 442, 445, 447, 450, 452, 455, 458),
-        up_steps=(0, 5, 10, 15, 20, 25, 30, 35, 40),
-        down_stations=(63154, 60040, 60002, 59761, 62752, 62778, 62463, 56747, 56819),
-        down_first=(440, 442, 445, 447, 450, 452, 455, 457, 458),
-        down_steps=(0, 5, 10, 15, 20, 25, 30, 35, 40),
+        u_stations=(56812, 62462, 62779, 62753, 59760, 60001, 60037, 62906),
+        u_first=(440, 442, 445, 447, 450, 452, 455, 458),
+        u_steps=(0, 5, 10, 15, 20, 25, 30, 35, 40),
+        d_stations=(63154, 60040, 60002, 59761, 62752, 62778, 62463, 56747, 56819),
+        d_first=(440, 442, 445, 447, 450, 452, 455, 457, 458),
+        d_steps=(0, 5, 10, 15, 20, 25, 30, 35, 40),
     ),
     Route(
         directional=True,
@@ -22778,9 +22778,9 @@ routes: tuple[Route, ...] = (
         route="金河客运站-金河市政府",
         runtime="7:30-8:30\\17:30-18:30",
         type="高峰线",
-        up_stations=(21459, 27120, 16501, 17823, 17826),
-        up_first=(450, 453, 456, 459, 462),
-        up_steps=(
+        u_stations=(21459, 27120, 16501, 17823, 17826),
+        u_first=(450, 453, 456, 459, 462),
+        u_steps=(
             0,
             5,
             10,
@@ -22808,9 +22808,9 @@ routes: tuple[Route, ...] = (
             655,
             660,
         ),
-        down_stations=(17848, 17824, 98707, 5425, 818, 21542),
-        down_first=(450, 453, 456, 459, 461, 462),
-        down_steps=(
+        d_stations=(17848, 17824, 98707, 5425, 818, 21542),
+        d_first=(450, 453, 456, 459, 461, 462),
+        d_steps=(
             0,
             5,
             10,
@@ -22848,9 +22848,9 @@ routes: tuple[Route, ...] = (
         route="金河客运站-普光公交站",
         runtime="6:45-21:30",
         type="高峰线",
-        up_stations=(103131, 104207, 99648, 99594, 98071, 98726, 818, 21541),
-        up_first=(405, 407, 410, 413, 416, 419, 421, 422),
-        up_steps=(
+        u_stations=(103131, 104207, 99648, 99594, 98071, 98726, 818, 21541),
+        u_first=(405, 407, 410, 413, 416, 419, 421, 422),
+        u_steps=(
             0,
             5,
             10,
@@ -23030,9 +23030,9 @@ routes: tuple[Route, ...] = (
             880,
             885,
         ),
-        down_stations=(21459, 803, 104283, 99589, 99630, 104184, 103125),
-        down_first=(405, 408, 410, 413, 416, 419, 420),
-        down_steps=(
+        d_stations=(21459, 803, 104283, 99589, 99630, 104184, 103125),
+        d_first=(405, 408, 410, 413, 416, 419, 420),
+        d_steps=(
             0,
             5,
             10,
@@ -23418,12 +23418,12 @@ routes: tuple[Route, ...] = (
         route="北路湾公交站→锦城西路",
         runtime="7:30-8:00",
         type="高峰线",
-        up_stations=(62259, 26552, 26576, 64499, 60188, 62928, 62906),
-        up_first=(450, 454, 458, 462, 466, 470, 474),
-        up_steps=(0, 15, 30),
-        down_stations=(63154, 62927, 60186, 25874, 26524, 26602, 34597),
-        down_first=(450, 454, 458, 462, 466, 470, 474),
-        down_steps=(0, 15, 30),
+        u_stations=(62259, 26552, 26576, 64499, 60188, 62928, 62906),
+        u_first=(450, 454, 458, 462, 466, 470, 474),
+        u_steps=(0, 15, 30),
+        d_stations=(63154, 62927, 60186, 25874, 26524, 26602, 34597),
+        d_first=(450, 454, 458, 462, 466, 470, 474),
+        d_steps=(0, 15, 30),
     ),
     Route(
         directional=False,
@@ -23447,7 +23447,7 @@ routes: tuple[Route, ...] = (
         route="天河区公交站→高新新区公交站",
         runtime="7:00-8:20",
         type="高峰线",
-        up_stations=(
+        u_stations=(
             53074,
             46218,
             52795,
@@ -23462,7 +23462,7 @@ routes: tuple[Route, ...] = (
             58225,
             58207,
         ),
-        up_first=(
+        u_first=(
             420,
             424,
             430,
@@ -23477,8 +23477,8 @@ routes: tuple[Route, ...] = (
             472,
             474,
         ),
-        up_steps=(0, 40, 80),
-        down_stations=(
+        u_steps=(0, 40, 80),
+        d_stations=(
             58201,
             58252,
             60211,
@@ -23493,7 +23493,7 @@ routes: tuple[Route, ...] = (
             53255,
             54073,
         ),
-        down_first=(
+        d_first=(
             420,
             426,
             430,
@@ -23508,7 +23508,7 @@ routes: tuple[Route, ...] = (
             474,
             475,
         ),
-        down_steps=(0, 40, 80),
+        d_steps=(0, 40, 80),
     ),
     Route(
         directional=True,
@@ -23519,9 +23519,9 @@ routes: tuple[Route, ...] = (
         route="永盛-金河南站公交站",
         runtime="7:00-21:35",
         type="高峰线",
-        up_stations=(7527, 56484, 56545, 750, 59162, 57482),
-        up_first=(420, 424, 430, 440, 448, 450),
-        up_steps=(
+        u_stations=(7527, 56484, 56545, 750, 59162, 57482),
+        u_first=(420, 424, 430, 440, 448, 450),
+        u_steps=(
             0,
             10,
             20,
@@ -23611,9 +23611,9 @@ routes: tuple[Route, ...] = (
             860,
             870,
         ),
-        down_stations=(57729, 749, 56546, 56485, 98677),
-        down_first=(420, 430, 440, 446, 450),
-        down_steps=(
+        d_stations=(57729, 749, 56546, 56485, 98677),
+        d_first=(420, 430, 440, 446, 450),
+        d_steps=(
             0,
             10,
             20,
@@ -23713,7 +23713,7 @@ routes: tuple[Route, ...] = (
         route="金河南站公交站-高新新区公交站",
         runtime="6:30-23:00",
         type="快速公交",
-        up_stations=(
+        u_stations=(
             57725,
             59160,
             59149,
@@ -23741,7 +23741,7 @@ routes: tuple[Route, ...] = (
             58225,
             58211,
         ),
-        up_first=(
+        u_first=(
             390,
             392,
             394,
@@ -23769,7 +23769,7 @@ routes: tuple[Route, ...] = (
             429,
             430,
         ),
-        up_steps=(
+        u_steps=(
             0,
             3,
             6,
@@ -24102,7 +24102,7 @@ routes: tuple[Route, ...] = (
             987,
             990,
         ),
-        down_stations=(
+        d_stations=(
             58205,
             58252,
             58289,
@@ -24130,7 +24130,7 @@ routes: tuple[Route, ...] = (
             59162,
             57478,
         ),
-        down_first=(
+        d_first=(
             390,
             392,
             394,
@@ -24158,7 +24158,7 @@ routes: tuple[Route, ...] = (
             429,
             430,
         ),
-        down_steps=(
+        d_steps=(
             0,
             3,
             6,
@@ -24501,7 +24501,7 @@ routes: tuple[Route, ...] = (
         route="金河南站公交站-高新软件园公交站",
         runtime="6:20-22:30",
         type="快速公交",
-        up_stations=(
+        u_stations=(
             57725,
             59160,
             59149,
@@ -24525,7 +24525,7 @@ routes: tuple[Route, ...] = (
             63213,
             59508,
         ),
-        up_first=(
+        u_first=(
             380,
             382,
             384,
@@ -24549,7 +24549,7 @@ routes: tuple[Route, ...] = (
             410,
             412,
         ),
-        up_steps=(
+        u_steps=(
             0,
             3,
             6,
@@ -24875,7 +24875,7 @@ routes: tuple[Route, ...] = (
             966,
             969,
         ),
-        down_stations=(
+        d_stations=(
             59509,
             63214,
             58401,
@@ -24900,7 +24900,7 @@ routes: tuple[Route, ...] = (
             59162,
             57479,
         ),
-        down_first=(
+        d_first=(
             380,
             382,
             384,
@@ -24925,7 +24925,7 @@ routes: tuple[Route, ...] = (
             414,
             415,
         ),
-        down_steps=(
+        d_steps=(
             0,
             3,
             6,
@@ -25261,7 +25261,7 @@ routes: tuple[Route, ...] = (
         route="钟楼→中海国际",
         runtime="6:00-22:50",
         type="快速公交",
-        up_stations=(
+        u_stations=(
             99947,
             99630,
             99688,
@@ -25279,7 +25279,7 @@ routes: tuple[Route, ...] = (
             100676,
             100653,
         ),
-        up_first=(
+        u_first=(
             360,
             362,
             364,
@@ -25297,7 +25297,7 @@ routes: tuple[Route, ...] = (
             383,
             385,
         ),
-        up_steps=(
+        u_steps=(
             0,
             3,
             6,
@@ -25636,7 +25636,7 @@ routes: tuple[Route, ...] = (
             1005,
             1008,
         ),
-        down_stations=(
+        d_stations=(
             100655,
             100677,
             102969,
@@ -25654,7 +25654,7 @@ routes: tuple[Route, ...] = (
             99648,
             99917,
         ),
-        down_first=(
+        d_first=(
             360,
             362,
             364,
@@ -25672,7 +25672,7 @@ routes: tuple[Route, ...] = (
             382,
             384,
         ),
-        down_steps=(
+        d_steps=(
             0,
             3,
             6,
@@ -26021,7 +26021,7 @@ routes: tuple[Route, ...] = (
         route="植物园-花明公交站",
         runtime="6:00-22:30",
         type="快速公交",
-        up_stations=(
+        u_stations=(
             60932,
             60884,
             60854,
@@ -26038,7 +26038,7 @@ routes: tuple[Route, ...] = (
             27680,
             62119,
         ),
-        up_first=(
+        u_first=(
             360,
             362,
             364,
@@ -26055,7 +26055,7 @@ routes: tuple[Route, ...] = (
             378,
             379,
         ),
-        up_steps=(
+        u_steps=(
             0,
             3,
             6,
@@ -26388,7 +26388,7 @@ routes: tuple[Route, ...] = (
             987,
             990,
         ),
-        down_stations=(
+        d_stations=(
             62108,
             63146,
             63135,
@@ -26403,7 +26403,7 @@ routes: tuple[Route, ...] = (
             60883,
             60903,
         ),
-        down_first=(
+        d_first=(
             360,
             362,
             364,
@@ -26418,7 +26418,7 @@ routes: tuple[Route, ...] = (
             376,
             378,
         ),
-        down_steps=(
+        d_steps=(
             0,
             3,
             6,
@@ -26761,7 +26761,7 @@ routes: tuple[Route, ...] = (
         route="金河南站公交站-火车西站公交站",
         runtime="23:30-5:30",
         type="夜班线",
-        up_stations=(
+        u_stations=(
             14497,
             56077,
             26756,
@@ -26786,7 +26786,7 @@ routes: tuple[Route, ...] = (
             59162,
             57488,
         ),
-        up_first=(
+        u_first=(
             1410,
             1412,
             1413,
@@ -26811,7 +26811,7 @@ routes: tuple[Route, ...] = (
             1439,
             0,
         ),
-        up_steps=(
+        u_steps=(
             0,
             10,
             20,
@@ -26850,7 +26850,7 @@ routes: tuple[Route, ...] = (
             350,
             360,
         ),
-        down_stations=(
+        d_stations=(
             57728,
             59160,
             59149,
@@ -26875,7 +26875,7 @@ routes: tuple[Route, ...] = (
             6999,
             14495,
         ),
-        down_first=(
+        d_first=(
             1410,
             1411,
             1412,
@@ -26900,7 +26900,7 @@ routes: tuple[Route, ...] = (
             1439,
             0,
         ),
-        down_steps=(
+        d_steps=(
             0,
             10,
             20,
@@ -27057,7 +27057,7 @@ routes: tuple[Route, ...] = (
         route="金河客运站-火车西站公交站",
         runtime="23:30-5:30",
         type="夜班线",
-        up_stations=(
+        u_stations=(
             21444,
             803,
             98730,
@@ -27082,7 +27082,7 @@ routes: tuple[Route, ...] = (
             6999,
             6997,
         ),
-        up_first=(
+        u_first=(
             1410,
             1411,
             1412,
@@ -27107,7 +27107,7 @@ routes: tuple[Route, ...] = (
             1435,
             1436,
         ),
-        up_steps=(
+        u_steps=(
             0,
             10,
             20,
@@ -27146,7 +27146,7 @@ routes: tuple[Route, ...] = (
             350,
             360,
         ),
-        down_stations=(
+        d_stations=(
             6996,
             6788,
             6819,
@@ -27170,7 +27170,7 @@ routes: tuple[Route, ...] = (
             818,
             21541,
         ),
-        down_first=(
+        d_first=(
             1410,
             1411,
             1412,
@@ -27194,7 +27194,7 @@ routes: tuple[Route, ...] = (
             1435,
             1436,
         ),
-        down_steps=(
+        d_steps=(
             0,
             10,
             20,
@@ -27243,7 +27243,7 @@ routes: tuple[Route, ...] = (
         route="金河客运站-火车西站公交站",
         runtime="23:10-5:50",
         type="夜班线",
-        up_stations=(
+        u_stations=(
             21447,
             803,
             98730,
@@ -27270,7 +27270,7 @@ routes: tuple[Route, ...] = (
             6999,
             7384,
         ),
-        up_first=(
+        u_first=(
             1390,
             1391,
             1392,
@@ -27297,7 +27297,7 @@ routes: tuple[Route, ...] = (
             1417,
             1418,
         ),
-        up_steps=(
+        u_steps=(
             0,
             10,
             20,
@@ -27340,7 +27340,7 @@ routes: tuple[Route, ...] = (
             390,
             400,
         ),
-        down_stations=(
+        d_stations=(
             7386,
             27145,
             25578,
@@ -27367,7 +27367,7 @@ routes: tuple[Route, ...] = (
             818,
             21542,
         ),
-        down_first=(
+        d_first=(
             1390,
             1392,
             1393,
@@ -27394,7 +27394,7 @@ routes: tuple[Route, ...] = (
             1417,
             1418,
         ),
-        down_steps=(
+        d_steps=(
             0,
             10,
             20,
@@ -27447,7 +27447,7 @@ routes: tuple[Route, ...] = (
         route="动物园公交站-鱼凫西路南",
         runtime="23:00-5:45",
         type="夜班线",
-        up_stations=(
+        u_stations=(
             5027,
             5214,
             5167,
@@ -27467,7 +27467,7 @@ routes: tuple[Route, ...] = (
             23469,
             23840,
         ),
-        up_first=(
+        u_first=(
             1380,
             1381,
             1382,
@@ -27487,7 +27487,7 @@ routes: tuple[Route, ...] = (
             1399,
             1400,
         ),
-        up_steps=(
+        u_steps=(
             0,
             10,
             20,
@@ -27530,7 +27530,7 @@ routes: tuple[Route, ...] = (
             390,
             400,
         ),
-        down_stations=(
+        d_stations=(
             23850,
             23851,
             23470,
@@ -27550,7 +27550,7 @@ routes: tuple[Route, ...] = (
             5168,
             5023,
         ),
-        down_first=(
+        d_first=(
             1380,
             1381,
             1382,
@@ -27570,7 +27570,7 @@ routes: tuple[Route, ...] = (
             1399,
             1400,
         ),
-        down_steps=(
+        d_steps=(
             0,
             10,
             20,
@@ -27623,7 +27623,7 @@ routes: tuple[Route, ...] = (
         route="北路湾公交站-北客站",
         runtime="23:00-5:30",
         type="夜班线",
-        up_stations=(
+        u_stations=(
             34661,
             26552,
             26576,
@@ -27646,7 +27646,7 @@ routes: tuple[Route, ...] = (
             20190,
             20260,
         ),
-        up_first=(
+        u_first=(
             1380,
             1381,
             1382,
@@ -27669,7 +27669,7 @@ routes: tuple[Route, ...] = (
             1402,
             1403,
         ),
-        up_steps=(
+        u_steps=(
             0,
             10,
             20,
@@ -27711,7 +27711,7 @@ routes: tuple[Route, ...] = (
             380,
             390,
         ),
-        down_stations=(
+        d_stations=(
             20259,
             20156,
             20189,
@@ -27736,7 +27736,7 @@ routes: tuple[Route, ...] = (
             26564,
             34595,
         ),
-        down_first=(
+        d_first=(
             1380,
             1381,
             1382,
@@ -27761,7 +27761,7 @@ routes: tuple[Route, ...] = (
             1405,
             1406,
         ),
-        down_steps=(
+        d_steps=(
             0,
             10,
             20,
@@ -27813,7 +27813,7 @@ routes: tuple[Route, ...] = (
         route="科北路-北路湾公交站",
         runtime="23:00-5:30",
         type="夜班线",
-        up_stations=(
+        u_stations=(
             2827,
             2073,
             3809,
@@ -27832,7 +27832,7 @@ routes: tuple[Route, ...] = (
             26564,
             34596,
         ),
-        up_first=(
+        u_first=(
             1380,
             1381,
             1382,
@@ -27851,7 +27851,7 @@ routes: tuple[Route, ...] = (
             1396,
             1397,
         ),
-        up_steps=(
+        u_steps=(
             0,
             10,
             20,
@@ -27893,7 +27893,7 @@ routes: tuple[Route, ...] = (
             380,
             390,
         ),
-        down_stations=(
+        d_stations=(
             34662,
             26552,
             26576,
@@ -27910,7 +27910,7 @@ routes: tuple[Route, ...] = (
             2074,
             2070,
         ),
-        down_first=(
+        d_first=(
             1380,
             1381,
             1382,
@@ -27927,7 +27927,7 @@ routes: tuple[Route, ...] = (
             1395,
             1396,
         ),
-        down_steps=(
+        d_steps=(
             0,
             10,
             20,
@@ -27979,7 +27979,7 @@ routes: tuple[Route, ...] = (
         route="高朋路首末站-地铁四河站",
         runtime="23:00-5:30",
         type="夜班线",
-        up_stations=(
+        u_stations=(
             2708,
             2766,
             2777,
@@ -28006,7 +28006,7 @@ routes: tuple[Route, ...] = (
             15034,
             14881,
         ),
-        up_first=(
+        u_first=(
             1380,
             1381,
             1382,
@@ -28033,7 +28033,7 @@ routes: tuple[Route, ...] = (
             1409,
             1410,
         ),
-        up_steps=(
+        u_steps=(
             0,
             10,
             20,
@@ -28075,7 +28075,7 @@ routes: tuple[Route, ...] = (
             380,
             390,
         ),
-        down_stations=(
+        d_stations=(
             14880,
             15035,
             15074,
@@ -28102,7 +28102,7 @@ routes: tuple[Route, ...] = (
             2769,
             2714,
         ),
-        down_first=(
+        d_first=(
             1380,
             1381,
             1382,
@@ -28129,7 +28129,7 @@ routes: tuple[Route, ...] = (
             1409,
             1410,
         ),
-        down_steps=(
+        d_steps=(
             0,
             10,
             20,
@@ -28181,7 +28181,7 @@ routes: tuple[Route, ...] = (
         route="金河南站公交站-高新软件园公交站",
         runtime="23:30-5:20",
         type="夜班线",
-        up_stations=(
+        u_stations=(
             57728,
             59160,
             59149,
@@ -28213,7 +28213,7 @@ routes: tuple[Route, ...] = (
             58225,
             58209,
         ),
-        up_first=(
+        u_first=(
             1410,
             1411,
             1412,
@@ -28245,7 +28245,7 @@ routes: tuple[Route, ...] = (
             4,
             5,
         ),
-        up_steps=(
+        u_steps=(
             0,
             10,
             20,
@@ -28283,7 +28283,7 @@ routes: tuple[Route, ...] = (
             340,
             350,
         ),
-        down_stations=(
+        d_stations=(
             58203,
             58252,
             64355,
@@ -28315,7 +28315,7 @@ routes: tuple[Route, ...] = (
             59162,
             57481,
         ),
-        down_first=(
+        d_first=(
             1410,
             1411,
             1413,
@@ -28347,7 +28347,7 @@ routes: tuple[Route, ...] = (
             4,
             5,
         ),
-        down_steps=(
+        d_steps=(
             0,
             10,
             20,
@@ -28395,7 +28395,7 @@ routes: tuple[Route, ...] = (
         route="天河区公交站-科北路",
         runtime="22:40-5:30",
         type="夜班线",
-        up_stations=(
+        u_stations=(
             53460,
             53400,
             53418,
@@ -28427,7 +28427,7 @@ routes: tuple[Route, ...] = (
             16432,
             2814,
         ),
-        up_first=(
+        u_first=(
             1360,
             1361,
             1362,
@@ -28459,7 +28459,7 @@ routes: tuple[Route, ...] = (
             1393,
             1394,
         ),
-        up_steps=(
+        u_steps=(
             0,
             10,
             20,
@@ -28503,7 +28503,7 @@ routes: tuple[Route, ...] = (
             400,
             410,
         ),
-        down_stations=(
+        d_stations=(
             2058,
             16433,
             16419,
@@ -28535,7 +28535,7 @@ routes: tuple[Route, ...] = (
             53401,
             55729,
         ),
-        down_first=(
+        d_first=(
             1360,
             1361,
             1363,
@@ -28567,7 +28567,7 @@ routes: tuple[Route, ...] = (
             1393,
             1394,
         ),
-        down_steps=(
+        d_steps=(
             0,
             10,
             20,
