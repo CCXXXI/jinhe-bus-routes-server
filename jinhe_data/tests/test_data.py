@@ -3,7 +3,7 @@ from data import routes, stations
 
 def test_routes():
     """Check routes data."""
-    # `name` is unique
+    # name is unique
     assert len({route.name for route in routes}) == len(routes)
 
     # stations & services
