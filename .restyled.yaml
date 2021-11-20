@@ -16,4 +16,3 @@ restylers:
 
 exclude:
     - "archive/data/*"
-    - "jinhe_data/data/routes.py"
