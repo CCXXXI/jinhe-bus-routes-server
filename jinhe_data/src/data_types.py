@@ -89,16 +89,26 @@ class Route:
             },
         )
 
-        # graph
-        for s, d in (
-            (self.stations, ""),
-            (self.up_stations, "u"),
-            (self.down_stations, "d"),
+        for stations, first, steps, ud in (
+            (self.stations, self.first_service, self.steps, ""),
+            (self.up_stations, self.first_up_service, self.up_steps, "u"),
+            (self.down_stations, self.first_down_service, self.down_steps, "d"),
         ):
-            if s:
-                for u, v in pairwise(s):
+            if stations:
+                # graph
+                for u, v in pairwise(stations):
                     g.query(
                         "MATCH (u{id:$u}), (v{id:$v}) "
-                        "CREATE (u)-[:r{name:$name,d:$d}]->(v)",
-                        {"u": u, "v": v, "name": self.name, "d": d},
+                        "CREATE (u)-[:r{name:$name,ud:$ud}]->(v)",
+                        {"u": u, "v": v, "name": self.name, "ud": ud},
                     )
+
+                # for UC-7
+                r.zadd(
+                    f"Route:{self.name}:first",
+                    mapping={t: i for t, i in zip(first, stations)},
+                )
+                r.sadd(
+                    f"Route:{self.name}:steps",
+                    *steps,
+                )
