@@ -26,7 +26,7 @@ class TestRoute:
     @staticmethod
     @mark.skip(reason="not implemented yet")
     def test_stations_services(route: Route):
-        """The route should be up and down or none."""
+        """The route is up and down or none."""
         assert (
             route.stations is None
             and route.services is None
@@ -42,3 +42,16 @@ class TestRoute:
             and route.down_stations is None
             and route.down_services is None
         )
+
+    @staticmethod
+    @mark.skip(reason="not implemented yet")
+    def test_stations_services_length(route: Route):
+        """The length of a service is equal to the number of the stations."""
+        for stations, services in (
+            (route.stations, route.services),
+            (route.up_stations, route.up_services),
+            (route.down_stations, route.down_services),
+        ):
+            if stations:
+                for service in services:
+                    assert len(service) == len(stations)
