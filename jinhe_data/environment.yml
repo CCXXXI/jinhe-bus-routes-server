@@ -6,4 +6,3 @@ dependencies:
   - pip
   - pip:
       - redisgraph
-      - pytest-docker
