@@ -4,17 +4,16 @@ from tqdm import tqdm
 
 from data import routes, stations
 
+r = Redis()
+g = Graph("g", r)
+
 
 def save():
     """Save all data to the database."""
-    r = Redis()
-    g = Graph("g", r)
-
     for station in tqdm(stations, "stations"):
         station.save(g)
     for route in tqdm(routes, "routes"):
         route.save(r, g)
-
     g.commit()
     r.save()
 

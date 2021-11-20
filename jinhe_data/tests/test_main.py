@@ -1,6 +1,13 @@
-from src.main import placeholder
+from data import stations
+from src.main import g, r, save
 
 
-def test_placeholder():
-    """Yet another fake test."""
-    assert placeholder() is not None
+def test_save():
+    """Save all data to the database."""
+    assert not r.hgetall("Route:1")
+    assert g.query("MATCH (p) RETURN count(p)").result_set[0][0] == 0
+
+    save()
+
+    assert r.hgetall("Route:1")
+    assert g.query("MATCH (p) RETURN count(p)").result_set[0][0] == len(stations)
