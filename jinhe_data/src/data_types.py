@@ -49,20 +49,29 @@ class Route:
     stations: tuple[int, ...] = None
     """不分上下行的沿线站点的 `id`"""
 
-    services: tuple[tuple[str, ...], ...] = None
-    """不分上下行的班次沿线站点时间"""
+    first_service: tuple[int, ...] = None
+    """不分上下行的首班沿线站点时间 (h * 60 + m)"""
+
+    steps: tuple[int, ...] = None
+    """不分上下行的每个班次离首班的分钟数"""
 
     up_stations: tuple[int, ...] = None
     """上行沿线站点的 `id`"""
 
-    up_services: tuple[tuple[str, ...], ...] = None
-    """上行班次沿线站点时间"""
+    first_up_service: tuple[int, ...] = None
+    """上行首班沿线站点时间 (h * 60 + m)"""
+
+    up_steps: tuple[int, ...] = None
+    """上行每个班次离首班的分钟数"""
 
     down_stations: tuple[int, ...] = None
     """下行沿线站点的 `id`"""
 
-    down_services: tuple[tuple[str, ...], ...] = None
-    """下行班次沿线站点时间"""
+    first_down_service: tuple[int, ...] = None
+    """下行首班沿线站点时间 (h * 60 + m)"""
+
+    down_steps: tuple[int, ...] = None
+    """下行每个班次离首班的分钟数"""
 
     def save(self, r: Redis, g: Graph):
         """Save self to the database."""

@@ -56,49 +56,51 @@ class TestRoute:
             assert set(stations) <= station_ids
 
     @staticmethod
-    def test_services_time(route: Route):
-        """The service time is valid."""
-        for services in filter(
+    def test_service_time(route: Route):
+        """The time is valid."""
+        for service in filter(
             None,
             (
-                route.services,
-                route.up_services,
-                route.down_services,
+                route.first_service,
+                route.first_up_service,
+                route.first_down_service,
             ),
         ):
-            for service in services:
-                for time in service:
-                    h, m = map(int, time.split(":"))
-                    assert 0 <= h < 24
-                    assert 0 <= m < 60
+            for time in service:
+                assert 0 <= time < 24 * 60
 
     @staticmethod
     def test_up_down(route: Route):
         """The route is up and down or none."""
         assert (
             route.stations is None
-            and route.services is None
+            and route.first_service is None
+            and route.steps is None
             and route.up_stations is not None
-            and route.up_services is not None
+            and route.first_up_service is not None
+            and route.up_steps is not None
             and route.down_stations is not None
-            and route.down_services is not None
+            and route.first_down_service is not None
+            and route.down_steps is not None
         ) or (
             route.stations is not None
-            and route.services is not None
+            and route.first_service is not None
+            and route.steps is not None
             and route.up_stations is None
-            and route.up_services is None
+            and route.first_up_service is None
+            and route.up_steps is None
             and route.down_stations is None
-            and route.down_services is None
+            and route.first_down_service is None
+            and route.down_steps is None
         )
 
     @staticmethod
     def test_stations_services(route: Route):
-        """The length of a service is equal to the number of the stations."""
-        for stations, services in (
-            (route.stations, route.services),
-            (route.up_stations, route.up_services),
-            (route.down_stations, route.down_services),
+        """The length of the service is equal to the number of the stations."""
+        for stations, service in (
+            (route.stations, route.first_service),
+            (route.up_stations, route.first_up_service),
+            (route.down_stations, route.first_down_service),
         ):
             if stations:
-                for service in services:
-                    assert len(service) == len(stations)
+                assert len(service) == len(stations)
