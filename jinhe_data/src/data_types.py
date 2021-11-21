@@ -37,7 +37,7 @@ class Route:
     oneway: str
     """运行时⻓"""
 
-    route: str
+    direction: str
     """线路走向"""
 
     runtime: str
@@ -83,7 +83,7 @@ class Route:
                 "interval": self.interval,
                 "kilometer": self.kilometer,
                 "oneway": self.oneway,
-                "route": self.route,
+                "direction": self.direction,
                 "runtime": self.runtime,
                 "type": self.type,
             },
