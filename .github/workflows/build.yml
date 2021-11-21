@@ -24,5 +24,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           default_branch: main
-          dockerfile: jinhe_data/Dockerfile
           workdir: jinhe_data
