@@ -6,15 +6,12 @@ on:
   schedule:
     - cron: "44 13 * * SUN"
 
-defaults:
-  run:
-    shell: bash -l {0}
-
 jobs:
   data:
     defaults:
       run:
         working-directory: jinhe_data
+        shell: bash -l {0}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -28,6 +25,7 @@ jobs:
     defaults:
       run:
         working-directory: jinhe_server
+        shell: bash -l {0}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
