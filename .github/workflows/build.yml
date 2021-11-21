@@ -15,7 +15,7 @@ jobs:
         with:
           environment-file: "jinhe_data/environment.yml"
       - run: docker-compose up -d
-      - run: python src/main.py
+      - run: python -m src.main
       - run: "docker cp redisgraph:/data/dump.rdb ."
       # todo
       - run: ls
