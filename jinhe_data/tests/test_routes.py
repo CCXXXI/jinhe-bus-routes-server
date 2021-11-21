@@ -67,10 +67,11 @@ class TestRoute:
             assert steps == tuple(sorted(steps))
 
     @staticmethod
-    def test_up_down(r: Route):
-        """The route is up and down or none."""
+    def test_directional(r: Route):
+        """The route is directional or not."""
         assert (
-            r.stations is None
+            r.directional
+            and r.stations is None
             and r.first is None
             and r.steps is None
             and r.u_stations is not None
@@ -80,7 +81,8 @@ class TestRoute:
             and r.d_first is not None
             and r.d_steps is not None
         ) or (
-            r.stations is not None
+            not r.directional
+            and r.stations is not None
             and r.first is not None
             and r.steps is not None
             and r.u_stations is None
