@@ -1,2 +1,2 @@
-FROM redislabs/redisgraph
+FROM redislabs/redisgraph:latest
 COPY dump.rdb /data/
