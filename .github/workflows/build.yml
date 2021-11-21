@@ -17,5 +17,12 @@ jobs:
       - run: docker-compose up -d
       - run: python -m src.main
       - run: "docker cp redisgraph:/data/dump.rdb ."
-      # todo
-      - run: ls
+      - uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: CCXXXI/jinhe-bus-routes-server/data
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ghcr.io
+          default_branch: main
+          dockerfile: jinhe_data/Dockerfile
+          workdir: jinhe_data
