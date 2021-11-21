@@ -15,7 +15,7 @@ class Station:
 
     def save(self, g: Graph):
         """Save self to the database."""
-        g.add_node(Node(properties={"id": self.id, "zh": self.zh, "en": self.en}))
+        g.add_node(Node(label=f"_{self.id}", properties={"zh": self.zh, "en": self.en}))
 
 
 @dataclass
@@ -98,9 +98,8 @@ class Route:
                 # graph
                 for u, v in pairwise(stations):
                     g.query(
-                        "MATCH (u{id:$u}), (v{id:$v}) "
-                        "CREATE (u)-[:r{name:$name,ud:$ud}]->(v)",
-                        {"u": u, "v": v, "name": self.name, "ud": ud},
+                        f"MATCH (u:_{u}), (v:_{v}) "
+                        f"CREATE (u)-[:_{self.name}{ud}]->(v)",
                     )
 
                 # for UC-7

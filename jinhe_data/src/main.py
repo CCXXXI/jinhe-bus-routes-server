@@ -12,9 +12,9 @@ def save():
     """Save all data to the database."""
     for station in tqdm(stations, "stations"):
         station.save(g)
+    g.commit()
     for route in tqdm(routes, "routes"):
         route.save(r, g)
-    g.commit()
     r.save()
 
 
