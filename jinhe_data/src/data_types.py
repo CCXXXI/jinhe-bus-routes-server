@@ -105,7 +105,7 @@ class Route:
                 # for UC-7
                 r.zadd(
                     f"route:{self.name}:first",
-                    mapping={i: t for i, t in zip(stations, first)},
+                    mapping=dict(zip(stations, first)),
                 )
                 r.sadd(
                     f"route:{self.name}:steps",
