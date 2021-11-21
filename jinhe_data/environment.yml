@@ -2,3 +2,7 @@ name: jinhe-data
 channels: [conda-forge]
 dependencies:
   - pytest-cov
+  - tqdm
+  - pip
+  - pip:
+      - redisgraph
