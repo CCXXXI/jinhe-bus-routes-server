@@ -1,4 +1,4 @@
-from src.data_types import Station
+from ..data_types import Station
 
 # noinspection SpellCheckingInspection
 stations: list[Station] = [

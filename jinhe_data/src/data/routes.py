@@ -1,4 +1,4 @@
-from src.data_types import Route
+from ..data_types import Route
 
 routes: tuple[Route, ...] = (
     Route(
