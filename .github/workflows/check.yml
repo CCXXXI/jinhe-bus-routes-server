@@ -12,6 +12,9 @@ defaults:
 
 jobs:
   data:
+    defaults:
+      run:
+        working-directory: jinhe_data
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,11 +22,12 @@ jobs:
         with:
           environment-file: "jinhe_data/environment.yml"
       - run: docker-compose up -d
-        working-directory: jinhe_data/tests
       - run: pytest --cov=./ --cov-report xml
-        working-directory: jinhe_data
       - uses: codecov/codecov-action@v2
   server:
+    defaults:
+      run:
+        working-directory: jinhe_server
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -31,5 +35,4 @@ jobs:
         with:
           environment-file: "jinhe_server/environment.yml"
       - run: pytest --cov=./ --cov-report xml
-        working-directory: jinhe_server
       - uses: codecov/codecov-action@v2
