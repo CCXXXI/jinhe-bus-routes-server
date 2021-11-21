@@ -2,7 +2,7 @@ from redis import Redis
 from redisgraph import Graph
 from tqdm import tqdm
 
-from data import routes, stations
+from .data import routes, stations
 
 r = Redis()
 g = Graph("g", r)

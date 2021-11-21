@@ -1,6 +1,6 @@
 from pytest import mark
 
-from data import stations
+from src.data import stations
 from src.data_types import Station
 
 station_ids = {station.id for station in stations}

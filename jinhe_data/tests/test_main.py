@@ -1,4 +1,4 @@
-from data import stations
+from src.data import stations
 from src.main import g, r, save
 
 

@@ -3,7 +3,7 @@ from itertools import chain
 
 from pytest import mark
 
-from data import routes
+from src.data import routes
 from src.data_types import Route
 from .test_stations import station_ids
 
