@@ -77,7 +77,7 @@ class Route:
         """Save self to the database."""
         # basic
         r.hset(
-            f"route:{self.name}",
+            f"Route:{self.name}",
             mapping={
                 "directional": int(self.directional),
                 "interval": self.interval,
@@ -104,17 +104,17 @@ class Route:
 
                 # for UC-7
                 r.zadd(
-                    f"route:{self.name}:first",
+                    f"Route:{self.name}:first",
                     mapping=dict(zip(stations, first)),
                 )
                 r.sadd(
-                    f"route:{self.name}:steps",
+                    f"Route:{self.name}:steps",
                     *steps,
                 )
 
                 # for UC-8 & UC-9
                 for i, t in zip(stations, first):
                     r.zadd(
-                        f"station:{i}:first",
+                        f"Station:{i}:first",
                         mapping={self.name + ud: t},
                     )
