@@ -1,8 +1,9 @@
 name: jinhe-server
 channels: [conda-forge]
 dependencies:
-  - pytest-cov
-
   - flask
   - sentry-sdk
   - blinker
+
+  # dev
+  - pytest-cov
