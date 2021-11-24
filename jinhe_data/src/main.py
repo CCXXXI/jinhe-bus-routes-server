@@ -4,7 +4,7 @@ from tqdm import tqdm
 
 from .data import routes, stations
 
-r = Redis()
+r = Redis(decode_responses=True)
 g = Graph("g", r)
 
 
