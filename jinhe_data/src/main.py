@@ -7,6 +7,11 @@ from tqdm import tqdm
 
 from .data import routes, stations
 
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+)
+
 r = Redis(decode_responses=True)
 g = Graph("g", r)
 
