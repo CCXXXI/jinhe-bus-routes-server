@@ -1,5 +1,6 @@
 import logging
 from subprocess import run
+from time import sleep
 
 from redis import Redis
 from redisgraph import Graph
@@ -18,6 +19,9 @@ g = Graph("g", r)
 
 def save():
     """Save all data to the database."""
+    # to resolve magic ConnectionError
+    sleep(0.1)
+
     # meta
     version = run(
         ["git", "rev-parse", "HEAD"], capture_output=True, check=True
