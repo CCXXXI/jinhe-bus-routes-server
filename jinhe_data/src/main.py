@@ -14,7 +14,9 @@ g = Graph("g", r)
 def save():
     """Save all data to the database."""
     # meta
-    version = run(["git", "rev-parse", "HEAD"], capture_output=True).stdout.strip()
+    version = run(
+        ["git", "rev-parse", "HEAD"], capture_output=True, check=True
+    ).stdout.strip()
     logging.info(f"{version=}")
     r.set("version", version)
 
