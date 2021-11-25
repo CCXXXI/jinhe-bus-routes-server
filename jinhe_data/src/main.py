@@ -1,4 +1,5 @@
 import logging
+from math import e
 from subprocess import run
 from time import sleep
 
@@ -13,14 +14,14 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 
-r = Redis(decode_responses=True)
+r = Redis(decode_responses=True, health_check_interval=1)
 g = Graph("g", r)
 
 
 def save():
     """Save all data to the database."""
-    # to resolve magic ConnectionError
-    sleep(0.1)
+    # wait for redis container
+    sleep(e)
 
     # meta
     version = run(

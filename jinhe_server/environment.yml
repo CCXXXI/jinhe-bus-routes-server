@@ -4,6 +4,9 @@ dependencies:
   - flask
   - sentry-sdk
   - blinker
+  - pip
+  - pip:
+      - gunicorn
 
   # dev
   - pytest-cov
