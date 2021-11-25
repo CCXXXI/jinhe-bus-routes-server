@@ -1,4 +1,4 @@
-FROM mambaorg/micromamba:0.18.1
+FROM mambaorg/micromamba:0.18.2
 WORKDIR /app
 COPY environment.yml .
 RUN micromamba install -y -n base -f environment.yml && \
