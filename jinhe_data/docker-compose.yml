@@ -3,4 +3,3 @@ services:
     image: redislabs/redisgraph:2.8
     ports:
       - "6379:6379"
-    container_name: redisgraph
