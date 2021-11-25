@@ -25,4 +25,4 @@ def hello_world():
 
 
 if __name__ == "__main__":  # pragma: no cover
-    app.run()
+    app.run(port=80, debug=True)
