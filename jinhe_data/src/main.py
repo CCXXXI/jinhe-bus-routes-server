@@ -3,7 +3,6 @@ from subprocess import run
 from time import sleep
 
 from redis import Redis
-from redis.exceptions import ConnectionError
 from redisgraph import Graph
 from tqdm import tqdm
 
@@ -20,15 +19,8 @@ g = Graph("g", r)
 
 def save():
     """Save all data to the database."""
-    # to resolve magic ConnectionError
-    while True:
-        try:
-            logging.info(f"{r.ping()=}")
-        except ConnectionError as e:
-            logging.warning(e)
-        else:
-            break
-        sleep(1)
+    # wait for redis container
+    sleep(3)
 
     # meta
     version = run(
