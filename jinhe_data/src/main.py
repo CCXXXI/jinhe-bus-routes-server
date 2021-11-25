@@ -1,8 +1,8 @@
 import logging
+from math import e
 from subprocess import run
 from time import sleep
 
-import redis
 from redis import Redis
 from redisgraph import Graph
 from tqdm import tqdm
@@ -14,21 +14,14 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 
-r = Redis(decode_responses=True)
+r = Redis(decode_responses=True, health_check_interval=1)
 g = Graph("g", r)
 
 
 def save():
     """Save all data to the database."""
     # wait for redis container
-    while True:
-        sleep(0.1)
-        try:
-            logging.info(f"{r.ping()=}")
-        except redis.exceptions.ConnectionError:  # pragma: no cover
-            pass
-        else:
-            break
+    sleep(e)
 
     # meta
     version = run(
