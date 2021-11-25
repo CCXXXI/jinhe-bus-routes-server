@@ -4,4 +4,5 @@ COPY environment.yml .
 RUN micromamba install -y -n base -f environment.yml && \
     micromamba clean --all --yes
 COPY src .
+EXPOSE 80
 CMD ["python", "-m", "src.app"]
