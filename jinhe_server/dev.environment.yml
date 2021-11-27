@@ -7,3 +7,6 @@ dependencies:
   - pip
   - pip:
       - gunicorn
+
+  # dev
+  - pytest-cov
