@@ -1,5 +1,5 @@
 name: jinhe-server
-channels: [ conda-forge ]
+channels: [conda-forge]
 dependencies:
   - flask
   - sentry-sdk
