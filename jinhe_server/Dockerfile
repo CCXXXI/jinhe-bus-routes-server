@@ -1,6 +1,10 @@
 FROM mambaorg/micromamba:0.18.2
 WORKDIR /app
 
+USER root
+RUN apt update && apt install -y gcc && rm -rf /var/lib/apt/lists/*
+USER micromamba
+
 COPY environment.yml .
 RUN micromamba install -y -n base -f environment.yml && \
     micromamba clean --all --yes
