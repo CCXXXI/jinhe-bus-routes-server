@@ -1,4 +1,4 @@
 services:
   data:
     image: ghcr.io/ccxxxi/jinhe-bus-routes-server/data:dev
-    ports: [ 6379:6379 ]
+    ports: [6379:6379]
