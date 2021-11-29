@@ -18,7 +18,11 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 
-r = Redis(host=getenv("JINHE_DATA_HOST", "localhost"), decode_responses=True)
+r = Redis(
+    host=getenv("JINHE_DATA_HOST", "localhost"),
+    decode_responses=True,
+    health_check_interval=1,
+)
 g = Graph("g", r)
 
 app = Flask(__name__)
