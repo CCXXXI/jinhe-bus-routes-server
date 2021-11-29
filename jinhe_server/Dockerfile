@@ -2,7 +2,7 @@ FROM mambaorg/micromamba:0.18.2
 WORKDIR /app
 
 USER root
-RUN apt-get update && apt-get install -y --no-install-recommends gcc linux-headers && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends gcc linux-headers-`uname -r` && rm -rf /var/lib/apt/lists/*
 USER micromamba
 
 COPY environment.yml .
