@@ -27,3 +27,9 @@ app = Flask(__name__)
 def version():
     """The Git commit ID of the data."""
     return r.get("version")
+
+
+@app.route("/route/<name>")
+def route(name: str):
+    """The basic info of the route."""
+    return r.hgetall(f"Route:{name}")
