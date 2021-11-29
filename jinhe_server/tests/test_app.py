@@ -1,4 +1,11 @@
+from time import sleep
+
 from src import app
+
+
+def setup_module():
+    """Wait for database."""
+    sleep(3)
 
 
 def test_version():
