@@ -76,7 +76,7 @@ class Route:
     def save(self, r: Redis, g: Graph):
         """Save self to the database."""
         # list
-        r.zadd("Routes", mapping={self.name: int(self.directional)})
+        r.hset("Routes", mapping={self.name: int(self.directional)})
 
         # basic
         r.hset(
