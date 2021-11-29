@@ -4,7 +4,7 @@ WORKDIR /app
 USER root
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-    gcc gcc-multilib && \
+    gcc && \
     rm -rf /var/lib/apt/lists/*
 USER micromamba
 
