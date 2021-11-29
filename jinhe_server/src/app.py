@@ -1,4 +1,5 @@
 import logging
+from os import getenv
 
 import sentry_sdk
 from flask import Flask
@@ -17,7 +18,7 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 
-r = Redis(decode_responses=True)
+r = Redis(host=getenv("JINHE_DATA_HOST", "localhost"), decode_responses=True)
 g = Graph("g", r)
 
 app = Flask(__name__)
