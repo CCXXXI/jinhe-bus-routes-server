@@ -29,6 +29,12 @@ def version():
     return r.get("version")
 
 
+@app.route("/routes/")
+def routes():
+    """All routes name and directional."""
+    return r.hgetall("Routes")
+
+
 @app.route("/routes/<name>")
 def routes_name(name: str):
     """The basic info of the route."""
