@@ -76,13 +76,12 @@ class Route:
     def save(self, r: Redis, g: Graph):
         """Save self to the database."""
         # list
-        r.zadd("Routes", mapping={self.name: self.directional})
+        r.zadd("Routes", mapping={self.name: int(self.directional)})
 
         # basic
         r.hset(
             f"Route:{self.name}",
             mapping={
-                "directional": int(self.directional),
                 "interval": self.interval,
                 "kilometer": self.kilometer,
                 "oneway": self.oneway,
