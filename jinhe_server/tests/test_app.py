@@ -6,9 +6,9 @@ def test_version():
     assert len(app.version()) == 40
 
 
-def test_route():
+def test_routes_name():
     """UC-1: 查询某条线路的基本信息"""
-    assert app.route("30") == {
+    assert app.routes_name("30") == {
         "direction": "燎原-北路湾公交站",
         "oneway": "约49分",
         "directional": "1",
