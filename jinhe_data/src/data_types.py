@@ -75,6 +75,9 @@ class Route:
 
     def save(self, r: Redis, g: Graph):
         """Save self to the database."""
+        # list
+        r.sadd("Routes", self.name)
+
         # basic
         r.hset(
             f"Route:{self.name}",
