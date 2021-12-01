@@ -2,9 +2,9 @@ import logging
 from os import getenv
 
 import sentry_sdk
-from flask import Flask
+from flask import Flask, jsonify
 from redis import Redis
-from redisgraph import Graph
+from redisgraph import Graph, Node
 from sentry_sdk.integrations.flask import FlaskIntegration
 
 sentry_sdk.init(
@@ -44,3 +44,25 @@ def routes():
 def routes_name(name: str):
     """The basic info of the route."""
     return r.hgetall(f"Route:_{name}")
+
+
+@app.route("/stations/")
+def stations():
+    """All stations info."""
+    res: list[Node] = [
+        s[0] for s in g.query("MATCH (s) RETURN s", read_only=True).result_set
+    ]
+    return jsonify(
+        [
+            {"id": station.label.removeprefix("_")} | station.properties
+            for station in res
+        ]
+    )
+
+
+@app.route("/routes/<name>/stations")
+def routes_name_stations(name: str):
+    """Stations of the route."""
+    return jsonify(
+        [s.removeprefix("_") for s in r.zrange(f"Route:_{name}:first", 0, -1)]
+    )
