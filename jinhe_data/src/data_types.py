@@ -9,13 +9,17 @@ from redisgraph import Graph, Node
 class Station:
     """站点"""
 
-    id: int
+    id: str | int
     zh: str
     en: str
 
+    def __post_init__(self):
+        """Convert the id."""
+        self.id = f"_{self.id}"
+
     def save(self, g: Graph):
         """Save self to the database."""
-        g.add_node(Node(label=f"_{self.id}", properties={"zh": self.zh, "en": self.en}))
+        g.add_node(Node(label=self.id, properties={"zh": self.zh, "en": self.en}))
 
 
 @dataclass
@@ -46,7 +50,7 @@ class Route:
     type: str
     """线路类型"""
 
-    stations: tuple[int, ...] = None
+    stations: tuple[str | int, ...] = None
     """不分上下行的沿线站点的 `id`"""
 
     first: tuple[int, ...] = None
@@ -55,7 +59,7 @@ class Route:
     steps: tuple[int, ...] = None
     """不分上下行的每个班次离首班的分钟数"""
 
-    u_stations: tuple[int, ...] = None
+    u_stations: tuple[str | int, ...] = None
     """上行沿线站点的 `id`"""
 
     u_first: tuple[int, ...] = None
@@ -64,7 +68,7 @@ class Route:
     u_steps: tuple[int, ...] = None
     """上行每个班次离首班的分钟数"""
 
-    d_stations: tuple[int, ...] = None
+    d_stations: tuple[str | int, ...] = None
     """下行沿线站点的 `id`"""
 
     d_first: tuple[int, ...] = None
@@ -72,6 +76,13 @@ class Route:
 
     d_steps: tuple[int, ...] = None
     """下行每个班次离首班的分钟数"""
+
+    def __post_init__(self):
+        """Convert the name and the stations."""
+        self.name = "_" + self.name
+        self.stations = tuple(f"_{s}" for s in self.stations)
+        self.u_stations = tuple(f"_{s}" for s in self.u_stations)
+        self.d_stations = tuple(f"_{s}" for s in self.d_stations)
 
     def save(self, r: Redis, g: Graph):
         """Save self to the database."""
@@ -100,8 +111,8 @@ class Route:
                 # graph
                 for u, v in pairwise(stations):
                     g.query(
-                        f"MATCH (u:_{u}), (v:_{v}) "
-                        f"CREATE (u)-[:_{self.name}{ud}]->(v)",
+                        f"MATCH (u:{u}), (v:{v}) "
+                        f"CREATE (u)-[:{self.name}{ud}]->(v)",
                     )
 
                 # for UC-7
