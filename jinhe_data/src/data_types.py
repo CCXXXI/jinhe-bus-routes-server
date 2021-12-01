@@ -80,9 +80,12 @@ class Route:
     def __post_init__(self):
         """Convert the name and the stations."""
         self.name = "_" + self.name
-        self.stations = tuple(f"_{s}" for s in self.stations)
-        self.u_stations = tuple(f"_{s}" for s in self.u_stations)
-        self.d_stations = tuple(f"_{s}" for s in self.d_stations)
+        if self.stations:
+            self.stations = tuple(f"_{s}" for s in self.stations)
+        if self.u_stations:
+            self.u_stations = tuple(f"_{s}" for s in self.u_stations)
+        if self.d_stations:
+            self.d_stations = tuple(f"_{s}" for s in self.d_stations)
 
     def save(self, r: Redis, g: Graph):
         """Save self to the database."""
