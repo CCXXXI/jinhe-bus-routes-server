@@ -12,7 +12,7 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 
-r = Redis(decode_responses=True, health_check_interval=1)
+r = Redis(decode_responses=True)
 g = Graph("g", r)
 
 
