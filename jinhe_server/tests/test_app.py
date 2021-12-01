@@ -1,6 +1,8 @@
 from time import sleep
 
-from src import app
+from src.app import app
+
+c = app.test_client()
 
 
 def setup_module():
@@ -10,13 +12,13 @@ def setup_module():
 
 def test_version():
     """The Git commit ID is a 40 digits long SHA-1 hash."""
-    assert len(app.version()) == 40
+    assert len(c.get("/version").data) == 40
 
 
 def test_routes():
     """UC-1"""
-    assert app.routes()["30"] == "1"
-    assert app.routes_name("30") == {
+    assert c.get("/routes/").json["30"] == "1"
+    assert c.get("/routes/30").json == {
         "direction": "燎原-北路湾公交站",
         "oneway": "约49分",
         "kilometer": "12.0",
