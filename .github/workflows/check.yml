@@ -19,6 +19,7 @@ jobs:
         with:
           environment-file: "jinhe_data/environment.yml"
       - run: docker-compose up -d
+      - run: sleep 3
       - run: pytest --cov=./ --cov-report xml
       - uses: codecov/codecov-action@v2
   server:
@@ -33,5 +34,6 @@ jobs:
         with:
           environment-file: "jinhe_server/dev.environment.yml"
       - run: docker-compose up -d
+      - run: sleep 3
       - run: pytest --cov=./ --cov-report xml
       - uses: codecov/codecov-action@v2

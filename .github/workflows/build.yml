@@ -15,6 +15,7 @@ jobs:
         with:
           environment-file: "jinhe_data/environment.yml"
       - run: docker-compose up -d
+      - run: sleep 3
       - run: python -m src.main
       - run: "docker cp redisgraph:/data/dump.rdb ."
       - uses: elgohr/Publish-Docker-Github-Action@master
