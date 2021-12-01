@@ -37,10 +37,10 @@ def version():
 @app.route("/routes/")
 def routes():
     """All routes name and directional."""
-    return r.hgetall("Routes")
+    return {n.removeprefix("_"): d for n, d in r.hgetall("Routes").items()}
 
 
 @app.route("/routes/<name>")
 def routes_name(name: str):
     """The basic info of the route."""
-    return r.hgetall(f"Route:{name}")
+    return r.hgetall(f"Route:_{name}")
