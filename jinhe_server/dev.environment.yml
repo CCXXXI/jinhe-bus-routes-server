@@ -11,3 +11,4 @@ dependencies:
 
   # dev
   - pytest-cov
+  - black
