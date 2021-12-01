@@ -8,8 +8,8 @@ def test_version():
     assert len(c.get("/version").data) == 40
 
 
-def test_routes():
-    """UC-1"""
+def test_uc1():
+    """查询某条线路的基本信息。"""
     assert c.get("/routes/").json["30"] == "1"
     assert c.get("/routes/30").json == {
         "direction": "燎原-北路湾公交站",
@@ -21,8 +21,8 @@ def test_routes():
     }
 
 
-def test_stations():
-    """UC-2"""
+def test_uc2():
+    """查询某条线路方向的全部站点信息。"""
     stations = c.get("/stations/").json
     assert {"id": "7542", "zh": "兴义镇(始发站)", "en": "XingYiZhen"} in stations
     assert {"id": "7527", "zh": "永盛(始发站)", "en": "YongSheng"} in stations
