@@ -18,9 +18,9 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 
-r, g = get_db()
-
 app = Flask(__name__)
+with app.app_context():
+    r, g = get_db()
 
 
 @app.route("/version")
