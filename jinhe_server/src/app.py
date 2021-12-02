@@ -55,9 +55,12 @@ def stations():
     )
 
 
-@app.route("/routes/<name>/stations")
-def routes_name_stations(name: str):
-    """Stations of the route."""
+@app.route("/routes/<name>/first")
+def routes_name_first(name: str):
+    """The first service of the route."""
     return jsonify(
-        [s.removeprefix("_") for s in r.zrange(f"Route:_{name}:first", 0, -1)]
+        [
+            (s.removeprefix("_"), t)
+            for s, t in r.zrange(f"Route:_{name}:first", 0, -1, withscores=True)
+        ]
     )
