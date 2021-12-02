@@ -1,11 +1,11 @@
 import logging
-from os import getenv
 
 import sentry_sdk
 from flask import Flask, jsonify
-from redis import Redis
-from redisgraph import Graph, Node
+from redisgraph import Node
 from sentry_sdk.integrations.flask import FlaskIntegration
+
+from .db import get_db
 
 sentry_sdk.init(
     dsn="https://a7ad189559a44dd8819c0862367ecbfe@o996799.ingest.sentry.io/6042882",
@@ -18,8 +18,7 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 
-r = Redis(host=getenv("JINHE_DATA_HOST", "localhost"), decode_responses=True)
-g = Graph("g", r)
+r, g = get_db()
 
 app = Flask(__name__)
 
