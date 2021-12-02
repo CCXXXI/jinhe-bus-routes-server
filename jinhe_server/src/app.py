@@ -64,3 +64,14 @@ def routes_name_first(name: str):
             for i, t in r.zrange(f"Route:_{name}:first", 0, -1, withscores=True)
         ]
     )
+
+
+@app.route("/stations/<id_>/first")
+def stations_id_first(id_):
+    """The first service of the station."""
+    return jsonify(
+        [
+            (n.removeprefix("_"), t)
+            for n, t in r.zrange(f"Station:_{id_}:first", 0, -1, withscores=True)
+        ]
+    )

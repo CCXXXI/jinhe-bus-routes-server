@@ -33,3 +33,31 @@ def test_uc2():
     assert first[1][0] == "7527"
     assert first[-1][0] == "14495"
     assert len(first) == 28
+
+
+def test_uc3():
+    """查询锦城广场站停靠的所有线路。"""
+    stations = c.get("/stations/").json
+    assert set(s["id"] for s in stations if s["zh"] == "锦城广场") == {
+        "58290",
+        "64355",
+        "58289",
+        "64356",
+    }
+
+    assert {n for n, _ in c.get("/stations/58290/first").json} == {
+        "K5u",
+    }
+    assert {n for n, _ in c.get("/stations/64355/first").json} == {
+        "N26d",
+        "G33u",
+        "17d",
+    }
+    assert {n for n, _ in c.get("/stations/58289/first").json} == {
+        "K5d",
+    }
+    assert {n for n, _ in c.get("/stations/64356/first").json} == {
+        "N26u",
+        "G33d",
+        "17u",
+    }
