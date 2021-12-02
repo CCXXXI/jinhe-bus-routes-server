@@ -60,7 +60,7 @@ def routes_name_first(name: str):
     """The first service of the route."""
     return jsonify(
         [
-            (s.removeprefix("_"), t)
-            for s, t in r.zrange(f"Route:_{name}:first", 0, -1, withscores=True)
+            (i.removeprefix("_"), t)
+            for i, t in r.zrange(f"Route:_{name}:first", 0, -1, withscores=True)
         ]
     )
