@@ -38,7 +38,7 @@ def test_uc2():
 def test_uc3():
     """查询锦城广场站停靠的所有线路。"""
     stations = c.get("/stations/").json
-    assert set(s["id"] for s in stations if s["zh"] == "锦城广场") == {
+    assert {s["id"] for s in stations if s["zh"] == "锦城广场"} == {
         "58290",
         "64355",
         "58289",
