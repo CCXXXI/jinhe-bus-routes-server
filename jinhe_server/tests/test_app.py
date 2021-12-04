@@ -1,11 +1,9 @@
-from src.app import app
-
-c = app.test_client()
+from . import c
 
 
 def test_version():
     """The Git commit ID is a 40 digits long SHA-1 hash."""
-    assert len(c.get("/version").data) == 40
+    assert len(c.get("/meta/version").data) == 40
 
 
 def test_uc1():

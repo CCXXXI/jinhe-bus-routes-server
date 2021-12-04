@@ -12,6 +12,6 @@ COPY environment.yml .
 RUN micromamba install -y -n base -f environment.yml && \
     micromamba clean --all --yes
 
-COPY src .
+COPY src app/
 EXPOSE 80
 CMD ["gunicorn", "app:app", "-b", ":80"]
