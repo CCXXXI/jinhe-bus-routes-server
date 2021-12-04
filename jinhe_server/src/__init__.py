@@ -21,7 +21,7 @@ logging.basicConfig(
 
 app = Flask(__name__)
 app.wsgi_app = DispatcherMiddleware(
-    Response("Not Found", status=404),
+    Response(status=404),
     {"/jinhe": app.wsgi_app},
 )
 
