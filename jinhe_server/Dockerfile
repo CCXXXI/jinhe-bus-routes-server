@@ -13,5 +13,6 @@ RUN micromamba install -y -n base -f environment.yml && \
     micromamba clean --all --yes
 
 COPY src app/
+CMD ["gunicorn", "app:app"]
+ENV PORT=80 SCRIPT_NAME=jinhe WEB_CONCURRENCY=5
 EXPOSE 80
-CMD ["gunicorn", "app:app", "-b", ":80"]
