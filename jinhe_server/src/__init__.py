@@ -3,6 +3,8 @@ import logging
 import sentry_sdk
 from flask import Flask
 from sentry_sdk.integrations.flask import FlaskIntegration
+from werkzeug.middleware.dispatcher import DispatcherMiddleware
+from werkzeug.wrappers import Response
 
 from .db import get_db
 
@@ -18,6 +20,13 @@ logging.basicConfig(
 )
 
 app = Flask(__name__)
+app.wsgi_app = DispatcherMiddleware(
+    Response("Not Found", status=404),
+    {"/jinhe": app.wsgi_app},
+)
+
+with app.app_context():
+    r, g = get_db()
 
 
 def register_blueprints():
@@ -29,6 +38,4 @@ def register_blueprints():
     app.register_blueprint(stations.bp)
 
 
-with app.app_context():
-    r, g = get_db()
 register_blueprints()
