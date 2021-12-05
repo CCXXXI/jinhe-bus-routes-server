@@ -190,3 +190,12 @@ def test_uc10():
     assert set(r[0][2]) > {"N12d", "N11d", "G38u", "G37d", "G28d", "G22d", "759u"}
     assert set(r[1][2]) > {"N31u", "G90u", "G41", "736d", "735d", "727Ad", "727d"}
     assert set(r[2][2]) > {"N31d", "G90d", "G41", "736u", "735u", "727Au", "727u"}
+
+
+def test_uc11():
+    """统计特殊站台。"""
+    stations = set(s["zh"] for s in c.get("/jinhe/stations/").json)
+
+    assert sum(s.startswith("地铁") for s in stations) == 20
+    assert sum(s.endswith("(始发站)") for s in stations) == 59
+    assert sum(s.endswith("(终点站)") for s in stations) == 59
