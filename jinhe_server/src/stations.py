@@ -1,12 +1,13 @@
 from flask import Blueprint, jsonify
 from redisgraph import Node
 
-from . import g, r
+from . import cached, g, r
 
 bp = Blueprint("stations", __name__, url_prefix="/stations")
 
 
 @bp.route("/")
+@cached()
 def stations():
     """All stations info."""
     res: list[Node] = [
@@ -21,6 +22,7 @@ def stations():
 
 
 @bp.route("/<id_>/first")
+@cached()
 def stations_id_first(id_):
     """The first service of the station."""
     return jsonify(
