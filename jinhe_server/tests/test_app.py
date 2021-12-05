@@ -256,3 +256,12 @@ def test_uc14():
         "花博路口": {"70d", "74d", "736u", "G41"},
         "星空大道南": {"16d", "30d", "735u", "N20u"},
     }
+
+
+def test_uc15():
+    """根据连接两个相邻站台之间线路数量排序两个相邻站台。"""
+    r = c.get("/jinhe/stats/stations/links").json
+    assert ["凤溪大道中", "凤溪大道和桥", 9] in r
+    assert ["凤溪大道和桥", "凤溪大道中", 9] in r
+    assert ["科北路口", "北门立交南", 8] in r
+    assert ["凤溪大道和桥", "河野", 8] in r

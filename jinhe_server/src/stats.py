@@ -28,3 +28,19 @@ def stations_most_routes():
 def routes_types():
     """The types of routes."""
     return {t: int(c) for t, c in r.hgetall("Stats:Route.type").items()}
+
+
+@bp.route("/stations/links")
+# @cached()
+def stations_links():
+    """The links of stations."""
+    return jsonify(
+        g.query(
+            "MATCH (a)-[r]->(b) "
+            "WHERE a.en<>b.en "
+            "RETURN a.zh, b.zh, count(r) "
+            "ORDER BY count(r) desc "
+            "LIMIT 15",
+            read_only=True,
+        ).result_set
+    )
