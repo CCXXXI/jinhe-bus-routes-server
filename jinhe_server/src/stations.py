@@ -8,7 +8,7 @@ bp = Blueprint("stations", __name__, url_prefix="/stations")
 
 @bp.route("/")
 @cached()
-def stations():
+def index():
     """All stations info."""
     res: list[Node] = [
         s[0] for s in g.query("MATCH (s) RETURN s", read_only=True).result_set
@@ -23,7 +23,7 @@ def stations():
 
 @bp.route("/<id_>/first")
 @cached()
-def stations_id_first(id_):
+def first(id_):
     """The first service of the station."""
     return jsonify(
         [
