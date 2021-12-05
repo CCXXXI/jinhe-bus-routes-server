@@ -1,7 +1,4 @@
 from bisect import bisect_left
-from itertools import product
-
-from pytest import mark
 
 from . import c
 
@@ -104,23 +101,10 @@ def test_uc4():
     assert u_first[u_q][1] - u_first[u_p][1] == 13
 
 
-@mark.skip(reason="wait for https://github.com/RedisGraph/RedisGraph/pull/2016")
 def test_uc5():
     """查询某两个站台之间的最短路径。"""
-    expected = ["16115", "59548", "5181", "5197", "5168", "14768"]
-
     sp_id = c.get("/jinhe/paths/shortest/16115/14768").json["s"]
-    assert sp_id == expected
-
-    stations = c.get("/jinhe/stations/").json
-    p_id = {s["id"] for s in stations if s["zh"] == "红瓦寺"}
-    q_id = {s["id"] for s in stations if s["zh"] == "动物园"}
-    sp_name = [
-        c.get(f"/jinhe/paths/shortest/{p}/{q}").json["s"]
-        for p, q in product(p_id, q_id)
-    ]
-    ...  # todo
-    assert sp_name
+    assert sp_id == ["16115", "59548", "5181", "5197", "5168", "14768"]
 
 
 def test_uc6():
@@ -169,3 +153,7 @@ def test_uc8():
         )
         <= limit
     } == {"101": 0, "174d": 3, "53d": 1, "70u": 5}
+
+
+def test_uc9():
+    """"""
