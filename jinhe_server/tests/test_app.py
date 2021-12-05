@@ -59,3 +59,41 @@ def test_uc3():
         "G33d",
         "17u",
     }
+
+
+def test_uc4():
+    """查询某条线路从某站到某站，线路的运行方向、沿路站点和运行时长。"""
+    # Route:10 is directional
+    assert c.get("/jinhe/routes/").json["10"] == "1"
+
+    # the expected direction is up
+    stations = c.get("/jinhe/stations/").json
+    p_id = {s["id"] for s in stations if s["zh"] == "大悦城"}
+    q_id = {s["id"] for s in stations if s["zh"] == "小吃街"}
+    u_first = c.get("/jinhe/routes/10u/first").json
+    d_first = c.get("/jinhe/routes/10d/first").json
+    u_p_arr = [i for i, x in enumerate(u_first) if x[0] in p_id]
+    u_q_arr = [i for i, x in enumerate(u_first) if x[0] in q_id]
+    d_p_arr = [i for i, x in enumerate(d_first) if x[0] in p_id]
+    d_q_arr = [i for i, x in enumerate(d_first) if x[0] in q_id]
+    assert len(u_p_arr) == 1
+    assert len(u_q_arr) == 1
+    assert len(d_p_arr) == 1
+    assert len(d_q_arr) == 1
+    u_p, u_q, d_p, d_q = u_p_arr[0], u_q_arr[0], d_p_arr[0], d_q_arr[0]
+    assert u_p < u_q
+    assert d_p > d_q
+
+    # stations along the line
+    assert [x[0] for x in u_first[u_p : u_q + 1]] == [
+        "62753",
+        "62765",
+        "62737",
+        "62729",
+        "6354",
+        "6363",
+        "6377",
+    ]
+
+    # time
+    assert u_first[u_q][1] - u_first[u_p][1] == 13
