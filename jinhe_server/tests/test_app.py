@@ -120,3 +120,15 @@ def test_uc5():
     ]
     ...  # todo
     assert sp_name
+
+
+def test_uc6():
+    """查询某两个站台间是否存在直达线路。"""
+    stations = c.get("/jinhe/stations/").json
+    p_id = {s["id"] for s in stations if s["zh"] == "荷花池"}
+    q_id = {s["id"] for s in stations if s["zh"] == "环球中心(始发站)"}
+
+    p = {n for i in p_id for n, _ in c.get(f"/jinhe/stations/{i}/first").json}
+    q = {n for i in q_id for n, _ in c.get(f"/jinhe/stations/{i}/first").json}
+
+    assert p & q == {"N12u", "N12d"}
