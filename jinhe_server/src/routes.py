@@ -29,3 +29,10 @@ def first(name: str):
             for i, t in r.zrange(f"Route:_{name}:first", 0, -1, withscores=True)
         ]
     )
+
+
+@bp.route("/<name>/steps")
+@cached()
+def steps(name: str):
+    """The service steps of the route."""
+    return jsonify(sorted(map(int, r.smembers(f"Route:_{name}:steps"))))

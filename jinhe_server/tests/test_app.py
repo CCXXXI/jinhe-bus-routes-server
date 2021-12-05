@@ -132,3 +132,20 @@ def test_uc6():
     q = {n for i in q_id for n, _ in c.get(f"/jinhe/stations/{i}/first").json}
 
     assert p & q == {"N12u", "N12d"}
+
+
+def test_uc7():
+    """查询某条线路某个方向的全部班次信息。"""
+    first = c.get("/jinhe/routes/239u/first").json
+    assert first[0][1] == 7 * 60
+    assert first[1][1] == 7 * 60 + 2
+    assert first[2][1] == 7 * 60 + 4
+    assert first[3][1] == 7 * 60 + 6
+    assert first[4][1] == 7 * 60 + 8
+    assert first[5][1] == 7 * 60 + 10
+    assert first[6][1] == 7 * 60 + 12
+    assert first[7][1] == 7 * 60 + 14
+
+    steps = c.get("/jinhe/routes/239u/steps").json
+    assert steps[0] == 0
+    assert steps[1] == 6
