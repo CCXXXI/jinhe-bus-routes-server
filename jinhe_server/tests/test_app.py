@@ -173,3 +173,20 @@ def test_uc9():
         "82u": [1, 7, 13],
         "99u": [4, 10, 16],
     }
+
+
+def test_uc10():
+    """统计停靠路线最多的站点并排序。"""
+    r = c.get("/jinhe/stats/stations/most-routes").json
+
+    assert r[0][0] == "818"
+    assert r[1][0] == "24645"
+    assert r[2][0] == "24646"
+
+    assert r[0][1] == 13
+    assert r[1][1] == 11
+    assert r[2][1] == 11
+
+    assert set(r[0][2]) > {"N12d", "N11d", "G38u", "G37d", "G28d", "G22d", "759u"}
+    assert set(r[1][2]) > {"N31u", "G90u", "G41", "736d", "735d", "727Ad", "727d"}
+    assert set(r[2][2]) > {"N31d", "G90d", "G41", "736u", "735u", "727Au", "727u"}
