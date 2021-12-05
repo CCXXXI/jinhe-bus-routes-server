@@ -46,11 +46,12 @@ with app.app_context():
 
 def _register_blueprints():
     """Register all blueprints."""
-    from . import meta, routes, stations
+    from . import meta, paths, routes, stations
 
     app.register_blueprint(meta.bp)
     app.register_blueprint(routes.bp)
     app.register_blueprint(stations.bp)
+    app.register_blueprint(paths.bp)
 
 
 _register_blueprints()
