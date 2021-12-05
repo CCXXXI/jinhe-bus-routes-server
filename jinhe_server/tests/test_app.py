@@ -214,3 +214,10 @@ def test_uc12():
         "驳接线": 5,
         "社区线": 2,
     }
+
+
+def test_uc13():
+    """查询两条线路重复的站点名。"""
+    u = {f[0] for f in c.get("/jinhe/routes/15u/first").json}
+    v = {f[0] for f in c.get("/jinhe/routes/30d/first").json}
+    assert u & v == {"17848", "17824", "17809"}
