@@ -2,6 +2,7 @@ import logging
 
 import sentry_sdk
 from flask import Flask
+from flask_cors import CORS
 from sentry_sdk.integrations.flask import FlaskIntegration
 from werkzeug.middleware.dispatcher import DispatcherMiddleware
 from werkzeug.wrappers import Response
@@ -24,6 +25,7 @@ app.wsgi_app = DispatcherMiddleware(
     Response(status=404),
     {"/jinhe": app.wsgi_app},
 )
+CORS(app)
 
 with app.app_context():
     r, g = get_db()
