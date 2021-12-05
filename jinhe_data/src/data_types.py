@@ -105,6 +105,9 @@ class Route:
             },
         )
 
+        # stats
+        r.hincrby("Stats:Route.type", self.type)
+
         for stations, first, steps, ud in (
             (self.stations, self.first, self.steps, ""),
             (self.u_stations, self.u_first, self.u_steps, "u"),
