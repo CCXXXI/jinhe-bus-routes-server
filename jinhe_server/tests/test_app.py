@@ -194,7 +194,7 @@ def test_uc10():
 
 def test_uc11():
     """统计特殊站台。"""
-    stations = set(s["zh"] for s in c.get("/jinhe/stations/").json)
+    stations = {s["zh"] for s in c.get("/jinhe/stations/").json}
 
     assert sum(s.startswith("地铁") for s in stations) == 20
     assert sum(s.endswith("(始发站)") for s in stations) == 59
