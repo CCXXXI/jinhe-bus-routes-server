@@ -31,7 +31,7 @@ def routes_types():
 
 
 @bp.route("/stations/links")
-# @cached()
+@cached()
 def stations_links():
     """The links of stations."""
     return jsonify(
