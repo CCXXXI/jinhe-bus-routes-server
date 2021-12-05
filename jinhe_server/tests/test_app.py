@@ -1,3 +1,4 @@
+from bisect import bisect_left
 from itertools import product
 
 from pytest import mark
@@ -149,3 +150,22 @@ def test_uc7():
     steps = c.get("/jinhe/routes/239u/steps").json
     assert steps[0] == 0
     assert steps[1] == 6
+
+
+def test_uc8():
+    """查询某个时刻某个站台某个时段内即将停靠的线路。"""
+    first = c.get("/jinhe/stations/16147/first").json
+    assert {x[0] for x in first} > {"53d", "70u", "101"}
+
+    now, limit = 8 * 60 + 37, 5
+    assert {
+        n: time
+        for n, f in first
+        if (
+            time := (steps := c.get(f"/jinhe/routes/{n}/steps").json)[
+                bisect_left(steps, now - f)
+            ]
+            - (now - f)
+        )
+        <= limit
+    } == {"101": 0, "174d": 3, "53d": 1, "70u": 5}
