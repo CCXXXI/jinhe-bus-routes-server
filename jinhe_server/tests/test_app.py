@@ -139,7 +139,7 @@ def test_uc7():
 def test_uc8():
     """查询某个时刻某个站台某个时段内即将停靠的线路。"""
     first = c.get("/jinhe/stations/16147/first").json
-    assert {x[0] for x in first} > {"53d", "70u", "101"}
+    assert {x[0] for x in first} >= {"53d", "70u", "101"}
 
     now, limit = 8 * 60 + 37, 5
     assert {
@@ -156,4 +156,20 @@ def test_uc8():
 
 
 def test_uc9():
-    """"""
+    """查询某个时刻某个站台线路最近的3趟班次信息。"""
+    first = c.get("/jinhe/stations/59760/first").json
+    assert {x[0] for x in first} >= {"106u", "82u", "99u"}
+
+    now = 10 * 60 + 32
+    res = {}
+    for n, f in first:
+        res[n] = []
+        for x in (steps := c.get(f"/jinhe/routes/{n}/steps").json)[
+            (start := bisect_left(steps, now - f)) : start + 3
+        ]:
+            res[n].append(x - (now - f))
+    assert dict(filter(lambda x: x[1], res.items())) == {
+        "106u": [7, 15, 23],
+        "82u": [1, 7, 13],
+        "99u": [4, 10, 16],
+    }
