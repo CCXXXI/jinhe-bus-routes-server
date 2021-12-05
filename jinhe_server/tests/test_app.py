@@ -221,3 +221,38 @@ def test_uc13():
     u = {f[0] for f in c.get("/jinhe/routes/15u/first").json}
     v = {f[0] for f in c.get("/jinhe/routes/30d/first").json}
     assert u & v == {"17848", "17824", "17809"}
+
+
+def test_uc14():
+    """查询换乘线路。"""
+    stations = {s["id"]: s["zh"] for s in c.get("/jinhe/stations/").json}
+    assert {
+        stations[s[0]]: routes
+        for s in c.get("/jinhe/routes/261u/first").json
+        if (
+            routes := {x[0] for x in c.get(f"/jinhe/stations/{s[0]}/first").json}
+            - {"261u"}
+        )
+    } == {
+        "凤溪大道中": {"70d", "74d", "322u", "727u", "735u", "736u", "G41", "N31d"},
+        "培风路北": {"30d", "208u"},
+        "双水村": {"15d", "16d", "N20u"},
+        "医学院": {"30d", "208u"},
+        "花博路": {"70d", "74d", "736u", "G41"},
+        "凤溪大道和桥": {
+            "70d",
+            "74d",
+            "322u",
+            "727u",
+            "727Au",
+            "735u",
+            "736u",
+            "G41",
+            "G90d",
+            "N31d",
+        },
+        "星空大道武科路口": {"15d", "16d", "G41", "N20u"},
+        "天府家园": {"15d", "16d", "N20u"},
+        "花博路口": {"70d", "74d", "736u", "G41"},
+        "星空大道南": {"16d", "30d", "735u", "N20u"},
+    }
