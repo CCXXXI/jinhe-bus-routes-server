@@ -199,3 +199,18 @@ def test_uc11():
     assert sum(s.startswith("地铁") for s in stations) == 20
     assert sum(s.endswith("(始发站)") for s in stations) == 59
     assert sum(s.endswith("(终点站)") for s in stations) == 59
+
+
+def test_uc12():
+    """分组统计路线类型。"""
+    r = c.get("/jinhe/stats/routes/types").json
+    assert r == {
+        "干线": 36,
+        "高峰线": 16,
+        "夜班线": 11,
+        "城乡线": 8,
+        "支线": 8,
+        "快速公交": 7,
+        "驳接线": 5,
+        "社区线": 2,
+    }

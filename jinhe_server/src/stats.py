@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 
-from . import cached, g
+from . import cached, g, r
 
 bp = Blueprint("stats", __name__, url_prefix="/stats")
 
@@ -21,3 +21,10 @@ def stations_most_routes():
             ).result_set
         ]
     )
+
+
+@bp.route("/routes/types")
+@cached()
+def routes_types():
+    """The types of routes."""
+    return {t: int(c) for t, c in r.hgetall("Stats:Route.type").items()}
