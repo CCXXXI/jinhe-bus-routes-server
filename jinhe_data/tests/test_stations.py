@@ -18,4 +18,4 @@ class TestStation:
     @staticmethod
     def test_id(station: Station):
         """The id is a positive number."""
-        assert station.id > 0
+        assert int(station.id.removeprefix("_")) > 0

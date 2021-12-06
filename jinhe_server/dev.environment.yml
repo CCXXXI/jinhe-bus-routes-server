@@ -2,11 +2,15 @@ name: jinhe-server
 channels: [conda-forge]
 dependencies:
   - flask
+  - flask-cors
+  - flask-caching
   - sentry-sdk
   - blinker
   - pip
   - pip:
       - gunicorn
+      - redisgraph
 
   # dev
   - pytest-cov
+  - black

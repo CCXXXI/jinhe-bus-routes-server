@@ -1,7 +1,5 @@
 import logging
-from math import e
 from subprocess import run
-from time import sleep
 
 from redis import Redis
 from redisgraph import Graph
@@ -14,15 +12,12 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
 )
 
-r = Redis(decode_responses=True, health_check_interval=1)
+r = Redis(decode_responses=True)
 g = Graph("g", r)
 
 
 def save():
     """Save all data to the database."""
-    # wait for redis container
-    sleep(e)
-
     # meta
     version = run(
         ["git", "rev-parse", "HEAD"], capture_output=True, check=True

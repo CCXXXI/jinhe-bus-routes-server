@@ -1,6 +1,9 @@
 name: build
 
-on: [push]
+on:
+  push:
+  schedule:
+    - cron: '23 1 * * SUN'
 
 jobs:
   data:
@@ -15,6 +18,7 @@ jobs:
         with:
           environment-file: "jinhe_data/environment.yml"
       - run: docker-compose up -d
+      - run: sleep 3
       - run: python -m src.main
       - run: "docker cp redisgraph:/data/dump.rdb ."
       - uses: elgohr/Publish-Docker-Github-Action@master
@@ -25,6 +29,7 @@ jobs:
           registry: ghcr.io
           default_branch: main
           workdir: jinhe_data
+          cache: ${{ github.event_name != 'schedule' }}
   server:
     runs-on: ubuntu-latest
     steps:
@@ -37,3 +42,4 @@ jobs:
           registry: ghcr.io
           default_branch: main
           workdir: jinhe_server
+          cache: ${{ github.event_name != 'schedule' }}

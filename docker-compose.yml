@@ -1,0 +1,11 @@
+services:
+  data:
+    image: ghcr.io/ccxxxi/jinhe-bus-routes-server/data:dev
+  server:
+    image: ghcr.io/ccxxxi/jinhe-bus-routes-server/server:dev
+    environment: [JINHE_DATA_HOST=data]
+    ports: [80:80]
+  watchtower:
+    image: containrrr/watchtower
+    volumes: [/var/run/docker.sock:/var/run/docker.sock]
+    command: --cleanup -i 60
