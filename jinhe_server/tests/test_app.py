@@ -103,8 +103,32 @@ def test_uc4():
 
 def test_uc5():
     """查询某两个站台之间的最短路径。"""
-    sp_id = c.get("/jinhe/paths/shortest/16115/14768").json["s"]
-    assert sp_id == ["16115", "59548", "5181", "5197", "5168", "14768"]
+    stations = c.get("/jinhe/stations/").json
+    assert c.get(
+        "/jinhe/paths/shortest"
+        f"/{'.'.join(sorted(s['id'] for s in stations if s['zh'] == '红瓦寺'))}"
+        f"/{'.'.join(sorted(s['id'] for s in stations if s['zh'] == '动物园'))}"
+    ).json[::3] == ["16115", "59548", "5181", "5197", "5168", "14768"]
+
+
+def test_uc5_extra():
+    """Additional check for /paths/shortest."""
+    assert c.get("/jinhe/paths/shortest/16115.16116/14768.5214").json[::3] == [
+        "16115",
+        "59548",
+        "5181",
+        "5197",
+        "5168",
+        "14768",
+    ]
+
+    assert set(
+        c.get("/jinhe/paths/shortest/27134.27145.64838.64839/114519.15343.3539").json[
+            1::3
+        ]
+    ) == {"N12d"}
+
+    assert c.get("/jinhe/paths/shortest/114514/1919810").json == []
 
 
 def test_uc6():
