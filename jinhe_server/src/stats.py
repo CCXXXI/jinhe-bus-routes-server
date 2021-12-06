@@ -5,9 +5,42 @@ from . import cached, g, r
 bp = Blueprint("stats", __name__, url_prefix="/stats")
 
 
-@bp.route("/stations/most-routes")
+@bp.route("/routes/types")
 @cached()
-def stations_most_routes():
+def routes_types():
+    """The types of routes."""
+    return {t: int(c) for t, c in r.hgetall("Stats:Route.type").items()}
+
+
+@bp.route("/routes/stations")
+@cached()
+def routes_stations():
+    """The counts of stations of routes."""
+    return jsonify(
+        [
+            (n.removeprefix("_"), int(c))
+            for n, c in r.zrange(
+                "Stats:Route.stations", 0, 14, desc=True, withscores=True
+            )
+        ]
+    )
+
+
+@bp.route("/routes/time")
+@cached()
+def routes_time():
+    """The runtimes of routes."""
+    return jsonify(
+        [
+            (n.removeprefix("_"), int(c))
+            for n, c in r.zrange("Stats:Route.time", 0, 14, desc=True, withscores=True)
+        ]
+    )
+
+
+@bp.route("/stations/routes")
+@cached()
+def stations_routes():
     """The 15 stations with most routes."""
     return jsonify(
         [
@@ -21,13 +54,6 @@ def stations_most_routes():
             ).result_set
         ]
     )
-
-
-@bp.route("/routes/types")
-@cached()
-def routes_types():
-    """The types of routes."""
-    return {t: int(c) for t, c in r.hgetall("Stats:Route.type").items()}
 
 
 @bp.route("/stations/links")

@@ -177,7 +177,7 @@ def test_uc9():
 
 def test_uc10():
     """统计停靠路线最多的站点并排序。"""
-    r = c.get("/jinhe/stats/stations/most-routes").json
+    r = c.get("/jinhe/stats/stations/routes").json
 
     assert r[0][0] == "818"
     assert r[1][0] == "24645"
@@ -265,3 +265,21 @@ def test_uc15():
     assert ["凤溪大道和桥", "凤溪大道中", 9] in r
     assert ["科北路口", "北门立交南", 8] in r
     assert ["凤溪大道和桥", "河野", 8] in r
+
+
+def test_uc16():
+    """根据站点数量对线路进行排序。"""
+    r = c.get("/jinhe/stats/routes/stations").json
+    assert ["736u", 47] in r
+    assert ["736d", 46] in r
+    assert ["735d", 44] in r
+    assert ["735u", 44] in r
+
+
+def test_uc17():
+    """根据运行时间对线路进行排序。"""
+    r = c.get("/jinhe/stats/routes/time").json
+    assert ["736u", 90] in r
+    assert ["736d", 90] in r
+    assert ["735d", 86] in r
+    assert ["735u", 86] in r
