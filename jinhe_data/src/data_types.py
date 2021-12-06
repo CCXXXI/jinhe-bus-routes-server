@@ -105,7 +105,7 @@ class Route:
             },
         )
 
-        # stats
+        # for UC-12
         r.hincrby("Stats:Route.type", self.type)
 
         for stations, first, steps, ud in (
@@ -137,3 +137,15 @@ class Route:
                         f"Station:{i}:first",
                         mapping={self.name + ud: t},
                     )
+
+                # for UC-16
+                r.zadd(
+                    f"Stats:Route.stations",
+                    mapping={self.name + ud: len(stations)},
+                )
+
+                # for UC-17
+                r.zadd(
+                    f"Stats:Route:time",
+                    mapping={self.name + ud: first[-1]},
+                )
