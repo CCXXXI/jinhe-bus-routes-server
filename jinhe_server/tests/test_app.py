@@ -128,6 +128,8 @@ def test_uc5_extra():
         ]
     ) == {"N12d"}
 
+    assert c.get("/jinhe/paths/shortest/114514/1919810").json == []
+
 
 def test_uc6():
     """查询某两个站台间是否存在直达线路。"""
