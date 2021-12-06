@@ -1,5 +1,4 @@
 from dataclasses import dataclass
-from itertools import pairwise
 
 from redis import Redis
 from redisgraph import Graph, Node
@@ -115,10 +114,11 @@ class Route:
         ):
             if stations:
                 # graph
-                for u, v in pairwise(stations):
+                for i in range(len(stations) - 1):
+                    u, v, t = stations[i], stations[i + 1], first[i + 1] - first[i]
                     g.query(
                         f"MATCH (u:{u}), (v:{v}) "
-                        f"CREATE (u)-[:{self.name}{ud}]->(v)",
+                        f"CREATE (u)-[:{self.name}{ud}{{t:{t}}}]->(v)",
                     )
 
                 # for UC-7
