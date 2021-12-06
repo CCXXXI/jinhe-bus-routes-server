@@ -25,7 +25,7 @@ def shortest(u_raw, v_raw):
         du, u = heappop(q)
         if u in vs:
             res = [u]
-            while p := pre.get(u, None):
+            while p := pre.get(u):
                 res.extend(p)
                 u = p[-1]
             return jsonify(
