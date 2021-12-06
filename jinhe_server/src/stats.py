@@ -44,7 +44,7 @@ def stations_routes():
     """The 15 stations with most routes."""
     return jsonify(
         [
-            [s.removeprefix("_"), c, [r.removeprefix("_") for r in rs]]
+            [s.removeprefix("_"), c, [n.removeprefix("_") for n in rs]]
             for s, c, rs in g.query(
                 "MATCH (p)-[r]-() "
                 "RETURN labels(p), count(distinct type(r)), collect(distinct type(r)) "
