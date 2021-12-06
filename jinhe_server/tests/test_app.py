@@ -111,6 +111,24 @@ def test_uc5():
     ).json[::3] == ["16115", "59548", "5181", "5197", "5168", "14768"]
 
 
+def test_uc5_extra():
+    """Additional check for /paths/shortest."""
+    assert c.get("/jinhe/paths/shortest/16115.16116/14768.5214").json[::3] == [
+        "16115",
+        "59548",
+        "5181",
+        "5197",
+        "5168",
+        "14768",
+    ]
+
+    assert set(
+        c.get("/jinhe/paths/shortest/27134.27145.64838.64839/114519.15343.3539").json[
+            1::3
+        ]
+    ) == {"N12d"}
+
+
 def test_uc6():
     """查询某两个站台间是否存在直达线路。"""
     stations = c.get("/jinhe/stations/").json

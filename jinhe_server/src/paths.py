@@ -36,11 +36,12 @@ def shortest(u_raw, v_raw):
             )
         if du != d[u]:  # visited
             continue
-        for t, r, v in g.query(
-            f"MATCH (:{u})-[r]->(v) "
-            "RETURN r.t, type(r), labels(v) "
-            "ORDER BY r.t, type(r)"
-        ).result_set:
+        edges = g.query(
+            f"MATCH (:{u})-[r]->(v) RETURN r.t, type(r), labels(v) ORDER BY r.t"
+        ).result_set
+        if p := pre.get(u):
+            edges.sort(key=lambda e: (e[0], e[1] != p[1]))  # same type first
+        for t, r, v in edges:
             if (dv := du + t) < d[v]:
                 d[v] = dv
                 heappush(q, (dv, v))
