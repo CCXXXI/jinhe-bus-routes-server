@@ -115,7 +115,8 @@ class Route:
             if stations:
                 # graph
                 for i in range(len(stations) - 1):
-                    u, v, t = stations[i], stations[i + 1], first[i + 1] - first[i]
+                    u, v = stations[i], stations[i + 1]
+                    t = (first[i + 1] - first[i]) % (60 * 24)
                     g.query(
                         f"MATCH (u:{u}), (v:{v}) "
                         f"CREATE (u)-[:{self.name}{ud}{{t:{t}}}]->(v)",
