@@ -147,5 +147,5 @@ class Route:
                 # for UC-17
                 r.zadd(
                     "Stats:Route.time",
-                    mapping={self.name + ud: first[-1] - first[0]},
+                    mapping={self.name + ud: (first[-1] - first[0]) % (60 * 24)},
                 )
