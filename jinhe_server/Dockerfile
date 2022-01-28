@@ -6,7 +6,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     gcc gcc-multilib && \
     rm -rf /var/lib/apt/lists/*
-USER micromamba
+USER mambauser
 
 COPY environment.yml .
 RUN micromamba install -y -n base -f environment.yml && \
