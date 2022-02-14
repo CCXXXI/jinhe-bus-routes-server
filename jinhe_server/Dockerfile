@@ -1,4 +1,4 @@
-FROM mambaorg/micromamba:0.21.1
+FROM mambaorg/micromamba:0.21.2
 WORKDIR /app
 
 USER root
